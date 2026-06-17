@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Suivi SEO — Maison du Web</title>
+<style>
+  :root {
+    --bg: #0f1220;
+    --card: #1a1f35;
+    --card-2: #222845;
+    --line: #2c3358;
+    --txt: #e8ebf7;
+    --muted: #9aa3c7;
+    --brand: #5b7cfa;
+    --brand-2: #3d5bd9;
+    --todo: #f0a33c;
+    --doing: #4aa3ff;
+    --done: #36cf8f;
+    --danger: #ff5d6c;
+    --shadow: 0 10px 30px rgba(0,0,0,.35);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: radial-gradient(1200px 600px at 80% -10%, #1c2347 0%, var(--bg) 55%);
+    color: var(--txt);
+    min-height: 100vh;
+    padding: 24px 16px 60px;
+  }
+  .wrap { max-width: 1080px; margin: 0 auto; }
+
+  header.top {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 16px; flex-wrap: wrap; margin-bottom: 20px;
+  }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .brand .logo {
+    width: 42px; height: 42px; border-radius: 11px;
+    background: linear-gradient(135deg, var(--brand), var(--brand-2));
+    display: grid; place-items: center; font-weight: 800; font-size: 20px;
+    box-shadow: var(--shadow);
+  }
+  .brand h1 { font-size: 20px; line-height: 1.1; }
+  .brand p { font-size: 12.5px; color: var(--muted); }
+
+  .btn {
+    border: 0; cursor: pointer; font-weight: 700; font-size: 14px;
+    border-radius: 10px; padding: 11px 16px; color: #fff;
+    background: linear-gradient(135deg, var(--brand), var(--brand-2));
+    box-shadow: var(--shadow); transition: transform .08s ease, filter .15s ease;
+  }
+  .btn:hover { filter: brightness(1.08); }
+  .btn:active { transform: translateY(1px); }
+  .btn.ghost { background: var(--card-2); box-shadow: none; border: 1px solid var(--line); }
+  .btn.danger { background: linear-gradient(135deg, #ff6b78, #e0414f); }
+  .btn .plus { font-size: 17px; margin-right: 6px; }
+
+  /* stats */
+  .stats { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; margin-bottom: 18px; }
+  .stat {
+    background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+    padding: 14px 16px;
+  }
+  .stat .n { font-size: 26px; font-weight: 800; }
+  .stat .l { font-size: 12px; color: var(--muted); margin-top: 2px; }
+  .stat.todo .n { color: var(--todo); }
+  .stat.doing .n { color: var(--doing); }
+  .stat.done .n { color: var(--done); }
+
+  /* hoguet banner */
+  .hoguet {
+    background: rgba(240,163,60,.10); border: 1px solid rgba(240,163,60,.4);
+    border-radius: 12px; padding: 11px 14px; font-size: 12.5px; color: #ffd7a1;
+    margin-bottom: 18px; line-height: 1.45;
+  }
+  .hoguet b { color: #ffba63; }
+
+  /* filters */
+  .filters { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+  .chip {
+    border: 1px solid var(--line); background: var(--card); color: var(--muted);
+    border-radius: 999px; padding: 7px 14px; font-size: 13px; cursor: pointer; font-weight: 600;
+  }
+  .chip.active { background: var(--brand); color: #fff; border-color: transparent; }
+
+  /* grid */
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px,1fr)); gap: 14px; }
+  .site {
+    background: var(--card); border: 1px solid var(--line); border-radius: 16px;
+    padding: 16px; position: relative; box-shadow: var(--shadow);
+  }
+  .site .row1 { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }
+  .site h3 { font-size: 16px; line-height: 1.2; }
+  .site a.url { font-size: 12.5px; color: var(--brand); text-decoration: none; word-break: break-all; }
+  .site a.url:hover { text-decoration: underline; }
+  .meta { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0 12px; }
+  .tag { font-size: 11px; font-weight: 700; padding: 4px 8px; border-radius: 7px; background: var(--card-2); color: var(--muted); }
+  .tag.city { color: #c7d0ff; }
+  .tag.act { background: rgba(91,124,250,.18); color: #aebcff; }
+  .tag.cg-no { background: rgba(255,93,108,.16); color: #ff9aa3; }
+  .tag.cg-yes { background: rgba(54,207,143,.16); color: #7ee6bd; }
+
+  .status-row { display: flex; align-items: center; gap: 8px; }
+  select.status {
+    flex: 1; appearance: none; border-radius: 9px; padding: 9px 10px; font-weight: 700;
+    font-size: 13px; border: 1px solid var(--line); background: var(--card-2); color: var(--txt);
+    cursor: pointer;
+  }
+  .dot { width: 10px; height: 10px; border-radius: 50%; flex: 0 0 auto; }
+  .dot.todo { background: var(--todo); } .dot.doing { background: var(--doing); } .dot.done { background: var(--done); }
+
+  .site .actions { position: absolute; top: 12px; right: 12px; display: flex; gap: 6px; }
+  .icon-btn {
+    width: 30px; height: 30px; border-radius: 8px; border: 1px solid var(--line);
+    background: var(--card-2); color: var(--muted); cursor: pointer; font-size: 14px;
+  }
+  .icon-btn:hover { color: #fff; }
+
+  .empty { text-align: center; color: var(--muted); padding: 50px 20px; border: 1px dashed var(--line); border-radius: 16px; }
+
+  /* note + email + files on card */
+  .note { font-size: 12.5px; color: #d7ddf7; background: var(--card-2); border-left: 3px solid var(--brand);
+    border-radius: 8px; padding: 8px 10px; margin: 0 0 10px; line-height: 1.45; white-space: pre-wrap; word-break: break-word; }
+  .line { display: flex; align-items: center; gap: 6px; font-size: 12.5px; color: var(--muted); margin-bottom: 6px; word-break: break-all; }
+  .line a { color: var(--brand); text-decoration: none; }
+  .line a:hover { text-decoration: underline; }
+  .files { display: flex; flex-direction: column; gap: 5px; margin-bottom: 12px; }
+  .file-link { display: flex; align-items: center; gap: 7px; font-size: 12px; color: #c7d0ff;
+    background: var(--card-2); border: 1px solid var(--line); border-radius: 8px; padding: 6px 9px; text-decoration: none; }
+  .file-link:hover { border-color: var(--brand); }
+
+  .field textarea {
+    width: 100%; border-radius: 10px; padding: 10px 12px; font-size: 14px; resize: vertical; min-height: 64px;
+    border: 1px solid var(--line); background: var(--card-2); color: var(--txt); font-family: inherit;
+  }
+  .field input[type=file] { padding: 8px; font-size: 12.5px; }
+  .filelist { display: flex; flex-direction: column; gap: 5px; margin-top: 8px; }
+  .filechip { display: flex; align-items: center; justify-content: space-between; gap: 8px;
+    background: var(--card-2); border: 1px solid var(--line); border-radius: 8px; padding: 6px 10px; font-size: 12px; }
+  .filechip button { border: 0; background: transparent; color: var(--danger); cursor: pointer; font-size: 14px; }
+  .hint { font-size: 11px; color: var(--muted); margin-top: 4px; }
+
+  /* modal */
+  .overlay {
+    position: fixed; inset: 0; background: rgba(6,8,18,.7); backdrop-filter: blur(3px);
+    display: none; align-items: center; justify-content: center; padding: 16px; z-index: 50;
+  }
+  .overlay.show { display: flex; }
+  .modal {
+    width: 100%; max-width: 460px; background: var(--card); border: 1px solid var(--line);
+    border-radius: 18px; padding: 22px; box-shadow: var(--shadow);
+  }
+  .modal h2 { font-size: 18px; margin-bottom: 14px; }
+  .field { margin-bottom: 12px; }
+  .field label { display: block; font-size: 12px; color: var(--muted); margin-bottom: 5px; font-weight: 600; }
+  .field input, .field select {
+    width: 100%; border-radius: 10px; padding: 10px 12px; font-size: 14px;
+    border: 1px solid var(--line); background: var(--card-2); color: var(--txt);
+  }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .modal-actions { display: flex; gap: 10px; justify-content: flex-end; margin-top: 18px; }
+  footer { text-align: center; color: var(--muted); font-size: 12px; margin-top: 34px; }
+
+  @media (max-width: 560px){ .stats { grid-template-columns: repeat(2,1fr); } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <div class="brand">
+      <div class="logo">SEO</div>
+      <div>
+        <h1>Suivi SEO des sites élèves</h1>
+        <p>Maison du Web · conciergerie & sous-location</p>
+      </div>
+    </div>
+    <button class="btn" onclick="openModal()"><span class="plus">+</span>Ajouter un site</button>
+  </header>
+
+  <div class="stats">
+    <div class="stat"><div class="n" id="s-total">0</div><div class="l">Sites au total</div></div>
+    <div class="stat todo"><div class="n" id="s-todo">0</div><div class="l">À faire</div></div>
+    <div class="stat doing"><div class="n" id="s-doing">0</div><div class="l">En cours</div></div>
+    <div class="stat done"><div class="n" id="s-done">0</div><div class="l">Terminés</div></div>
+  </div>
+
+  <div class="hoguet">
+    ⚠️ <b>Rappel Loi Hoguet :</b> pour un client <b>sans Carte G</b>, ne jamais utiliser
+    « gestion », « gestionnaire », « gestion locative » (ni « gestion Airbnb »).
+    Vocabulaire autorisé : conciergerie, location courte durée, location saisonnière, sous-location.
+  </div>
+
+  <div class="filters" id="filters">
+    <div class="chip active" data-f="all" onclick="setFilter('all',this)">Tous</div>
+    <div class="chip" data-f="todo" onclick="setFilter('todo',this)">À faire</div>
+    <div class="chip" data-f="doing" onclick="setFilter('doing',this)">En cours</div>
+    <div class="chip" data-f="done" onclick="setFilter('done',this)">Terminés</div>
+  </div>
+
+  <div class="grid" id="grid"></div>
+
+  <footer>Données enregistrées dans ton navigateur · Maison du Web</footer>
+</div>
+
+<!-- Modal -->
+<div class="overlay" id="overlay">
+  <div class="modal">
+    <h2 id="modal-title">Ajouter un site</h2>
+    <input type="hidden" id="f-id">
+    <div class="field">
+      <label>Nom du client</label>
+      <input id="f-name" placeholder="Ex : La Belle Vie Conciergerie">
+    </div>
+    <div class="field">
+      <label>URL du site</label>
+      <input id="f-url" placeholder="https://...">
+    </div>
+    <div class="two">
+      <div class="field">
+        <label>Activité</label>
+        <select id="f-activity">
+          <option value="Conciergerie">Conciergerie</option>
+          <option value="Sous-location">Sous-location</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Ville / zone</label>
+        <input id="f-city" placeholder="Ex : Dax">
+      </div>
+    </div>
+    <div class="two">
+      <div class="field">
+        <label>Carte G ?</label>
+        <select id="f-cg">
+          <option value="no">Non (vocabulaire restreint)</option>
+          <option value="yes">Oui</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Statut</label>
+        <select id="f-status">
+          <option value="todo">À faire</option>
+          <option value="doing">En cours</option>
+          <option value="done">Terminé</option>
+        </select>
+      </div>
+    </div>
+    <div class="field">
+      <label>E-mail du client</label>
+      <input id="f-email" type="email" placeholder="contact@client.fr">
+    </div>
+    <div class="field">
+      <label>Note de Camille</label>
+      <textarea id="f-note" placeholder="Ex : Yoast installé, manque les ALT sur la page Zones. Accès WP OK."></textarea>
+    </div>
+    <div class="field">
+      <label>Fichiers (captures, rapport, identifiants…)</label>
+      <input id="f-files" type="file" multiple onchange="addFiles(this.files)">
+      <div class="hint">Les fichiers sont enregistrés dans le navigateur. Privilégie des fichiers légers (captures, PDF).</div>
+      <div class="filelist" id="filelist"></div>
+    </div>
+    <div class="modal-actions">
+      <button class="btn ghost" onclick="closeModal()">Annuler</button>
+      <button class="btn" onclick="saveSite()">Enregistrer</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  const KEY = 'mdw_seo_sites';
+  const LABELS = { todo:'À faire', doing:'En cours', done:'Terminé' };
+  let sites = load();
+  let filter = 'all';
+  let formFiles = [];   // fichiers en cours d'édition dans le modal
+
+  function load(){ try { return JSON.parse(localStorage.getItem(KEY)) || []; } catch(e){ return []; } }
+  function save(){ localStorage.setItem(KEY, JSON.stringify(sites)); }
+  function uid(){ return Date.now().toString(36) + Math.random().toString(36).slice(2,6); }
+
+  function setFilter(f, el){
+    filter = f;
+    document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+    el.classList.add('active');
+    render();
+  }
+
+  function openModal(site){
+    document.getElementById('overlay').classList.add('show');
+    document.getElementById('modal-title').textContent = site ? 'Modifier le site' : 'Ajouter un site';
+    document.getElementById('f-id').value = site ? site.id : '';
+    document.getElementById('f-name').value = site ? site.name : '';
+    document.getElementById('f-url').value = site ? site.url : '';
+    document.getElementById('f-activity').value = site ? site.activity : 'Conciergerie';
+    document.getElementById('f-city').value = site ? site.city : '';
+    document.getElementById('f-cg').value = site ? site.cg : 'no';
+    document.getElementById('f-status').value = site ? site.status : 'todo';
+    document.getElementById('f-email').value = site ? (site.email || '') : '';
+    document.getElementById('f-note').value = site ? (site.note || '') : '';
+    document.getElementById('f-files').value = '';
+    formFiles = site && site.files ? site.files.map(f => ({...f})) : [];
+    renderFileList();
+    document.getElementById('f-name').focus();
+  }
+  function closeModal(){ document.getElementById('overlay').classList.remove('show'); }
+
+  // ----- Fichiers -----
+  function addFiles(fileList){
+    const arr = Array.from(fileList);
+    let pending = arr.length;
+    if(!pending) return;
+    arr.forEach(file => {
+      const reader = new FileReader();
+      reader.onload = e => {
+        formFiles.push({ name: file.name, type: file.type, dataUrl: e.target.result });
+        if(--pending === 0) renderFileList();
+      };
+      reader.readAsDataURL(file);
+    });
+    document.getElementById('f-files').value = '';
+  }
+  function removeFile(i){ formFiles.splice(i,1); renderFileList(); }
+  function renderFileList(){
+    const box = document.getElementById('filelist');
+    box.innerHTML = formFiles.map((f,i) =>
+      `<div class="filechip"><span>📎 ${esc(f.name)}</span><button type="button" onclick="removeFile(${i})" title="Retirer">✕</button></div>`
+    ).join('');
+  }
+
+  function saveSite(){
+    const id = document.getElementById('f-id').value;
+    const name = document.getElementById('f-name').value.trim();
+    if(!name){ alert('Indique au moins le nom du client.'); return; }
+    const data = {
+      id: id || uid(),
+      name,
+      url: document.getElementById('f-url').value.trim(),
+      activity: document.getElementById('f-activity').value,
+      city: document.getElementById('f-city').value.trim(),
+      cg: document.getElementById('f-cg').value,
+      status: document.getElementById('f-status').value,
+      email: document.getElementById('f-email').value.trim(),
+      note: document.getElementById('f-note').value.trim(),
+      files: formFiles.map(f => ({...f}))
+    };
+    try {
+    if(id){ sites = sites.map(s => s.id === id ? data : s); }
+    else { sites.unshift(data); }
+      save();
+    } catch(e){
+      alert("Impossible d'enregistrer : les fichiers sont peut-être trop volumineux pour le stockage du navigateur. Réessaie avec des fichiers plus légers.");
+      return;
+    }
+    closeModal(); render();
+  }
+
+  function editSite(id){ openModal(sites.find(s => s.id === id)); }
+  function delSite(id){
+    if(confirm('Supprimer ce site du suivi ?')){ sites = sites.filter(s => s.id !== id); save(); render(); }
+  }
+  function changeStatus(id, val){
+    sites = sites.map(s => s.id === id ? {...s, status: val} : s); save(); render();
+  }
+
+  function render(){
+    const grid = document.getElementById('grid');
+    document.getElementById('s-total').textContent = sites.length;
+    document.getElementById('s-todo').textContent  = sites.filter(s=>s.status==='todo').length;
+    document.getElementById('s-doing').textContent = sites.filter(s=>s.status==='doing').length;
+    document.getElementById('s-done').textContent  = sites.filter(s=>s.status==='done').length;
+
+    const list = sites.filter(s => filter === 'all' || s.status === filter);
+    if(list.length === 0){
+      grid.innerHTML = '<div class="empty">Aucun site ici pour le moment.<br>Clique sur « + Ajouter un site » pour commencer.</div>';
+      return;
+    }
+    grid.innerHTML = list.map(s => `
+      <div class="site">
+        <div class="actions">
+          <button class="icon-btn" title="Modifier" onclick="editSite('${s.id}')">✎</button>
+          <button class="icon-btn" title="Supprimer" onclick="delSite('${s.id}')">🗑</button>
+        </div>
+        <div class="row1">
+          <div>
+            <h3>${esc(s.name)}</h3>
+            ${s.url ? `<a class="url" href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.url)}</a>` : '<span class="url" style="color:var(--muted)">pas d\'URL</span>'}
+          </div>
+        </div>
+        <div class="meta">
+          <span class="tag act">${esc(s.activity)}</span>
+          ${s.city ? `<span class="tag city">📍 ${esc(s.city)}</span>` : ''}
+          <span class="tag ${s.cg==='yes'?'cg-yes':'cg-no'}">${s.cg==='yes'?'Carte G ✓':'Sans Carte G'}</span>
+        </div>
+        ${s.email ? `<div class="line">✉️ <a href="mailto:${esc(s.email)}">${esc(s.email)}</a></div>` : ''}
+        ${s.note ? `<div class="note">${esc(s.note)}</div>` : ''}
+        ${(s.files && s.files.length) ? `<div class="files">${s.files.map(f =>
+          `<a class="file-link" href="${f.dataUrl}" download="${esc(f.name)}">📎 ${esc(f.name)}</a>`).join('')}</div>` : ''}
+        <div class="status-row">
+          <span class="dot ${s.status}"></span>
+          <select class="status" onchange="changeStatus('${s.id}', this.value)">
+            <option value="todo"  ${s.status==='todo'?'selected':''}>À faire</option>
+            <option value="doing" ${s.status==='doing'?'selected':''}>En cours</option>
+            <option value="done"  ${s.status==='done'?'selected':''}>Terminé</option>
+          </select>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  function esc(str){ return (str||'').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+
+  document.getElementById('overlay').addEventListener('click', e => { if(e.target.id === 'overlay') closeModal(); });
+  document.addEventListener('keydown', e => { if(e.key === 'Escape') closeModal(); });
+
+  // Démo au premier lancement
+  if(sites.length === 0){
+    sites = [
+      { id: uid(), name:'La Belle Vie Conciergerie', url:'https://labellevieconciergerie.fr', activity:'Conciergerie', city:'Dax', cg:'no', status:'doing' },
+      { id: uid(), name:'Exemple — site terminé', url:'', activity:'Conciergerie', city:'Bayonne', cg:'no', status:'done' },
+      { id: uid(), name:'Exemple — sous-location', url:'', activity:'Sous-location', city:'Pau', cg:'yes', status:'todo' }
+    ];
+    save();
+  }
+  render();
+</script>
+</body>
+</html>
