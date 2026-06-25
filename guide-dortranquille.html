@@ -49,6 +49,16 @@
   .card .ttl{font-size:14.5px;font-weight:700;margin:2px 0 8px}
   .card.done{opacity:.55}
 
+  .pagelink{display:inline-flex;align-items:center;gap:5px;font-size:12.5px;font-weight:700;
+    color:var(--brown);text-decoration:none;background:var(--gold-soft);padding:5px 11px;
+    border-radius:7px;margin-bottom:8px}
+  .pagelink:hover{background:#dcc28f}
+  .loc{font-size:12.5px;color:#6b5a47;background:#faf6ee;border-radius:8px;padding:8px 11px;margin-bottom:9px}
+  .loc b{color:var(--brown)}
+  ol.substeps{margin:10px 0 0 8px;padding-left:18px;display:flex;flex-direction:column;gap:7px}
+  ol.substeps li{font-size:13.5px;line-height:1.45}
+  ol.substeps li b{color:var(--brown)}
+  .note{font-size:12px;color:#897a68;font-style:italic;margin-top:6px}
   .ba{display:flex;flex-direction:column;gap:8px}
   .line{border-radius:9px;padding:9px 11px;font-size:13.5px}
   .line.no{background:var(--red-bg);border:1px solid #f3cfca}
@@ -114,8 +124,9 @@
   <div id="step3"></div>
 
   <!-- ÉTAPE 4 : TECHNIQUE -->
-  <h2 class="section"><span class="num">4</span> Réglages techniques</h2>
-  <ul class="tech" id="step4"></ul>
+  <h2 class="section"><span class="num">4</span> Réglages techniques (pas à pas)</h2>
+  <div class="hint">Tu ne connais pas ? Pas de panique : suis chaque point dans l'ordre, clic par clic.</div>
+  <div id="step4"></div>
 
   <button class="reset" onclick="resetAll()">↺ Réinitialiser mes cases cochées</button>
   <footer>Maison du Web · à appliquer puis passer le site en « Terminé » dans le suivi.</footer>
@@ -123,38 +134,57 @@
 
 <script>
   // ---------- DONNÉES ----------
+  const URLS = {
+    'Accueil':'https://dortranquille.fr/',
+    'À propos':'https://dortranquille.fr/a-propos/',
+    'Services':'https://dortranquille.fr/services/',
+    'Contact':'https://dortranquille.fr/contact/',
+    'Blog':'https://dortranquille.fr/blog/',
+  };
+
   const textFixes = [
-    {page:'Accueil', ttl:'Sur-titre de section',
+    {page:'Accueil', url:'https://dortranquille.fr/', ttl:'Sur-titre de section',
+      loc:'En haut, juste au-dessus du grand titre « Un Accompagnement Humain Et Professionnel Aux 2 Alpes ».',
       no:'Une Gestion Sereine Pour Votre Location Courte Durée',
       ok:'Un Accompagnement Serein Pour Votre Location Courte Durée'},
-    {page:'Accueil', ttl:'Témoignage de Miley Houdson',
+    {page:'Accueil', url:'https://dortranquille.fr/', ttl:'Témoignage de Miley Houdson',
+      loc:'Section « avis / témoignages » (bas de la page d’accueil), 1er témoignage (Miley Houdson, 5 étoiles).',
       no:'…tout au long de la gestion de notre logement.',
       ok:'…tout au long de l’accompagnement de notre logement.'},
-    {page:'À propos', ttl:'Paragraphe « Une Nouvelle Vie… » (3e §)',
+    {page:'À propos', url:'https://dortranquille.fr/a-propos/', ttl:'Paragraphe « Une Nouvelle Vie… » (3e §)',
+      loc:'Bloc de texte « Une Nouvelle Vie Au Cœur Des 2 Alpes », 3e paragraphe.',
       no:'…accompagne les propriétaires dans la gestion de leur location courte durée…',
       ok:'…accompagne les propriétaires dans la prise en charge de leur location courte durée…'},
-    {page:'À propos', ttl:'Carte de valeur « Confiance »',
+    {page:'À propos', url:'https://dortranquille.fr/a-propos/', ttl:'Carte de valeur « Confiance »',
+      loc:'Section « Une Conciergerie Fondée Sur L’humain » — 3e carte (Confiance, icône cœur).',
       no:'Un accompagnement sérieux pour gérer votre bien sereinement.',
       ok:'Un accompagnement sérieux pour prendre soin de votre bien sereinement.'},
-    {page:'À propos', ttl:'Bandeau du bas (CTA)',
+    {page:'À propos', url:'https://dortranquille.fr/a-propos/', ttl:'Bandeau du bas (CTA)',
+      loc:'Bandeau sombre en bas de page « Confiez Votre Location Courte Durée À D’Or Tranquille », sous-titre.',
       no:'…pour gérer votre logement aux 2 Alpes en toute sérénité.',
       ok:'…pour prendre soin de votre logement aux 2 Alpes en toute sérénité.'},
-    {page:'Services', ttl:'Bloc « Pourquoi Choisir » — titre',
+    {page:'Services', url:'https://dortranquille.fr/services/', ttl:'Bloc « Pourquoi Choisir » — titre',
+      loc:'Section « Une Conciergerie Basée Sur La Confiance Et La Qualité » — bloc avec l’icône Airbnb.',
       no:'Gestion Sérieuse',
       ok:'Suivi Sérieux'},
-    {page:'Services', ttl:'Carte « Gestion Du Linge » — titre',
+    {page:'Services', url:'https://dortranquille.fr/services/', ttl:'Carte « Gestion Du Linge » — titre',
+      loc:'Section « Nos Services » — 2e carte (image de linge blanc).',
       no:'Gestion Du Linge',
       ok:'Coordination Du Linge'},
-    {page:'Services', ttl:'Carte linge — texte',
+    {page:'Services', url:'https://dortranquille.fr/services/', ttl:'Carte linge — texte',
+      loc:'Même carte que ci-dessus (texte sous le titre).',
       no:'Gestion du linge avec une attention particulière au confort et à la propreté.',
       ok:'Coordination du linge avec une attention particulière au confort et à la propreté.'},
-    {page:'Contact', ttl:'Formulaire — champ mal orthographié',
+    {page:'Contact', url:'https://dortranquille.fr/contact/', ttl:'Formulaire — champ mal orthographié',
+      loc:'Formulaire de contact — le 4e champ (entre « Numéro de téléphone » et « Message »).',
       no:'Sujette',
       ok:'Sujet'},
-    {page:'Pied de page', ttl:'Footer (Theme Builder — à faire UNE fois)',
+    {page:'Pied de page', url:'', ttl:'Footer (Theme Builder — à faire UNE fois)',
+      loc:'WordPress → Templates → Theme Builder → Footer. Texte sous le logo (colonne de gauche). S’applique à toutes les pages.',
       no:'…pour valoriser et gérer votre location courte durée aux 2 Alpes.',
       ok:'…pour valoriser et prendre soin de votre location courte durée aux 2 Alpes.'},
-    {page:'Partout', ttl:'Orthographe de la marque',
+    {page:'Partout', url:'', ttl:'Orthographe de la marque',
+      loc:'Sur toutes les pages, partout où le texte écrit « D’or ».',
       no:'D’or Tranquille (dans les textes)',
       ok:'D’Or Tranquille (remplacer « D’or » par « D’Or » dans les textes — le logo reste tel quel)'},
   ];
@@ -191,14 +221,53 @@
   ];
 
   const tech = [
-    'Indexation ON : Réglages → Lecture → décocher « Demander aux moteurs de ne pas indexer ».',
-    'Permaliens : Réglages → Permaliens → « Titre de la publication ».',
-    'Search Console : valider le site + soumettre le sitemap /sitemap_index.xml.',
-    'Cache actif (LiteSpeed) + images en WebP (Converter for Media).',
-    'Vérifier que le site est bien accessible publiquement (pas d’erreur 403).',
-    'Blog : retirer les ** du titre « **Nos Articles & Conseils » (on garde la page).',
-    'Fiche Google Business : catégorie « Service de conciergerie », mêmes nom/adresse/téléphone que le site, zone Les 2 Alpes, photos, description sans « gestion ».',
-    'Vérif finale : Ctrl+F « gestion » sur chaque page → il ne doit plus rien rester.',
+    {ttl:'1. Rendre le site visible par Google (indexation)', steps:[
+      'Connecte-toi à WordPress : tape <b>dortranquille.fr/wp-admin</b> (identifiant camille).',
+      'Dans le menu noir à gauche, clique sur <b>Réglages</b>, puis <b>Lecture</b>.',
+      'Tout en bas, repère la case <b>« Demander aux moteurs de recherche de ne pas indexer ce site »</b>.',
+      'Cette case doit être <b>DÉCOCHÉE</b> (sinon Google ignore le site).',
+      'Clique le bouton <b>Enregistrer les modifications</b>.',
+    ]},
+    {ttl:'2. Mettre des adresses de pages propres (permaliens)', steps:[
+      'Menu de gauche → <b>Réglages</b> → <b>Permaliens</b>.',
+      'Coche l’option <b>« Titre de la publication »</b> (ou « Nom de l’article »).',
+      'Clique <b>Enregistrer les modifications</b>.',
+    ]},
+    {ttl:'3. Inscrire le site sur Google (Search Console)', steps:[
+      'Va sur <b>search.google.com/search-console</b> et connecte-toi avec le compte Google de l’entreprise.',
+      'Clique <b>Ajouter une propriété</b> → choisis « Préfixe d’URL » → tape <b>https://dortranquille.fr</b>.',
+      'Pour valider : le plus simple est via Yoast (WordPress → <b>Yoast SEO → Réglages → Connexions de sites</b>, colle le code fourni par Google).',
+      'Une fois validé, dans Search Console : menu <b>Sitemaps</b> → tape <b>sitemap_index.xml</b> → <b>Envoyer</b>.',
+    ]},
+    {ttl:'4. Accélérer le site (cache + images légères)', steps:[
+      'Le site est sur <b>Hostinger</b> : le cache <b>LiteSpeed</b> est souvent déjà installé. Vérifie dans Extensions que « LiteSpeed Cache » est <b>activé</b>.',
+      'Installe le plugin <b>« Converter for Media »</b> : menu <b>Extensions → Ajouter</b> → cherche-le → Installer → Activer.',
+      'Lance la conversion : il transforme les images en <b>WebP</b> (format plus léger = site plus rapide).',
+    ]},
+    {ttl:'5. Vérifier que le site est bien accessible (lever le 403)', steps:[
+      'Ouvre <b>dortranquille.fr</b> dans une fenêtre de navigation <b>privée</b> (pas connectée).',
+      'Si tu vois une erreur <b>403</b> ou une page « bientôt en ligne » : il y a un mode maintenance / mot de passe à enlever.',
+      'Cherche un plugin de maintenance (ex : « Coming Soon », « Maintenance ») et <b>désactive-le</b>, ou décoche l’option dans le thème.',
+      '⚠️ Tant que le site est bloqué, Google ne peut pas le référencer.',
+    ]},
+    {ttl:'6. Corriger le titre du Blog', steps:[
+      'Ouvre la page <b>Blog</b> avec Elementor.',
+      'Clique sur le titre <b>« **Nos Articles & Conseils »</b>.',
+      'Enlève les deux étoiles <b>**</b> au début → il doit rester « Nos Articles & Conseils ».',
+      '(On garde la page telle quelle, l’article viendra plus tard.)',
+    ]},
+    {ttl:'7. Créer / optimiser la fiche Google Business', steps:[
+      'Va sur <b>business.google.com</b> et connecte-toi avec le compte Google de l’entreprise.',
+      'Catégorie principale : <b>« Service de conciergerie »</b> — <b>jamais</b> une catégorie avec « gestion immobilière ».',
+      'Renseigne EXACTEMENT comme sur le site : nom <b>D’Or Tranquille</b>, tél <b>06 88 21 58 30</b>, zone <b>Les 2 Alpes</b>, horaires, photos.',
+      'Description <b>sans le mot « gestion »</b>.',
+      'Partage l’accès à <b>service@maisonduweb.fr</b>.',
+    ]},
+    {ttl:'8. Vérification finale (le plus important !)', steps:[
+      'Ouvre chaque page <b>publiée</b> du site (Accueil, À propos, Services, Contact).',
+      'Fais <b>Ctrl + F</b> (ou Cmd + F sur Mac) et tape <b>« gestion »</b>.',
+      'Il ne doit <b>plus y avoir aucun résultat</b>. Si un reste, corrige-le.',
+    ]},
   ];
 
   // ---------- RENDU ----------
@@ -224,8 +293,10 @@
 
   // Étape 1
   document.getElementById('step1').innerHTML = textFixes.map(f=>card(
-    `<div class="where">${f.page}</div>
+    `<div class="where">📄 Page : ${f.page}</div>
      <div class="ttl">${f.ttl}</div>
+     ${f.url?`<a class="pagelink" href="${f.url}" target="_blank" rel="noopener">👉 Ouvrir la page « ${f.page} » ↗</a>`:''}
+     <div class="loc">📍 <b>Où sur la page :</b> ${escapeHtml(f.loc)}</div>
      <div class="ba">
        <div class="line no"><span class="tag">AVANT</span>${escapeHtml(f.no)}</div>
        <div class="line ok"><span class="tag">APRÈS</span>${escapeHtml(f.ok)}</div>
@@ -235,7 +306,8 @@
 
   // Étape 2
   document.getElementById('step2').innerHTML = yoast.map(y=>card(
-    `<div class="where">${y.page}</div>
+    `<div class="where">📄 Page : ${y.page}</div>
+     ${URLS[y.page]?`<a class="pagelink" href="${URLS[y.page]}" target="_blank" rel="noopener">👉 Ouvrir la page « ${y.page} » ↗</a>`:''}
      <div class="yoast">
        <div class="row">${box('Titre SEO',y.title)}</div>
        <div class="row">${box('Méta description',y.meta)}</div>
@@ -251,11 +323,10 @@
   );
 
   // Étape 4
-  document.getElementById('step4').innerHTML = tech.map(t=>{
-    const id='c'+(idc++);
-    return `<li><input type="checkbox" class="chk" id="${id}" ${checks[id]?'checked':''} onchange="toggle('${id}')">
-      <span>${escapeHtml(t)}</span></li>`;
-  }).join('');
+  document.getElementById('step4').innerHTML = tech.map(t=>card(
+    `<div class="ttl">${t.ttl}</div>
+     <ol class="substeps">${t.steps.map(s=>`<li>${s}</li>`).join('')}</ol>`
+  )).join('');
 
   document.getElementById('ptot').textContent = idc;
   updateProgress();
