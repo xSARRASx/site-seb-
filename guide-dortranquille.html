@@ -115,7 +115,7 @@
 
   <!-- ÉTAPE 2 : YOAST -->
   <h2 class="section"><span class="num">2</span> Titre & description Google (Yoast)</h2>
-  <div class="hint">Page → bloc « Yoast SEO » sous l'éditeur → « Édition de l'extrait Google » → colle dans Titre SEO, Méta description et Requête cible.</div>
+  <div class="hint">Ouvre la page (Pages → la page → Modifier) → clique l'icône <b>« Y »</b> colorée en haut à droite → colle le <b>Mot-clé principal</b>, puis ouvre <b>« Apparence de recherche »</b> pour le <b>Titre SEO</b> + la <b>Méta-description</b>. Les 2 barres doivent être <b>VERTES</b> 🟢, puis <b>Sauvegarder</b>. (La « limace » = fin de l'URL : laisse telle quelle si déjà propre.)</div>
   <div id="step2"></div>
 
   <!-- ÉTAPE 3 : IMAGES -->
@@ -190,25 +190,25 @@
   ];
 
   const yoast = [
-    {page:'Accueil',
+    {page:'Accueil', slug:'accueil',
       title:`Conciergerie Airbnb Les 2 Alpes | D'Or Tranquille`,
-      meta:`Conciergerie aux 2 Alpes : accueil des voyageurs, ménage, linge et optimisation de vos annonces. Confiez votre location courte durée à D'Or Tranquille.`,
+      meta:`Conciergerie Airbnb aux 2 Alpes : accueil, ménage, linge et optimisation de vos annonces. Location courte durée en toute sérénité.`,
       kw:`conciergerie Airbnb Les 2 Alpes`},
-    {page:'À propos',
+    {page:'À propos', slug:'a-propos',
       title:`Conciergerie Les 2 Alpes : à propos de D'Or Tranquille`,
-      meta:`Découvrez D'Or Tranquille, votre conciergerie aux 2 Alpes : une reconversion passionnée, l'exigence du service et la proximité au cœur de la station.`,
+      meta:`Découvrez D'Or Tranquille, conciergerie aux 2 Alpes : reconversion passionnée, exigence du service et proximité au cœur de la station.`,
       kw:`conciergerie Les 2 Alpes`},
-    {page:'Services',
+    {page:'Services', slug:'services',
       title:`Conciergerie Airbnb Les 2 Alpes : ménage, accueil & annonces`,
-      meta:`Ménage, linge, check-in/out, création d'annonces et optimisation : découvrez les services de conciergerie de D'Or Tranquille aux 2 Alpes.`,
+      meta:`Ménage, linge, check-in/out, création et optimisation d'annonces : tous les services de conciergerie de D'Or Tranquille aux 2 Alpes.`,
       kw:`services de conciergerie Les 2 Alpes`},
-    {page:'Contact',
+    {page:'Contact', slug:'contact',
       title:`Contact – Conciergerie Les 2 Alpes | D'Or Tranquille`,
-      meta:`Contactez D'Or Tranquille, conciergerie aux 2 Alpes. Prenez rendez-vous en ligne ou appelez le 06 88 21 58 30. Parlons de votre location courte durée.`,
+      meta:`Contactez D'Or Tranquille, conciergerie aux 2 Alpes. Prenez rendez-vous en ligne ou appelez le 06 88 21 58 30.`,
       kw:`conciergerie Les 2 Alpes contact`},
-    {page:'Blog',
+    {page:'Blog', slug:'blog',
       title:`Blog conciergerie & location courte durée | D'Or Tranquille`,
-      meta:`Conseils et actualités pour propriétaires en location courte durée aux 2 Alpes : optimisation, accueil des voyageurs et bonnes pratiques par D'Or Tranquille.`,
+      meta:`Conseils et actualités pour propriétaires en location courte durée aux 2 Alpes : optimisation, accueil voyageurs et bonnes pratiques.`,
       kw:`conciergerie Les 2 Alpes blog`},
   ];
 
@@ -309,9 +309,10 @@
     `<div class="where">📄 Page : ${y.page}</div>
      ${URLS[y.page]?`<a class="pagelink" href="${URLS[y.page]}" target="_blank" rel="noopener">👉 Ouvrir la page « ${y.page} » ↗</a>`:''}
      <div class="yoast">
+       <div class="row">${box('Mot-clé principal',y.kw)}</div>
        <div class="row">${box('Titre SEO',y.title)}</div>
-       <div class="row">${box('Méta description',y.meta)}</div>
-       <div class="row">${box('Requête cible (mot-clé)',y.kw)}</div>
+       <div class="row">${box('Méta-description (version courte = barre verte)',y.meta)}</div>
+       <div class="row">${box('Limace / slug',y.slug)}</div>
      </div>`
   )).join('');
 
