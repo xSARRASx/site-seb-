@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guide SEO — D'Or Tranquille</title>
+<style>
+  :root{
+    --brown:#5a3e2b; --brown-2:#7a5640; --gold:#c79a4b; --gold-soft:#e7d3a8;
+    --bg:#f7f1e8; --card:#ffffff; --txt:#3a2c20; --muted:#897a68;
+    --green:#2e9e6b; --green-bg:#e6f6ee; --red:#c0392b; --red-bg:#fdeceb;
+    --line:#ece0cd; --shadow:0 8px 24px rgba(90,62,43,.10);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:var(--bg);color:var(--txt);line-height:1.5;padding:0 16px 80px}
+  .wrap{max-width:860px;margin:0 auto}
+
+  header{background:linear-gradient(135deg,var(--brown),var(--brown-2));color:#fff;
+    border-radius:0 0 22px 22px;padding:26px 24px 24px;box-shadow:var(--shadow);margin-bottom:22px}
+  header .badge{display:inline-block;background:rgba(255,255,255,.15);color:var(--gold-soft);
+    font-size:12px;font-weight:700;padding:4px 10px;border-radius:999px;letter-spacing:.5px}
+  header h1{font-size:24px;margin:10px 0 4px}
+  header p{font-size:13.5px;color:#e9ddcb;opacity:.95}
+  .progress-wrap{margin-top:16px}
+  .progress-bar{height:9px;background:rgba(255,255,255,.2);border-radius:999px;overflow:hidden}
+  .progress-fill{height:100%;width:0;background:var(--gold);transition:width .3s}
+  .progress-txt{font-size:12px;color:#e9ddcb;margin-top:6px}
+
+  .rule{background:#fff7e9;border:1px solid var(--gold);border-left:5px solid var(--gold);
+    border-radius:12px;padding:14px 16px;margin-bottom:24px;font-size:13.5px}
+  .rule b{color:var(--brown)}
+  .rule .ok{color:var(--green);font-weight:700}
+  .rule .no{color:var(--red);font-weight:700}
+
+  h2.section{font-size:18px;margin:30px 0 14px;display:flex;align-items:center;gap:10px}
+  h2.section .num{background:var(--brown);color:#fff;width:28px;height:28px;border-radius:8px;
+    display:grid;place-items:center;font-size:14px;flex:0 0 auto}
+  .hint{font-size:13px;color:#897a68;margin:-6px 0 14px;padding-left:38px}
+
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;
+    padding:14px 16px;margin-bottom:12px;box-shadow:var(--shadow)}
+  .card .top{display:flex;align-items:flex-start;gap:10px}
+  .chk{appearance:none;width:22px;height:22px;border:2px solid var(--gold);border-radius:6px;
+    cursor:pointer;flex:0 0 auto;margin-top:2px;position:relative;transition:.15s}
+  .chk:checked{background:var(--green);border-color:var(--green)}
+  .chk:checked::after{content:"✓";color:#fff;position:absolute;inset:0;display:grid;place-items:center;font-size:14px;font-weight:800}
+  .card .where{font-size:12px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:.4px}
+  .card .ttl{font-size:14.5px;font-weight:700;margin:2px 0 8px}
+  .card.done{opacity:.55}
+
+  .ba{display:flex;flex-direction:column;gap:8px}
+  .line{border-radius:9px;padding:9px 11px;font-size:13.5px}
+  .line.no{background:var(--red-bg);border:1px solid #f3cfca}
+  .line.ok{background:var(--green-bg);border:1px solid #c4e8d6}
+  .line .tag{font-size:11px;font-weight:800;display:inline-block;margin-right:6px}
+  .line.no .tag{color:var(--red)} .line.ok .tag{color:var(--green)}
+
+  .copy{margin-top:8px;display:flex;gap:8px;flex-wrap:wrap}
+  .copy-box{flex:1;min-width:200px;background:#faf6ee;border:1px dashed var(--gold);
+    border-radius:9px;padding:8px 10px;font-size:13px;font-family:ui-monospace,Menlo,Consolas,monospace;
+    word-break:break-word}
+  .copy-box .lbl{display:block;font-size:10.5px;font-weight:800;color:var(--gold);
+    text-transform:uppercase;letter-spacing:.4px;margin-bottom:3px;font-family:inherit}
+  button.btn{border:0;cursor:pointer;background:var(--brown);color:#fff;font-weight:700;
+    border-radius:8px;padding:8px 12px;font-size:12.5px;white-space:nowrap;transition:.15s}
+  button.btn:hover{background:var(--brown-2)}
+  button.btn.copied{background:var(--green)}
+  .yoast{display:flex;flex-direction:column;gap:8px}
+  .yoast .row{display:flex;gap:8px;align-items:stretch}
+  .yoast .row .copy-box{display:flex;flex-direction:column;justify-content:center}
+
+  ul.tech{list-style:none;display:flex;flex-direction:column;gap:8px}
+  ul.tech li{display:flex;gap:10px;align-items:flex-start;background:var(--card);
+    border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:13.5px}
+  footer{text-align:center;color:#897a68;font-size:12.5px;margin-top:30px}
+  .reset{background:none;border:1px solid var(--line);color:#897a68;border-radius:8px;
+    padding:6px 12px;font-size:12px;cursor:pointer;margin-top:10px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <span class="badge">GUIDE SEO · MAISON DU WEB</span>
+    <h1>D'Or Tranquille — corrections à faire</h1>
+    <p>Conciergerie · Les 2 Alpes · site dortranquille.fr</p>
+    <div class="progress-wrap">
+      <div class="progress-bar"><div class="progress-fill" id="fill"></div></div>
+      <div class="progress-txt"><span id="pdone">0</span> / <span id="ptot">0</span> tâches faites</div>
+    </div>
+  </header>
+
+  <div class="rule">
+    ⚖️ <b>La règle d'or (Loi Hoguet)</b> — le client n'a <b>pas la Carte G</b>.
+    <span class="no">Interdit :</span> gestion, gestionnaire, gérer.
+    <span class="ok">Autorisé :</span> conciergerie, location courte durée, prise en charge, accompagnement, optimisation.
+    <br>👉 Astuce : à la fin, fais <b>Ctrl + F « gestion »</b> sur chaque page pour vérifier qu'il n'en reste plus.
+  </div>
+
+  <!-- ÉTAPE 1 : TEXTES -->
+  <h2 class="section"><span class="num">1</span> Corriger les textes</h2>
+  <div class="hint">Dans WordPress : ouvre la page → bouton « Edit with Elementor » → clique le texte → corrige → bouton vert « Mettre à jour ».</div>
+  <div id="step1"></div>
+
+  <!-- ÉTAPE 2 : YOAST -->
+  <h2 class="section"><span class="num">2</span> Titre & description Google (Yoast)</h2>
+  <div class="hint">Page → bloc « Yoast SEO » sous l'éditeur → « Édition de l'extrait Google » → colle dans Titre SEO, Méta description et Requête cible.</div>
+  <div id="step2"></div>
+
+  <!-- ÉTAPE 3 : IMAGES -->
+  <h2 class="section"><span class="num">3</span> Textes ALT des images</h2>
+  <div class="hint">Clique une image → champ « Texte alternatif » → colle un de ces textes selon l'image.</div>
+  <div id="step3"></div>
+
+  <!-- ÉTAPE 4 : TECHNIQUE -->
+  <h2 class="section"><span class="num">4</span> Réglages techniques</h2>
+  <ul class="tech" id="step4"></ul>
+
+  <button class="reset" onclick="resetAll()">↺ Réinitialiser mes cases cochées</button>
+  <footer>Maison du Web · à appliquer puis passer le site en « Terminé » dans le suivi.</footer>
+</div>
+
+<script>
+  // ---------- DONNÉES ----------
+  const textFixes = [
+    {page:'Accueil', ttl:'Sur-titre de section',
+      no:'Une Gestion Sereine Pour Votre Location Courte Durée',
+      ok:'Un Accompagnement Serein Pour Votre Location Courte Durée'},
+    {page:'Accueil', ttl:'Témoignage de Miley Houdson',
+      no:'…tout au long de la gestion de notre logement.',
+      ok:'…tout au long de l’accompagnement de notre logement.'},
+    {page:'À propos', ttl:'Paragraphe « Une Nouvelle Vie… » (3e §)',
+      no:'…accompagne les propriétaires dans la gestion de leur location courte durée…',
+      ok:'…accompagne les propriétaires dans la prise en charge de leur location courte durée…'},
+    {page:'À propos', ttl:'Carte de valeur « Confiance »',
+      no:'Un accompagnement sérieux pour gérer votre bien sereinement.',
+      ok:'Un accompagnement sérieux pour prendre soin de votre bien sereinement.'},
+    {page:'À propos', ttl:'Bandeau du bas (CTA)',
+      no:'…pour gérer votre logement aux 2 Alpes en toute sérénité.',
+      ok:'…pour prendre soin de votre logement aux 2 Alpes en toute sérénité.'},
+    {page:'Services', ttl:'Bloc « Pourquoi Choisir » — titre',
+      no:'Gestion Sérieuse',
+      ok:'Suivi Sérieux'},
+    {page:'Services', ttl:'Carte « Gestion Du Linge » — titre',
+      no:'Gestion Du Linge',
+      ok:'Coordination Du Linge'},
+    {page:'Services', ttl:'Carte linge — texte',
+      no:'Gestion du linge avec une attention particulière au confort et à la propreté.',
+      ok:'Coordination du linge avec une attention particulière au confort et à la propreté.'},
+    {page:'Contact', ttl:'Formulaire — champ mal orthographié',
+      no:'Sujette',
+      ok:'Sujet'},
+    {page:'Pied de page', ttl:'Footer (Theme Builder — à faire UNE fois)',
+      no:'…pour valoriser et gérer votre location courte durée aux 2 Alpes.',
+      ok:'…pour valoriser et prendre soin de votre location courte durée aux 2 Alpes.'},
+    {page:'Partout', ttl:'Orthographe de la marque',
+      no:'D’or Tranquille (dans les textes)',
+      ok:'D’Or Tranquille (remplacer « D’or » par « D’Or » dans les textes — le logo reste tel quel)'},
+  ];
+
+  const yoast = [
+    {page:'Accueil',
+      title:`Conciergerie Airbnb Les 2 Alpes | D'Or Tranquille`,
+      meta:`Conciergerie aux 2 Alpes : accueil des voyageurs, ménage, linge et optimisation de vos annonces. Confiez votre location courte durée à D'Or Tranquille.`,
+      kw:`conciergerie Airbnb Les 2 Alpes`},
+    {page:'À propos',
+      title:`Conciergerie Les 2 Alpes : à propos de D'Or Tranquille`,
+      meta:`Découvrez D'Or Tranquille, votre conciergerie aux 2 Alpes : une reconversion passionnée, l'exigence du service et la proximité au cœur de la station.`,
+      kw:`conciergerie Les 2 Alpes`},
+    {page:'Services',
+      title:`Conciergerie Airbnb Les 2 Alpes : ménage, accueil & annonces`,
+      meta:`Ménage, linge, check-in/out, création d'annonces et optimisation : découvrez les services de conciergerie de D'Or Tranquille aux 2 Alpes.`,
+      kw:`services de conciergerie Les 2 Alpes`},
+    {page:'Contact',
+      title:`Contact – Conciergerie Les 2 Alpes | D'Or Tranquille`,
+      meta:`Contactez D'Or Tranquille, conciergerie aux 2 Alpes. Prenez rendez-vous en ligne ou appelez le 06 88 21 58 30. Parlons de votre location courte durée.`,
+      kw:`conciergerie Les 2 Alpes contact`},
+    {page:'Blog',
+      title:`Blog conciergerie & location courte durée | D'Or Tranquille`,
+      meta:`Conseils et actualités pour propriétaires en location courte durée aux 2 Alpes : optimisation, accueil des voyageurs et bonnes pratiques par D'Or Tranquille.`,
+      kw:`conciergerie Les 2 Alpes blog`},
+  ];
+
+  const alts = [
+    'conciergerie Airbnb Les 2 Alpes',
+    'ménage location courte durée Les 2 Alpes',
+    'coordination du linge conciergerie Les 2 Alpes',
+    'check-in voyageurs Les 2 Alpes',
+    'chalet en location courte durée Les 2 Alpes',
+  ];
+
+  const tech = [
+    'Indexation ON : Réglages → Lecture → décocher « Demander aux moteurs de ne pas indexer ».',
+    'Permaliens : Réglages → Permaliens → « Titre de la publication ».',
+    'Search Console : valider le site + soumettre le sitemap /sitemap_index.xml.',
+    'Cache actif (LiteSpeed) + images en WebP (Converter for Media).',
+    'Vérifier que le site est bien accessible publiquement (pas d’erreur 403).',
+    'Blog : retirer les ** du titre « **Nos Articles & Conseils » (on garde la page).',
+    'Fiche Google Business : catégorie « Service de conciergerie », mêmes nom/adresse/téléphone que le site, zone Les 2 Alpes, photos, description sans « gestion ».',
+    'Vérif finale : Ctrl+F « gestion » sur chaque page → il ne doit plus rien rester.',
+  ];
+
+  // ---------- RENDU ----------
+  let idc=0;
+  const KEY='dort_guide_checks';
+  let checks = JSON.parse(localStorage.getItem(KEY)||'{}');
+
+  function box(label,val){
+    return `<div class="copy-box"><span class="lbl">${label}</span>${escapeHtml(val)}</div>
+      <button class="btn" onclick="copy(this,\`${val.replace(/`/g,'\\`')}\`)">📋 Copier</button>`;
+  }
+  function escapeHtml(s){return s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));}
+
+  function card(inner){
+    const id='c'+(idc++);
+    const done=checks[id]?'checked':'';
+    return `<div class="card ${checks[id]?'done':''}" id="card-${id}">
+      <div class="top">
+        <input type="checkbox" class="chk" id="${id}" ${done} onchange="toggle('${id}')">
+        <div style="flex:1">${inner}</div>
+      </div></div>`;
+  }
+
+  // Étape 1
+  document.getElementById('step1').innerHTML = textFixes.map(f=>card(
+    `<div class="where">${f.page}</div>
+     <div class="ttl">${f.ttl}</div>
+     <div class="ba">
+       <div class="line no"><span class="tag">AVANT</span>${escapeHtml(f.no)}</div>
+       <div class="line ok"><span class="tag">APRÈS</span>${escapeHtml(f.ok)}</div>
+     </div>
+     <div class="copy">${box('Texte corrigé à coller',f.ok)}</div>`
+  )).join('');
+
+  // Étape 2
+  document.getElementById('step2').innerHTML = yoast.map(y=>card(
+    `<div class="where">${y.page}</div>
+     <div class="yoast">
+       <div class="row">${box('Titre SEO',y.title)}</div>
+       <div class="row">${box('Méta description',y.meta)}</div>
+       <div class="row">${box('Requête cible (mot-clé)',y.kw)}</div>
+     </div>`
+  )).join('');
+
+  // Étape 3
+  document.getElementById('step3').innerHTML = card(
+    `<div class="where">Images</div>
+     <div class="ttl">Exemples de textes ALT (selon l'image)</div>
+     <div class="yoast">${alts.map(a=>`<div class="row">${box('ALT',a)}</div>`).join('')}</div>`
+  );
+
+  // Étape 4
+  document.getElementById('step4').innerHTML = tech.map(t=>{
+    const id='c'+(idc++);
+    return `<li><input type="checkbox" class="chk" id="${id}" ${checks[id]?'checked':''} onchange="toggle('${id}')">
+      <span>${escapeHtml(t)}</span></li>`;
+  }).join('');
+
+  document.getElementById('ptot').textContent = idc;
+  updateProgress();
+
+  // ---------- INTERACTIONS ----------
+  function toggle(id){
+    const el=document.getElementById(id);
+    checks[id]=el.checked;
+    localStorage.setItem(KEY,JSON.stringify(checks));
+    const card=document.getElementById('card-'+id);
+    if(card) card.classList.toggle('done',el.checked);
+    updateProgress();
+  }
+  function updateProgress(){
+    const done=Object.values(checks).filter(Boolean).length;
+    document.getElementById('pdone').textContent=done;
+    document.getElementById('fill').style.width=(idc?100*done/idc:0)+'%';
+  }
+  function copy(btn,txt){
+    navigator.clipboard.writeText(txt).then(()=>{
+      const old=btn.textContent;btn.textContent='✓ Copié';btn.classList.add('copied');
+      setTimeout(()=>{btn.textContent=old;btn.classList.remove('copied');},1300);
+    });
+  }
+  function resetAll(){
+    if(confirm('Décocher toutes les cases ?')){checks={};localStorage.removeItem(KEY);
+      document.querySelectorAll('.chk').forEach(c=>c.checked=false);
+      document.querySelectorAll('.card').forEach(c=>c.classList.remove('done'));
+      updateProgress();}
+  }
+</script>
+</body>
+</html>
