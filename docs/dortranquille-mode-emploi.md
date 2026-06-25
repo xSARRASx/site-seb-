@@ -108,10 +108,12 @@ ou via **Médias** → champ **« Texte alternatif »**. Exemples à utiliser :
 - [ ] **Search Console** : valider le site + soumettre le sitemap `/sitemap_index.xml`
 - [ ] **Cache** (LiteSpeed sur Hostinger) actif + **images WebP** (Converter for Media)
 - [ ] **403** : vérifier que le site est bien accessible publiquement (sinon Google ne peut pas l'indexer)
-- [ ] **Blog** : retirer les `**` du titre « **Nos Articles & Conseils » → « Nos Articles & Conseils ».
-      Tant que le blog est vide → le passer en **noindex** dans Yoast (onglet « Avancé » de la page).
-- [ ] **Témoignages** : remplacer les faux avis OU masquer la section.
-- [ ] **Marque** : uniformiser « D'Or Tranquille » (textes) / logo.
+- [ ] **Blog** : on **garde la page tel quel** (un article viendra plus tard). Juste retirer les `**`
+      du titre « **Nos Articles & Conseils » → « Nos Articles & Conseils » (petit défaut d'affichage).
+- [ ] **Témoignages** : ✅ **on garde la section** pour l'instant. (Mais bien corriger le mot « gestion »
+      dans le témoignage de Miley Houdson — voir Bloc 1, point 2.)
+- [ ] **Marque** : ✅ uniformiser les **textes** en « **D'Or Tranquille** » (remplacer « D'or » par « D'Or »).
+      Le logo « Dort Tranquille » reste tel quel (exception graphique assumée).
 - [ ] **Fiche Google Business** : catégorie « Service de conciergerie », NAP identique au site,
       zone Les 2 Alpes, photos, description sans « gestion ».
 
