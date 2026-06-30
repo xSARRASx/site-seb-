@@ -113,6 +113,11 @@
   <div class="hint">Dans WordPress : ouvre la page → bouton « Edit with Elementor » → clique le texte → corrige → bouton vert « Mettre à jour ».</div>
   <div id="step1"></div>
 
+  <!-- ÉTAPE H : STRUCTURE DES TITRES -->
+  <h2 class="section"><span class="num">H</span> Structure des titres (H1 / H2 / H3)</h2>
+  <div class="hint">Découvert avec les tests de headings : <b>seul l'Accueil avait un H1</b>. Sur les 4 autres pages, le titre du héros était en H2 → il faut le passer en <b>H1</b>. Manip : clique le grand titre → colonne de gauche → <b>« Balise HTML »</b> → H1.</div>
+  <div id="stepH"></div>
+
   <!-- ÉTAPE 2 : YOAST -->
   <h2 class="section"><span class="num">2</span> Titre & description Google (Yoast)</h2>
   <div class="hint">Ouvre la page (Pages → la page → Modifier) → clique l'icône <b>« Y »</b> colorée en haut à droite → colle le <b>Mot-clé principal</b>, puis ouvre <b>« Apparence de recherche »</b> pour le <b>Titre SEO</b> + la <b>Méta-description</b>. Les 2 barres doivent être <b>VERTES</b> 🟢, puis <b>Sauvegarder</b>. (La « limace » = fin de l'URL : laisse telle quelle si déjà propre.)</div>
@@ -220,6 +225,21 @@
     'chalet en location courte durée Les 2 Alpes',
   ];
 
+  const headings = [
+    {page:'Accueil', done:true, h1:`Votre conciergerie de confiance aux 2 Alpes`,
+      h2:['Une conciergerie fondée sur l’humain et la confiance','Une conciergerie humaine, sérieuse et perfectionniste','Un accompagnement humain et professionnel aux 2 Alpes','Confiez votre location courte durée à D’Or Tranquille'],
+      h3:['Cartes services : Ménage & entretien · Coordination du linge · Check-in/out · Création d’annonces · Communication voyageurs · Optimisation des réservations']},
+    {page:'À propos', done:false, h1:`À propos de D'Or Tranquille, conciergerie aux 2 Alpes`,
+      h2:['Une nouvelle vie au cœur des 2 Alpes','Une conciergerie fondée sur l’humain et la confiance','Une approche humaine pour valoriser votre bien','Une présence locale au cœur des 2 Alpes'],
+      h3:['Proximité · Qualité · Confiance · Engagement','Accompagnement personnalisé · Exigence & propreté · Communication réactive · Connaissance des 2 Alpes','Les 2 Alpes · Station & environnement · Service de proximité · Locations saisonnières']},
+    {page:'Services', done:false, h1:`Nos services de conciergerie aux 2 Alpes`,
+      h2:['Une conciergerie humaine, sérieuse et perfectionniste','Une conciergerie basée sur la confiance et la qualité','Confiez votre bien en toute sérénité'],
+      h3:['Ménage & entretien · Coordination du linge · Check-in/out · Création d’annonces · Communication voyageurs · Optimisation des réservations · Petite maintenance · Home staging & décoration','Service humain · Travail soigné · Suivi sérieux · Optimisation locative']},
+    {page:'Blog', done:false, h1:`Conseils & actualités — conciergerie aux 2 Alpes`, h2:[], h3:[]},
+    {page:'Contact', done:false, h1:`Contactez D'Or Tranquille, conciergerie aux 2 Alpes`,
+      h2:['Parlons de votre bien aux 2 Alpes'], h3:[]},
+  ];
+
   const tech = [
     {ttl:'1. Rendre le site visible par Google (indexation)', steps:[
       'Connecte-toi à WordPress : tape <b>dortranquille.fr/wp-admin</b> (identifiant camille).',
@@ -322,6 +342,19 @@
      <div class="ttl">Exemples de textes ALT (selon l'image)</div>
      <div class="yoast">${alts.map(a=>`<div class="row">${box('ALT',a)}</div>`).join('')}</div>`
   );
+
+  // Étape H — structure des titres
+  document.getElementById('stepH').innerHTML = headings.map(h=>card(
+    `<div class="where">📄 Page : ${h.page}</div>
+     ${h.done?'<div class="loc">✅ <b>H1 déjà en place</b> sur cette page — rien à faire.</div>'
+       :'<div class="loc">📍 Passe le <b>grand titre du héros</b> en <b>H1</b> (Balise HTML → H1) et utilise le texte ci-dessous.</div>'}
+     <div class="ba">
+       <div class="line ok"><span class="tag">H1</span>${escapeHtml(h.h1)}</div>
+       ${h.h2.length?`<div class="line"><span class="tag" style="color:var(--brown)">H2</span>${h.h2.map(escapeHtml).join(' · ')}</div>`:''}
+       ${h.h3.length?`<div class="line"><span class="tag" style="color:var(--gold)">H3</span>${h.h3.map(escapeHtml).join('<br>')}</div>`:''}
+     </div>
+     ${h.done?'':`<div class="copy">${box('H1 à coller',h.h1)}</div>`}`
+  )).join('');
 
   // Étape 4
   document.getElementById('step4').innerHTML = tech.map(t=>card(
