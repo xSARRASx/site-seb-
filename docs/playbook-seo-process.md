@@ -8,6 +8,17 @@ référencés, sans rien réinventer à chaque fois.
 > - **Claude (cette conv)** = analyse, produit la fiche de corrections prête à coller.
 > - **Toi (Seb)** = valides les décisions et contrôles le rendu final.
 
+> ## 🚧 PÉRIMÈTRE DE LA PRESTATION (important, à retenir)
+> La prestation = **le référencement naturel (SEO) uniquement** : mots-clés, Titles/métas,
+> structure Hn, vocabulaire conforme (Loi Hoguet), technique (indexation, sitemap, Search
+> Console) et fiche Google Business.
+>
+> ❌ **NE FONT PAS partie du périmètre** (donc on ne les rédige pas) :
+> - La **rédaction des articles de blog** → c'est au **client** (ou une prestation à part).
+> - La création/refonte du design ou du contenu éditorial des pages.
+>
+> → On **optimise** l'existant pour le SEO, on n'écrit pas le contenu à la place du client.
+
 ---
 
 ## 🔁 La boucle, étape par étape (par site)
