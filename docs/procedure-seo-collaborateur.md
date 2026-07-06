@@ -127,3 +127,44 @@
 | 6. SEO local / Google Business | 15-20 min |
 | 7. Vérif + reporting | 10 min |
 | **Total réaliste** | **1h30 – 2h** |
+
+---
+
+## 🧰 LEÇONS DE TERRAIN (retours d'expérience — à lire avant chaque site)
+
+> Trucs concrets appris sur les sites WordPress + Elementor + Yoast. Font gagner un temps fou.
+
+### Elementor / thème JEG Kit (JKit)
+- Le texte ne se modifie **pas en double-cliquant** dessus sur la page. → **Clic UNE fois** sur le bloc, puis modifier dans le **panneau de gauche** (onglet « Contenu »).
+- Les **blocs « Icon Box » JKit** (cartes avec icône) : le titre + la description sont des **champs** dans le panneau de gauche.
+- **Changer une balise de titre (H1/H2/H3)** : clique le titre → panneau gauche → réglage **« Balise HTML »** (HTML Tag) → choisis H1/H2/H3.
+- **Le pied de page est un modèle GLOBAL** : Elementor → **Theme Builder → Footer**. On l'édite **une seule fois**, ça s'applique à toutes les pages.
+
+### Loi Hoguet — chasse aux mots interdits
+- Cherche **DEUX mots** au Ctrl+F sur chaque page publiée : **« gestion »** ET **« gérer »** (Ctrl+F « gestion » ne trouve pas « gérer » !).
+- Les « gestion / gérer » se cachent souvent dans : **le footer** (global), **les faux témoignages**, **les sur-titres** de section, **les titres de cartes** (ex. « Gestion du Linge », « Gestion Sérieuse »), **les cartes de valeurs**.
+- Remplacements types : gestion → **prise en charge / coordination / suivi / accompagnement / optimisation** ; gérer → **prendre soin de / accompagner**.
+
+### Balises Hn (structure des titres)
+- **Piège fréquent** : les titres de héros sont souvent construits en **H2**, donc la page **n'a AUCUN H1**. → Vérifier avec un **outil d'audit de headings** que **chaque page a bien 1 seul H1**, et le passer en H1 si besoin (avec le mot-clé + ville).
+- H2 = sections, H3 = sous-blocs. Les cartes en H5 → bonus (peu d'impact), ne pas s'acharner.
+
+### Yoast
+- Pour saisir Titre/Méta : ouvre la page en **éditeur normal** (pas Elementor) → clique l'**icône « Y » colorée en haut à droite** → section **« Apparence de recherche »**.
+- **Méta-description** : viser **~120 à 155 caractères** → barre **verte**. Orange = trop longue (raccourcir) ou trop courte (rallonger).
+- **« Limace » = slug** (mauvaise traduction). C'est la fin de l'URL. Laisser tel quel si déjà propre.
+- L'« Analyse SEO » peut afficher un visage **orange/rouge sur les pages Elementor** → **normal**, sans impact. Ce qui compte : **Titre + Méta verts**.
+
+### Blog
+- Vérifier qu'aucun titre ne contient des **`**`** parasites (reste de markdown) → les enlever.
+
+### Google Search Console
+- **Toujours vérifier qu'on est sur la BONNE propriété** (sélecteur en haut à gauche) — risque d'agir sur le site d'un autre client.
+- Le **sitemap Yoast** existe automatiquement : à envoyer sous la forme **`sitemap_index.xml`**.
+- **Accélérer l'indexation** : barre « Inspecter une URL » → coller chaque page → **« Demander une indexation »**.
+
+### Pilotage navigateur (option)
+- L'extension **« Claude pour Chrome »** peut appliquer les changements dans Elementor à la place du collaborateur (voir `prompt-pilotage-navigateur.md`). ⚠️ Fonctionne avec **claude.ai**, pas avec Claude Code. Sur Elementor c'est **lent** → valider étape par étape, « ne publie pas sans accord ».
+
+### Cohérence de marque
+- Vérifier une **orthographe unique** du nom partout (textes + logo + fiche Google).
