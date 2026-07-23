@@ -2,9 +2,9 @@
 
 > **Comment l'utiliser :**
 > 1. Je (Claude) remplis les champs `[ENTRE CROCHETS]` avec les infos du site + les corrections repérées sur les captures.
-> 2. Tu ouvres un onglet Chrome sur `.../wp-admin` (connecté), et tu gardes **« Demander avant d'agir »** activé.
+> 2. Tu ouvres un onglet Chrome sur `.../wp-admin` (connecté).
 > 3. Tu colles TOUT le bloc ci-dessous dans le panneau latéral Claude.
-> 4. Tu valides ses captures au fur et à mesure.
+> 4. Mode **autonome** : il déroule tout seul et te fait un récap à la fin. (Tu peux désactiver « Demander avant d'agir » pour qu'il n'attende pas — ou le garder si tu préfères confirmer.)
 >
 > ⚠️ C'est un Claude *navigateur* (claude.ai), pas Claude Code. Sur Elementor c'est lent → normal.
 
@@ -22,11 +22,11 @@ Tu agis DANS mon navigateur, sur l'onglet ouvert. Suis ce protocole À LA LETTRE
 - Carte G : [OUI / NON]
 
 ########## RÈGLES ABSOLUES (à respecter en permanence) ##########
-1. TRAVAILLE PAGE PAR PAGE, DANS L'ORDRE indiqué plus bas. Une seule action à la fois.
-2. AVANT CHAQUE enregistrement (« Mettre à jour » / « Sauvegarder » / « Save »), 
-   MONTRE-MOI UNE CAPTURE et ATTENDS MON « OK ». N'enregistre/ne publie JAMAIS sans mon accord.
+1. TRAVAILLE PAGE PAR PAGE, DANS L'ORDRE indiqué plus bas.
+2. AVANCE DE FAÇON AUTONOME : enregistre (« Mettre à jour » / « Sauvegarder » / « Save ») 
+   au fur et à mesure, SANS me demander à chaque fois. Ne t'arrête QUE si tu es réellement bloqué.
 3. Ne touche QU'À ce qui est listé. Ne modifie NI le design, NI la mise en page, NI les couleurs.
-4. Si un élément est introuvable, ambigu, ou si tu hésites : ARRÊTE-TOI et demande-moi. Ne devine pas.
+4. FAUX AVIS / témoignages inventés : ne les invente jamais, ne les crée jamais ; signale-les-moi dans le récap final (risque légal).
 5. LOI HOGUET (si Carte G = NON) : le site ne doit contenir AUCUN de ces mots :
    « gestion », « gestionnaire », « gérer », « gestion locative », « gestion Airbnb ».
    Remplacements autorisés : prise en charge · coordination · suivi · accompagnement · optimisation.
@@ -114,7 +114,9 @@ VÉRIFICATION FINALE
 - Les barres Titre + Méta sont vertes dans Yoast.
 - Donne-moi un RÉCAP page par page de tout ce que tu as modifié.
 
-Commence par l'ÉTAPE 0. Montre-moi une capture après chaque action et attends mon accord avant d'enregistrer.
+Commence par l'ÉTAPE 0 et déroule TOUT jusqu'à la vérification finale, de façon autonome, 
+en enregistrant au fur et à mesure. Ne t'arrête que si tu es réellement bloqué. 
+À la fin, donne-moi le récap complet page par page + la liste des faux avis repérés.
 ```
 
 ---
@@ -123,3 +125,16 @@ Commence par l'ÉTAPE 0. Montre-moi une capture après chaque action et attends 
 - Remplir tous les `[…]` à partir du formulaire + des captures.
 - Étapes 1, 2, 3 : lister explicitement par page (l'agent navigateur ne devine pas).
 - Si le site a beaucoup de pages, découper : donner une ÉTAPE à la fois.
+
+## Infos à demander au client pour chaque nouveau site
+Avant de remplir le template, je pose systématiquement les questions dont j'ai besoin, notamment :
+1. **URL du site** + accès (ou captures de chaque page).
+2. **Carte G : OUI ou NON ?** (détermine tout le vocabulaire autorisé).
+3. **Ville / zone** exacte ciblée (+ communes voisines éventuelles).
+4. **Activité** : conciergerie ou sous-location ?
+5. **Nom exact de la marque** (orthographe à uniformiser).
+6. **Téléphone, e-mail, adresse** (NAP pour la fiche Google).
+7. **Réseaux sociaux** réels (vraie page Facebook ? sinon on retire le lien).
+8. **Fiche Google Business** : existe déjà ou à créer ? accès partagé ?
+9. Points de décision : **témoignages** (vrais/faux/à masquer), **blog** (au client).
+→ Ne jamais deviner : si une info manque, la demander.
