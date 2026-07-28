@@ -91,14 +91,20 @@ Comme le site bloque souvent la lecture externe (403), c'est **elle** qui fait l
   `guide-dortranquille.html`, `docs/recap-verification-dortranquille.md`.
 - Restait en option : ALT images, 1er article de blog (= au client).
 
-### 🔄 Valse de Lin — valsedelin.fr (Sainte-Reine-de-Bretagne) — EN COURS
-- Karine, conciergerie SASU, **sans Carte G**. SIRET 107 254 401.
-- **Tél** : 06 10 90 52 09 · **E-mail** : accueil@valsedelin.fr · Horaires Lun-Ven 9h-18h30 · FB + Insta.
+### ✅ Valse de Lin — valsedelin.fr (Sainte-Reine-de-Bretagne) — ON-PAGE FAIT
+- Karine **Riou**, conciergerie SASU, **sans Carte G**. SIRET 107 254 401 00014.
+- **Adresse** : 10 Bis rue des Sapins, 44160 Sainte-Reine-de-Bretagne.
+- **Tél** : 06 10 90 52 09 (tel:+33610905209) · **E-mail** : accueil@valsedelin.fr · Horaires Lun-Ven 9h-18h30.
+- **Réseaux** : Facebook (profil id) + Instagram (instagram.com/valsedelin/).
 - **Zone** : La Baule, Guérande, Pornichet, Saint-Nazaire, Saint-Joachim, Montoir-de-Bretagne,
   Pontchâteau, Missillac, La Roche-Bernard, Savenay, Redon.
-- **Mots-clés** : principal « conciergerie Airbnb La Baule » (+ Guérande / presqu'île guérandaise).
-- Faute repérée : « English speacking » → « English speaking ».
-- Statut : audit via extension en cours (méthode §5, 2 temps).
+- **Mot-clé principal** : « conciergerie Airbnb La Baule » (+ Guérande / presqu'île guérandaise).
+- **Méthode** : audit puis correction via l'extension Claude pour Chrome (docs `valsedelin-modification-prompt.md`).
+- **Fait** ✅ : titres+métas (7 pages), H1 sur toutes les pages, tous les « gestion/gérer » retirés,
+  ALT sur les 42 images, noindex mentions/politique, nom d'auteur « Karine Riou », liens sociaux/footer,
+  fautes corrigées, faux avis masqués, archives d'auteur désactivées, hero H1+H2.
+- **Reste** : fiche Google Business (adresse ci-dessus) · pages locales par ville (levier SEO, projet à part)
+  · vrais avis à récolter · 1er contenu blog = au client.
 
 ---
 
