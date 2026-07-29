@@ -108,7 +108,13 @@ Comme le site bloque souvent la lecture externe (403), c'est **elle** qui fait l
   tél, site, horaires, description (462/750). ⏳ **Vérification à faire par Karine** (vidéo) —
   rien de public avant. À ajouter : **logo + photos** (depuis le Drive), catégorie secondaire
   « Service de nettoyage », liste des services.
-- **Reste** : pages locales par ville (levier SEO, projet à part) · vrais avis à récolter · blog = au client.
+- **Search Console** : ✅ propriété https://valsedelin.fr ajoutée (Préfixe d'URL) + validée via Yoast
+  (Connexions du site → code Google), sitemap `sitemap_index.xml` envoyé, 7 pages soumises à l'indexation
+  (6 déjà indexées, /faq/ relancée).
+- **Reste** : vérification GMB (vidéo) + photos par Karine · pages locales par ville (projet à part) · vrais avis · blog = au client.
+
+> ⚠️ RAPPEL PROCESS : la **Search Console (ajout propriété + vérif Yoast + sitemap + demande d'indexation)**
+> fait partie du process de BASE à chaque site — voir ÉTAPE 6 du template. Ne pas l'oublier.
 
 ---
 

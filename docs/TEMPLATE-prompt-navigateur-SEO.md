@@ -99,12 +99,16 @@ Exemples : « conciergerie Airbnb [VILLE] », « ménage location courte durée 
 Ne renomme PAS les fichiers, ne remplace PAS les photos (c'est au client).
 
 ===================================================================
-ÉTAPE 6 — GOOGLE (indexation)
+ÉTAPE 6 — GOOGLE SEARCH CONSOLE (obligatoire, à chaque site)
 ===================================================================
-6.1 Vérifie que le sitemap existe : [URL]/sitemap_index.xml
-6.2 Dans Google Search Console : VÉRIFIE d'abord que tu es sur la BONNE propriété ([URL]).
-    Puis Sitemaps → envoie « sitemap_index.xml ».
-6.3 Inspection d'URL → pour chaque page, colle l'adresse → « Demander une indexation ».
+6.1 Ouvre search.google.com/search-console. VÉRIFIE d'abord que tu es sur la BONNE propriété ([URL]).
+6.2 Si la propriété [URL] N'EXISTE PAS → ajoute-la :
+    - « Ajouter une propriété » → choisis « PRÉFIXE DE L'URL » (pas « Domaine ») → https://[URL] → Continuer.
+    - Méthode « Balise HTML » → copie le code de vérification (google-site-verification).
+    - Va sur wp-admin → Yoast SEO → Réglages → « Connexions du site » → champ Google → colle le code → Enregistre.
+    - Reviens sur Search Console → clique « Valider » (→ « Propriété validée »).
+6.3 Menu « Sitemaps » → ajoute « sitemap_index.xml » → Envoyer. (S'il affiche « impossible de récupérer », c'est souvent transitoire → recharge.)
+6.4 « Inspection de l'URL » → pour CHAQUE page, colle l'adresse → « Demander une indexation ».
 
 ===================================================================
 VÉRIFICATION FINALE
