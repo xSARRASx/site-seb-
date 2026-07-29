@@ -103,8 +103,12 @@ Comme le site bloque souvent la lecture externe (403), c'est **elle** qui fait l
 - **Fait** ✅ : titres+métas (7 pages), H1 sur toutes les pages, tous les « gestion/gérer » retirés,
   ALT sur les 42 images, noindex mentions/politique, nom d'auteur « Karine Riou », liens sociaux/footer,
   fautes corrigées, faux avis masqués, archives d'auteur désactivées, hero H1+H2.
-- **Reste** : fiche Google Business (adresse ci-dessus) · pages locales par ville (levier SEO, projet à part)
-  · vrais avis à récolter · 1er contenu blog = au client.
+- **Fiche Google Business** : ✅ créée (prestataire de services, adresse masquée) — catégorie
+  **« Conciergerie privée »** (« Service de conciergerie » n'existe pas chez Google), 11 zones,
+  tél, site, horaires, description (462/750). ⏳ **Vérification à faire par Karine** (vidéo) —
+  rien de public avant. À ajouter : **logo + photos** (depuis le Drive), catégorie secondaire
+  « Service de nettoyage », liste des services.
+- **Reste** : pages locales par ville (levier SEO, projet à part) · vrais avis à récolter · blog = au client.
 
 ---
 
