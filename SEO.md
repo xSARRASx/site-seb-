@@ -96,9 +96,10 @@ Comme le site bloque souvent la lecture externe (403), c'est **elle** qui fait l
 - **Adresse** : 10 Bis rue des Sapins, 44160 Sainte-Reine-de-Bretagne.
 - **Tél** : 06 10 90 52 09 (tel:+33610905209) · **E-mail** : accueil@valsedelin.fr · Horaires Lun-Ven 9h-18h30.
 - **Réseaux** : Facebook (profil id) + Instagram (instagram.com/valsedelin/).
-- **Zone** : La Baule, Guérande, Pornichet, Saint-Nazaire, Saint-Joachim, Montoir-de-Bretagne,
-  Pontchâteau, Missillac, La Roche-Bernard, Savenay, Redon.
-- **Mot-clé principal** : « conciergerie Airbnb La Baule » (+ Guérande / presqu'île guérandaise).
+- **Zone RÉELLE (confirmée par la cliente)** : **la Brière, Pontchâteau, La Roche-Bernard et alentours**.
+  ⚠️ La Baule / Guérande / Pornichet / Saint-Nazaire = **HORS secteur** (retirés le 25/07 après retour de Karine —
+  ils étaient dans la liste initiale de Camille mais ce n'est pas sa zone).
+- **Mot-clé principal** : « conciergerie Brière » (+ Pontchâteau / La Roche-Bernard).
 - **Méthode** : audit puis correction via l'extension Claude pour Chrome (docs `valsedelin-modification-prompt.md`).
 - **Fait** ✅ : titres+métas (7 pages), H1 sur toutes les pages, tous les « gestion/gérer » retirés,
   ALT sur les 42 images, noindex mentions/politique, nom d'auteur « Karine Riou », liens sociaux/footer,

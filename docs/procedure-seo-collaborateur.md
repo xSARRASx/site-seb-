@@ -168,3 +168,9 @@
 
 ### Cohérence de marque
 - Vérifier une **orthographe unique** du nom partout (textes + logo + fiche Google).
+
+### ⚠️ Zone géographique = celle RÉELLEMENT desservie (confirmée par le client)
+- Cibler **uniquement les communes que le client dessert vraiment**, pas la ville voisine la plus recherchée.
+- Exemple vécu (Valse de Lin) : la liste initiale incluait La Baule/Guérande/Saint-Nazaire (fort volume),
+  mais la cliente ne dessert que la Brière/Pontchâteau/La Roche-Bernard → il a fallu tout recentrer.
+- **En cas de doute sur la zone : confirmer avec le client AVANT d'optimiser** (H1, titres, fiche Google).
