@@ -98,8 +98,12 @@ Comme le site bloque souvent la lecture externe (403), c'est **elle** qui fait l
 - **Réseaux** : Facebook (profil id) + Instagram (instagram.com/valsedelin/).
 - **Zone RÉELLE (confirmée par la cliente)** : **la Brière, Pontchâteau, La Roche-Bernard et alentours**.
   ⚠️ La Baule / Guérande / Pornichet / Saint-Nazaire = **HORS secteur** (retirés le 25/07 après retour de Karine —
-  ils étaient dans la liste initiale de Camille mais ce n'est pas sa zone).
+  ils étaient dans la liste initiale de Camille mais ce n'est pas sa zone). ✅ Recentrage appliqué en ligne
+  (H1, 7 titres/métas, footer, articles, ALT). Laissé volontairement : « tribunaux de Saint-Nazaire »
+  dans les mentions légales (= tribunal de rattachement, juridiquement correct, page noindex).
+  À faire plus tard : renommer les fichiers images (…la-baule…), remplacer les visuels bord de mer par des photos de Brière.
 - **Mot-clé principal** : « conciergerie Brière » (+ Pontchâteau / La Roche-Bernard).
+- **GMB à corriger** : retirer La Baule/Guérande/Pornichet/Saint-Nazaire des zones desservies de la fiche.
 - **Méthode** : audit puis correction via l'extension Claude pour Chrome (docs `valsedelin-modification-prompt.md`).
 - **Fait** ✅ : titres+métas (7 pages), H1 sur toutes les pages, tous les « gestion/gérer » retirés,
   ALT sur les 42 images, noindex mentions/politique, nom d'auteur « Karine Riou », liens sociaux/footer,
