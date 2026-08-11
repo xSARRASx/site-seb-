@@ -123,15 +123,20 @@ Comme le site bloque souvent la lecture externe (403), c'est **elle** qui fait l
 
 ---
 
-### 🔄 Léandro Conciergerie — leandroconciergerie.fr (Grenoble) — SEO LOCAL en cours
+### ✅ Léandro Conciergerie — leandroconciergerie.fr (Grenoble) — SEO LOCAL fait (base)
 - Lucie & Jonathan, conciergerie SAS, **sans Carte G**. SIREN 107 309 882. Siège : **47 rue Vivienne, 75002 Paris** (⚠️ pas d'adresse à Grenoble → handicap local).
 - **Tél** : 07 75 67 42 16 · **E-mail** : contact@leandroconciergerie.fr · Horaires 9h-20h · FB + Insta.
 - **Prestation** : SEO LOCAL uniquement (base déjà faite par Camille : Yoast, titres, métas, schema, ALT).
 - **Zone** : Grenoble, Grésivaudan, Voiron, Chambéry et les stations. 🚫 **JAMAIS** Vercors ni Aix-les-Bains.
 - **Vocabulaire** : interdits = gestion/gérer/gestionnaire **+ « création d'annonces »** → pilotage · coordination · prestataire · optimisation.
-- **Audit fait** (extension) : villes secondaires absentes des H1/titres, Vercors+Aix-les-Bains à retirer (3+4 occ.),
-  1 « création d'annonces », pas de pages locales, pas de fiche Google Business, adresse Paris dans le schema.
-- **En cours** : prompt d'optimisation locale (conformité + H1/titres/métas + schema). À décider : pages locales par ville + fiche Google Business.
+- **Fait (extension, prompt `docs/leandro-modification-prompt.md`)** :
+  - Conformité : Vercors + Aix-les-Bains retirés (Accueil FAQ+schema FAQPage, CGU, article ×2) ; « création d'annonces » → « Optimisation de vos annonces » ; « mandat de gestion » reformulé en « mandat immobilier / co-hôte » ; « gestion/gérer » corrigés dans confidentialité + mentions légales + pied de page.
+  - H1 : 1 seul H1 par page (12 pages), **avec ville** sur les pages principales ; doublons corrigés (Mentions légales, article 5→1, Tarifs bandeau doublon).
+  - Yoast : 6 titres+métas enrichis (Grésivaudan/Voiron/Chambéry).
+  - Zone dans le contenu : barre d'en-tête + intros Services/Tarifs/À propos + bloc Contact du footer.
+  - Schema LocalBusiness (Elementor → Custom Code, ID 480) : ajout telephone, openingHours Mo-Su 09:00-20:00, areaServed Chamrousse + Les 7 Laux, Facebook dans sameAs.
+- **⚠️ Reste bloqué** : 6 chaînes « Gérer… » du **plugin Complianz** (bannière cookies + politique cookies UE) = chaînes de traduction du plugin → nécessitent un override **Loco Translate**. Risque faible (vocabulaire cookies, pas immobilier).
+- **À décider (leviers locaux, non faits)** : (1) pages locales par ville, (2) fiche Google Business « zone desservie », (3) Search Console + Site Kit + transfert propriété au client, (4) adresse iséroise (siège = Paris = handicap local).
 
 ---
 
