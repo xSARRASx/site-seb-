@@ -140,7 +140,8 @@ Comme le site bloque souvent la lecture externe (403), c'est **elle** qui fait l
 - **Pages locales** ✅✅ créées ET **100% vertes Yoast** (17 bons résultats, 0 problème) : /conciergerie-chambery/ (574), /conciergerie-voiron/ (575), /conciergerie-gresivaudan/ (576). Template Elementor Full Width, 1 H1 + 5 H2, ~310-324 mots, 1 image ALT + 1 lien sortant (office de tourisme) par page, maillées (footer + accueil). Titres en correspondance exacte : « Conciergerie [ville] : location courte durée | Léandro ». Déjà indexées (recrawl auto via sitemap lastmod).
   - ⚠️ Piège Elementor↔Yoast : Yoast ne « voit » pas les widgets Heading/Image (reçus en texte brut) → placer `<h2>` et `<img>` DANS un widget Texte pour que les assessments passent au vert (rendu public identique).
 - **🛑 Reste 2 clics humains** : Site Kit → « Se connecter avec Google » (OAuth, à faire par le user) ; ajouter contact@leandroconciergerie.fr en propriétaire (Search Console → Validation de la propriété → Ajouter un propriétaire ; doit être un vrai compte Google).
-- **À décider (non faits)** : fiche Google Business « zone desservie » (prompt prêt : `docs/leandro-google-business-prompt.md`) ; adresse iséroise (siège = Paris = handicap local).
+- **Fiche Google Business : NON FAITE (choix)** — la vérification vidéo est côté client → on laisse tomber (comme convenu). Prompt archivé si besoin un jour : `docs/leandro-google-business-prompt.md`.
+- **À noter** : adresse iséroise absente (siège = Paris = handicap local) — non résolu, dépend du client.
 - **À noter** : éditeur de blocs WordPress + page réglages Yoast **plantent** sur ce site (conflit d'extension probable) → contourner via Quick Edit / Elementor. Module « Duplication de contenu » d'ASE activé pour créer les pages.
 
 ---
