@@ -148,6 +148,16 @@ Comme le site bloque souvent la lecture externe (403), c'est **elle** qui fait l
 
 ---
 
+### ✅ Les Clefs du Rivage 85 — lesclefsdurivage85.fr (Saint-Jean-de-Monts / Vendée) — SEO COMPLET fait
+- Isabelle Fonteneau, conciergerie, **sans Carte G**. ⚠️ **Dossier sensible** (prévenir Camille avant contact client). Tél +33 6 66 18 23 21 · contact@lesclefsdurivage85.fr · SIREN 106859010 · 186 Av. Valentin, 85160 Saint-Jean-de-Monts.
+- **Zone** (leur propre page « Notre zone ») : Saint-Jean-de-Monts, Notre-Dame-de-Monts, Saint-Hilaire-de-Riez, Saint-Gilles-Croix-de-Vie, Challans (Pays de Monts / littoral vendéen). Marque figée **« Les Clefs du Rivage 85 »**. Réseaux vides (laissés).
+- ⚠️ **Yoast n'était PAS installé** → SEO complet. Prompt : `docs/lesclefsdurivage-correction-prompt.md`.
+- **Fait (extension)** : Yoast installé (archives auteur+catégories off, sitemap propre) ; **Loi Hoguet 0/0** (7 remplacements : gestion linge→coordination, gestion d'entreprise→direction, cookies→paramétrage) ; H1 avec ville (7 pages) ; titres+métas verts ; légales noindex ; **94 ALT** (piège Elementor : alt vide du widget écrase la médiathèque → corrigé) ; tel: corrigé ; mailto: ajouté (ML+CGU) ; footer nav 4→8 liens ; textes anglais retirés ; **schema LocalBusiness** (Elementor Code perso, 5 communes) ; **Search Console** créée+validée+sitemap (indexation quota → demain).
+- **Reste (1 finition)** : H2 « Notre zone d'intervention » redondant avec le nouveau H1 → à reformuler.
+- **Reste CLIENT / plus tard** : photo **Espagne (San Sebastian)** sur Accueil+Notre zone à remplacer par vraie photo Vendée (photos reçues 27/07) ; mentions légales incomplètes ; page /politique-de-confidentialite/ = 404 ; pas de bandeau cookies + Maps sans consentement ; http→https 301 à vérifier (Hostinger) ; brouillon article doublon ; 0 avis ; fiche Google + Site Kit à faire.
+
+---
+
 ### ✅ Le Nid Mousin — lenidmousin.com (Folles 87250 / Haute-Vienne / Limousin) — SEO COMPLET fait
 - Pauline & Jason (Pauline Boulet-Benac EI), conciergerie **+ sous-location**, **sans Carte G**. Tél 06 41 84 03 46 · hello@lenidmousin.com.
 - **Zone** : Folles, Haute-Vienne, Limousin, **Limoges** (client cible Limoges via leur article). Marque figée : **« Le Nid Mousin »** (sans apostrophe). Réseaux sociaux laissés vides (choix client).
