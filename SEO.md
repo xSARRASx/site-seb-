@@ -154,7 +154,8 @@ Comme le site bloque souvent la lecture externe (403), c'est **elle** qui fait l
 - ⚠️ **Yoast n'était PAS installé** → SEO complet (pas juste local). Prompt : `docs/lenidmousin-correction-prompt.md`, audit : mega prompt.
 - **Fait (extension, one-shot)** : Yoast installé + réglages (slogan, fuseau Paris, archives auteur off) ; **Loi Hoguet 0/0** sur 9 pages (5 remplacements : gestion→coordination/exploitation/suivi) ; 1 seul H1/page avec zone ; 7 titres+métas Yoast verts ; légales en noindex ; **27 images ALT** ; tel: corrigé (+33641840346) ; marque uniformisée ; carte CTA `#`→/services/ ; **Search Console** créée+validée + sitemap Yoast soumis (indexation quota dépassé → refaire demain).
 - **⚠️ Schema** : Yoast gratuit ne met pas le téléphone (réservé Yoast Local SEO payant) → **schema LocalBusiness complet ajouté à part** (prompt de finition) avec tél + adresse Folles + areaServed.
-- **Finitions (prompt 2)** : doublon H2 sous-location corrigé ; schema LocalBusiness JSON-LD ; Blog ajouté au menu.
+- **Finitions (prompt 2)** ✅ : doublon H2 sous-location corrigé ; **schema LocalBusiness JSON-LD** ajouté via Elementor → Code personnalisé (ID 354, `<head>`, tout le site, cohabite avec Yoast, @id distinct) ; Blog ajouté au menu (5e position, header OK sur 1 ligne ≥1080px).
+- **Micro-polish restant (optionnel)** : libellés de menu — « Sous Location Professionnelle » → « Sous-location » (plus court + trait d'union) ; « À propos de » → « À propos » (cohérence). Nouveau H2 sous-location passe sur 2 lignes (ok, sinon raccourcir « Une solution clé en main en Haute-Vienne »).
 - **Reste CLIENT / plus tard** : mentions légales incomplètes (pas de SIRET/adresse/dir. publication) ; aucun avis (à construire) ; slug /services/ (redirection = payant) ; 2 brouillons BACKUP à nettoyer ; fiche Google Business + Site Kit à faire.
 
 ---
