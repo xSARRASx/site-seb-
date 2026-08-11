@@ -123,7 +123,7 @@ Comme le site bloque souvent la lecture externe (403), c'est **elle** qui fait l
 
 ---
 
-### ✅ Léandro Conciergerie — leandroconciergerie.fr (Grenoble) — SEO LOCAL fait (base)
+### ✅✅ Léandro Conciergerie — leandroconciergerie.fr (Grenoble) — TERMINÉ
 - Lucie & Jonathan, conciergerie SAS, **sans Carte G**. SIREN 107 309 882. Siège : **47 rue Vivienne, 75002 Paris** (⚠️ pas d'adresse à Grenoble → handicap local).
 - **Tél** : 07 75 67 42 16 · **E-mail** : contact@leandroconciergerie.fr · Horaires 9h-20h · FB + Insta.
 - **Prestation** : SEO LOCAL uniquement (base déjà faite par Camille : Yoast, titres, métas, schema, ALT).
@@ -139,7 +139,8 @@ Comme le site bloque souvent la lecture externe (403), c'est **elle** qui fait l
 - **Search Console** ✅ : propriété créée + validée (balise Yoast), sitemap `sitemap_index.xml` soumis, 7 pages + 3 pages locales envoyées à l'indexation. Propriétaire actuel = martinmorebkk@gmail.com.
 - **Pages locales** ✅✅ créées ET **100% vertes Yoast** (17 bons résultats, 0 problème) : /conciergerie-chambery/ (574), /conciergerie-voiron/ (575), /conciergerie-gresivaudan/ (576). Template Elementor Full Width, 1 H1 + 5 H2, ~310-324 mots, 1 image ALT + 1 lien sortant (office de tourisme) par page, maillées (footer + accueil). Titres en correspondance exacte : « Conciergerie [ville] : location courte durée | Léandro ». Déjà indexées (recrawl auto via sitemap lastmod).
   - ⚠️ Piège Elementor↔Yoast : Yoast ne « voit » pas les widgets Heading/Image (reçus en texte brut) → placer `<h2>` et `<img>` DANS un widget Texte pour que les assessments passent au vert (rendu public identique).
-- **🛑 Reste 2 clics humains** : Site Kit → « Se connecter avec Google » (OAuth, à faire par le user) ; ajouter contact@leandroconciergerie.fr en propriétaire (Search Console → Validation de la propriété → Ajouter un propriétaire ; doit être un vrai compte Google).
+- **Site Kit** ✅ installé + connecté (compte martinmorebkk@gmail.com) — « Configuration initiale terminée ». Analytics non connecté (voulu) → cartes « Autorisations insuffisantes » = normal.
+- **Propriétaire client Search Console : ABANDONNÉ** — l'email de Lucie est **luciesimonian@outlook.fr** (Outlook, PAS un compte Google) → transfert impossible. La propriété reste sous martinmorebkk@gmail.com. (Camille est admin WP via camillefauveau.service@gmail.com.)
 - **Fiche Google Business : CRÉÉE** (finalement faite) — ID 01044066609826807143, sous martinmorebkk@gmail.com, état « Validation requise » / non publique. Catégorie « Conciergerie privée », adresse masquée (services à domicile), tél 07 75 67 42 16, horaires 7j/7 9h-20h, description conforme. Zones (6) : Grenoble, **Communauté de Communes Le Grésivaudan** (⚠️ « Grésivaudan » seul = Sud-Grésivaudan/Saint-Marcellin = MAUVAIS), Voiron, Chambéry, Chamrousse, **Station des Sept Laux** (l'entrée « Les 7 Laux » n'existe pas). Zéro Vercors/Aix. Offres payantes (Ads 400€, Workspace) refusées.
   - **🛑 Reste au CLIENT (Lucie/Jonathan)** : cliquer « Valider » → saisir leur **adresse postale réelle** (non publique) → choisir la vérif (vidéo/courrier/tel/email) ; puis ajouter **logo + 3-5 photos** de logements. Tant que non validé = fiche invisible.
 - **À noter** : adresse iséroise absente (siège = Paris = handicap local) — non résolu, dépend du client.
