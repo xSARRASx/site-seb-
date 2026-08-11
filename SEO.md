@@ -148,6 +148,17 @@ Comme le site bloque souvent la lecture externe (403), c'est **elle** qui fait l
 
 ---
 
+### ✅ Le Nid Mousin — lenidmousin.com (Folles 87250 / Haute-Vienne / Limousin) — SEO COMPLET fait
+- Pauline & Jason (Pauline Boulet-Benac EI), conciergerie **+ sous-location**, **sans Carte G**. Tél 06 41 84 03 46 · hello@lenidmousin.com.
+- **Zone** : Folles, Haute-Vienne, Limousin, **Limoges** (client cible Limoges via leur article). Marque figée : **« Le Nid Mousin »** (sans apostrophe). Réseaux sociaux laissés vides (choix client).
+- ⚠️ **Yoast n'était PAS installé** → SEO complet (pas juste local). Prompt : `docs/lenidmousin-correction-prompt.md`, audit : mega prompt.
+- **Fait (extension, one-shot)** : Yoast installé + réglages (slogan, fuseau Paris, archives auteur off) ; **Loi Hoguet 0/0** sur 9 pages (5 remplacements : gestion→coordination/exploitation/suivi) ; 1 seul H1/page avec zone ; 7 titres+métas Yoast verts ; légales en noindex ; **27 images ALT** ; tel: corrigé (+33641840346) ; marque uniformisée ; carte CTA `#`→/services/ ; **Search Console** créée+validée + sitemap Yoast soumis (indexation quota dépassé → refaire demain).
+- **⚠️ Schema** : Yoast gratuit ne met pas le téléphone (réservé Yoast Local SEO payant) → **schema LocalBusiness complet ajouté à part** (prompt de finition) avec tél + adresse Folles + areaServed.
+- **Finitions (prompt 2)** : doublon H2 sous-location corrigé ; schema LocalBusiness JSON-LD ; Blog ajouté au menu.
+- **Reste CLIENT / plus tard** : mentions légales incomplètes (pas de SIRET/adresse/dir. publication) ; aucun avis (à construire) ; slug /services/ (redirection = payant) ; 2 brouillons BACKUP à nettoyer ; fiche Google Business + Site Kit à faire.
+
+---
+
 ## 9. 🧰 Leçons de terrain (voir aussi `docs/procedure-seo-collaborateur.md`)
 - **Elementor** : modifier un texte = **clic UNE fois** sur le bloc → panneau de gauche (pas double-clic).
 - **Blocs JKit « Icon Box »** : titre + description = champs à gauche.
