@@ -136,7 +136,11 @@ Comme le site bloque souvent la lecture externe (403), c'est **elle** qui fait l
   - Zone dans le contenu : barre d'en-tête + intros Services/Tarifs/À propos + bloc Contact du footer.
   - Schema LocalBusiness (Elementor → Custom Code, ID 480) : ajout telephone, openingHours Mo-Su 09:00-20:00, areaServed Chamrousse + Les 7 Laux, Facebook dans sameAs.
 - **⚠️ Reste bloqué** : 6 chaînes « Gérer… » du **plugin Complianz** (bannière cookies + politique cookies UE) = chaînes de traduction du plugin → nécessitent un override **Loco Translate**. Risque faible (vocabulaire cookies, pas immobilier).
-- **À décider (leviers locaux, non faits)** : (1) pages locales par ville, (2) fiche Google Business « zone desservie », (3) Search Console + Site Kit + transfert propriété au client, (4) adresse iséroise (siège = Paris = handicap local).
+- **Search Console** ✅ : propriété créée + validée (balise Yoast), sitemap `sitemap_index.xml` soumis, 7 pages + 3 pages locales envoyées à l'indexation. Propriétaire actuel = martinmorebkk@gmail.com.
+- **Pages locales** ✅ créées (`docs/leandro-pages-locales.md`) : /conciergerie-chambery/ (574), /conciergerie-voiron/ (575), /conciergerie-gresivaudan/ (576) — template Elementor Full Width, 1 H1 avec ville, Yoast rempli, maillées (footer + accueil). Passage au vert = +1 paragraphe/page + métas raccourcies (prompt 2b).
+- **🛑 Reste 2 clics humains** : Site Kit → « Se connecter avec Google » (OAuth, à faire par le user) ; ajouter contact@leandroconciergerie.fr en propriétaire (Search Console → Validation de la propriété → Ajouter un propriétaire ; doit être un vrai compte Google).
+- **À décider (non faits)** : fiche Google Business « zone desservie » (prompt prêt : `docs/leandro-google-business-prompt.md`) ; adresse iséroise (siège = Paris = handicap local).
+- **À noter** : éditeur de blocs WordPress + page réglages Yoast **plantent** sur ce site (conflit d'extension probable) → contourner via Quick Edit / Elementor. Module « Duplication de contenu » d'ASE activé pour créer les pages.
 
 ---
 

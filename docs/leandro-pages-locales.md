@@ -99,6 +99,47 @@
 
 ---
 
+## Passage au vert Yoast (contenu additionnel — ajouté après création)
+
+> Les 3 pages sont ressorties « OK » (orange) car : ~210-230 mots (Yoast veut 300+), aucune image,
+> aucun lien sortant, et 2 métas un peu longues. Voici de quoi passer au vert.
+
+### Métas raccourcies (Chambéry + Grésivaudan étaient oranges)
+- **Chambéry** : `Léandro, conciergerie de location courte durée à Chambéry : accueil voyageurs, ménage, linge, optimisation de vos annonces. Devis gratuit.`
+- **Grésivaudan** : `Léandro, conciergerie de location courte durée dans le Grésivaudan, de Montbonnot à Pontcharra : accueil, ménage, linge et optimisation.`
+
+### Paragraphe additionnel (+1 H2, ~100 mots, avec lien sortant) — un par page
+**Chambéry** — H2 « Une conciergerie qui connaît Chambéry » :
+> Entre lac du Bourget et massifs, Chambéry séduit une clientèle variée : city-break, curistes, voyageurs
+> d'affaires et amoureux de montagne. Notre conciergerie adapte chaque séjour à cette diversité : arrivées
+> autonomes, recommandations locales, ménage hôtelier et linge soigné. Nous veillons aussi à la qualité de vos
+> photos et de votre annonce pour vous démarquer sur Airbnb et Booking. Pour préparer le séjour de vos voyageurs,
+> nous nous appuyons sur les ressources de l'office de tourisme de Chambéry (lien sortant :
+> https://www.chambery-montagnes.com/). Résultat : des voyageurs conquis, de meilleurs avis et un logement qui
+> tourne toute l'année à Chambéry.
+
+**Voiron** — H2 « Une conciergerie qui connaît le Voironnais » :
+> Au pied de la Chartreuse, Voiron et le Voironnais attirent randonneurs, familles et voyageurs de passage entre
+> Lyon et les Alpes. Notre conciergerie s'adapte à ce rythme : accueil flexible, ménage impeccable entre deux
+> réservations, linge hôtelier et optimisation continue de vos annonces. Nous soignons chaque détail pour
+> transformer un simple séjour en expérience mémorable, gage d'avis positifs et de réservations récurrentes.
+> Pour orienter vos voyageurs, nous nous appuyons sur les informations de l'office de tourisme du Pays Voironnais
+> (lien sortant : https://www.paysvoironnais.info/). Vous profitez d'une location courte durée sereine à Voiron.
+
+**Grésivaudan** — H2 « Une conciergerie qui connaît le Grésivaudan » :
+> Adossé à Belledonne et à la Chartreuse, le Grésivaudan accueille voyageurs d'affaires de la vallée technologique
+> comme amateurs de nature, de Montbonnot à Pontcharra. Notre conciergerie couvre toute la vallée : accueil des
+> voyageurs, ménage entre séjours, linge soigné et optimisation régulière de vos annonces. Nous adaptons chaque
+> prestation au profil de vos hôtes pour maximiser vos avis et votre taux d'occupation. Pour enrichir leurs séjours,
+> nous relayons les suggestions de l'office de tourisme du Grésivaudan (lien sortant : https://www.legresivaudan.fr/).
+> Vous confiez l'opérationnel de votre location courte durée dans le Grésivaudan à une équipe locale et réactive.
+
+### Image (optionnel)
+Ajouter 1 photo par page depuis la médiathèque existante (logement / montagne), avec un **ALT** contenant le mot-clé
+(ex. « conciergerie Airbnb Chambéry »). Si aucune photo dispo, le client en fournira — non bloquant.
+
+---
+
 ## Après création des 3 pages
 - Les ajouter au **menu** et/ou au **footer** (colonne zones) → maillage interne.
 - Sur l'**accueil**, ajouter 3 liens « Conciergerie à Chambéry / Voiron / dans le Grésivaudan » vers ces pages.
