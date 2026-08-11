@@ -100,6 +100,8 @@
   .tag.act { background: rgba(91,124,250,.18); color: #aebcff; }
   .tag.cg-no { background: rgba(255,93,108,.16); color: #ff9aa3; }
   .tag.cg-yes { background: rgba(54,207,143,.16); color: #7ee6bd; }
+  .tag.presta { background: rgba(74,163,255,.16); color: #9dc8ff; }
+  .tag.warn { background: rgba(240,163,60,.18); color: #ffca82; }
 
   .status-row { display: flex; align-items: center; gap: 8px; }
   select.status {
@@ -223,11 +225,28 @@
         <select id="f-activity">
           <option value="Conciergerie">Conciergerie</option>
           <option value="Sous-location">Sous-location</option>
+          <option value="Conciergerie + sous-location">Conciergerie + sous-location</option>
         </select>
       </div>
       <div class="field">
         <label>Ville / zone</label>
-        <input id="f-city" placeholder="Ex : Dax">
+        <input id="f-city" placeholder="Ex : Dax + communes desservies">
+      </div>
+    </div>
+    <div class="two">
+      <div class="field">
+        <label>Prestation</label>
+        <select id="f-prestation">
+          <option value="complet">SEO complet</option>
+          <option value="local">SEO local uniquement (base déjà faite)</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Zone confirmée par le client ?</label>
+        <select id="f-zoneok">
+          <option value="ok">Oui, confirmée</option>
+          <option value="tbc">⚠️ À confirmer</option>
+        </select>
       </div>
     </div>
     <div class="two">
@@ -247,9 +266,36 @@
         </select>
       </div>
     </div>
+    <div class="two">
+      <div class="field">
+        <label>E-mail du client</label>
+        <input id="f-email" type="email" placeholder="contact@client.fr">
+      </div>
+      <div class="field">
+        <label>Téléphone</label>
+        <input id="f-phone" placeholder="06 xx xx xx xx">
+      </div>
+    </div>
+    <div class="two">
+      <div class="field">
+        <label>Compte Google du client (Gmail)</label>
+        <input id="f-gmail" placeholder="…@gmail.com (pour Site Kit)">
+      </div>
+      <div class="field">
+        <label>Fiche Google Business</label>
+        <select id="f-gbp">
+          <option value="none">Aucune / à créer</option>
+          <option value="exists">Existe déjà</option>
+        </select>
+      </div>
+    </div>
     <div class="field">
-      <label>E-mail du client</label>
-      <input id="f-email" type="email" placeholder="contact@client.fr">
+      <label>Adresse (même de rattachement)</label>
+      <input id="f-address" placeholder="Rue, code postal, ville">
+    </div>
+    <div class="field">
+      <label>Réseaux sociaux (Facebook / Instagram)</label>
+      <input id="f-socials" placeholder="URLs réelles, sinon laisser vide">
     </div>
     <div class="field">
       <label>Note de Camille</label>
@@ -294,9 +340,16 @@
     document.getElementById('f-url').value = site ? site.url : '';
     document.getElementById('f-activity').value = site ? site.activity : 'Conciergerie';
     document.getElementById('f-city').value = site ? site.city : '';
+    document.getElementById('f-prestation').value = site ? (site.prestation || 'complet') : 'complet';
+    document.getElementById('f-zoneok').value = site ? (site.zoneok || 'ok') : 'ok';
     document.getElementById('f-cg').value = site ? site.cg : 'no';
     document.getElementById('f-status').value = site ? site.status : 'todo';
     document.getElementById('f-email').value = site ? (site.email || '') : '';
+    document.getElementById('f-phone').value = site ? (site.phone || '') : '';
+    document.getElementById('f-gmail').value = site ? (site.gmail || '') : '';
+    document.getElementById('f-gbp').value = site ? (site.gbp || 'none') : 'none';
+    document.getElementById('f-address').value = site ? (site.address || '') : '';
+    document.getElementById('f-socials').value = site ? (site.socials || '') : '';
     document.getElementById('f-note').value = site ? (site.note || '') : '';
     document.getElementById('f-files').value = '';
     formFiles = site && site.files ? site.files.map(f => ({...f})) : [];
@@ -338,9 +391,16 @@
       url: document.getElementById('f-url').value.trim(),
       activity: document.getElementById('f-activity').value,
       city: document.getElementById('f-city').value.trim(),
+      prestation: document.getElementById('f-prestation').value,
+      zoneok: document.getElementById('f-zoneok').value,
       cg: document.getElementById('f-cg').value,
       status: document.getElementById('f-status').value,
       email: document.getElementById('f-email').value.trim(),
+      phone: document.getElementById('f-phone').value.trim(),
+      gmail: document.getElementById('f-gmail').value.trim(),
+      gbp: document.getElementById('f-gbp').value,
+      address: document.getElementById('f-address').value.trim(),
+      socials: document.getElementById('f-socials').value.trim(),
       note: document.getElementById('f-note').value.trim(),
       files: formFiles.map(f => ({...f}))
     };
@@ -391,8 +451,15 @@
           <span class="tag act">${esc(s.activity)}</span>
           ${s.city ? `<span class="tag city">📍 ${esc(s.city)}</span>` : ''}
           <span class="tag ${s.cg==='yes'?'cg-yes':'cg-no'}">${s.cg==='yes'?'Carte G ✓':'Sans Carte G'}</span>
+          ${s.prestation==='local' ? `<span class="tag presta">SEO local</span>` : ''}
+          ${s.zoneok==='tbc' ? `<span class="tag warn">⚠️ Zone à confirmer</span>` : ''}
+          ${s.gbp==='exists' ? `<span class="tag presta">Fiche Google ✓</span>` : ''}
         </div>
         ${s.email ? `<div class="line">✉️ <a href="mailto:${esc(s.email)}">${esc(s.email)}</a></div>` : ''}
+        ${s.phone ? `<div class="line">📞 ${esc(s.phone)}</div>` : ''}
+        ${s.gmail ? `<div class="line">🔵 ${esc(s.gmail)}</div>` : ''}
+        ${s.address ? `<div class="line">📍 ${esc(s.address)}</div>` : ''}
+        ${s.socials ? `<div class="line">🔗 ${esc(s.socials)}</div>` : ''}
         ${s.note ? `<div class="note">${esc(s.note)}</div>` : ''}
         ${(s.files && s.files.length) ? `<div class="files">${s.files.map(f =>
           `<a class="file-link" href="${f.dataUrl}" download="${esc(f.name)}">📎 ${esc(f.name)}</a>`).join('')}</div>` : ''}
