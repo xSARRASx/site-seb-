@@ -123,6 +123,18 @@ Comme le site bloque souvent la lecture externe (403), c'est **elle** qui fait l
 
 ---
 
+### 🔄 Léandro Conciergerie — leandroconciergerie.fr (Grenoble) — SEO LOCAL en cours
+- Lucie & Jonathan, conciergerie SAS, **sans Carte G**. SIREN 107 309 882. Siège : **47 rue Vivienne, 75002 Paris** (⚠️ pas d'adresse à Grenoble → handicap local).
+- **Tél** : 07 75 67 42 16 · **E-mail** : contact@leandroconciergerie.fr · Horaires 9h-20h · FB + Insta.
+- **Prestation** : SEO LOCAL uniquement (base déjà faite par Camille : Yoast, titres, métas, schema, ALT).
+- **Zone** : Grenoble, Grésivaudan, Voiron, Chambéry et les stations. 🚫 **JAMAIS** Vercors ni Aix-les-Bains.
+- **Vocabulaire** : interdits = gestion/gérer/gestionnaire **+ « création d'annonces »** → pilotage · coordination · prestataire · optimisation.
+- **Audit fait** (extension) : villes secondaires absentes des H1/titres, Vercors+Aix-les-Bains à retirer (3+4 occ.),
+  1 « création d'annonces », pas de pages locales, pas de fiche Google Business, adresse Paris dans le schema.
+- **En cours** : prompt d'optimisation locale (conformité + H1/titres/métas + schema). À décider : pages locales par ville + fiche Google Business.
+
+---
+
 ## 9. 🧰 Leçons de terrain (voir aussi `docs/procedure-seo-collaborateur.md`)
 - **Elementor** : modifier un texte = **clic UNE fois** sur le bloc → panneau de gauche (pas double-clic).
 - **Blocs JKit « Icon Box »** : titre + description = champs à gauche.
