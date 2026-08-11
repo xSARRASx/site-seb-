@@ -157,7 +157,8 @@ Comme le site bloque souvent la lecture externe (403), c'est **elle** qui fait l
 - **Finitions (prompt 2)** ✅ : doublon H2 sous-location corrigé ; **schema LocalBusiness JSON-LD** ajouté via Elementor → Code personnalisé (ID 354, `<head>`, tout le site, cohabite avec Yoast, @id distinct) ; Blog ajouté au menu (5e position, header OK sur 1 ligne ≥1080px).
 - **Micro-polish** ✅ : libellés de menu raccourcis (« Sous-location », « À propos ») → header plus aéré, tient sur 1 ligne dès 1025px. **SEO 100% terminé.**
 - **⚠️ Astuce** : la **traduction auto de Chrome** sur `/wp-admin` affiche des libellés faux (« Sous-localisation », « À propos de ») alors que les vraies valeurs sont bonnes → désactiver la traduction pour éviter les fausses alertes.
-- **Reste CLIENT / plus tard** : mentions légales incomplètes (pas de SIRET/adresse/dir. publication) ; aucun avis (à construire) ; slug /services/ (redirection = payant) ; 2 brouillons BACKUP à nettoyer ; fiche Google Business + Site Kit à faire.
+- **Site Kit** ✅ installé + connecté (compte martinmorebkk@gmail.com). Le flux OAuth déjà autorisé a tout connecté d'un coup : Search Console + **Analytics GA4 créé** (compte 395592310, propriété 549568632, mesure G-DCWY8V6DY0) + PageSpeed. Gardé (stats en bonus). Objectif « Fournir des services ». Encarts promo (Reader Revenue, Sign in with Google) = ignorés.
+- **Reste CLIENT / plus tard** : mentions légales incomplètes (pas de SIRET/adresse/dir. publication) ; aucun avis (à construire) ; slug /services/ (redirection = payant) ; 2 brouillons BACKUP à nettoyer ; **fiche Google Business à créer** (vérif vidéo côté client).
 
 ---
 
