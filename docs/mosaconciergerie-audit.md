@@ -58,3 +58,59 @@ Rends-moi TOUT ça page par page (FR+EN). NE MODIFIE RIEN.
 - **Images/liens** : 8 pictos sans ALT (accueil FR+EN, mosa-icone-1…8) ; photos logements en **fond CSS** (pas d'`<img>` → pas d'ALT possible) ; Insta/Facebook = **liens vides** (instagram.com/, facebook.com/) ; LinkedIn = profil perso ; `tel:+32491972718` OK mais affiché « 0491… » en FR / « +32 491… » en EN ; **e-mail en .com** alors que le site est en .be ; menu = ancres de l'accueil ; politique de confidentialité orpheline.
 - **Zone citée** : Liège, **Huy, Namur** (slogan), Outremeuse, Sart-Tilman, Condroz, Le Perron/Cornillon (noms de logements), Liège seul dans l'article. ⚠️ Huy/Namur = à confirmer avec Maxime (3 villes distinctes, peut-être aspirationnel).
 - **Reste à auditer** (browser coupé) : vocabulaire gestion/management, témoignages, fautes/textes template, ALT médiathèque, H2/H3 légales/archives, communes « Zone d'activité » + FAQ.
+
+---
+
+## PLAN DE CORRECTION (prêt — à appliquer SEULEMENT après les 2 feux verts)
+> Zone provisoire = **Liège (principale), Huy, Namur** (leur propre site le cite partout). ⚠️ confirmer la hiérarchie
+> avec Maxime (3 villes + « Wallonie » = ambition, pas forcément zone réelle). Belgique = pas Hoguet, mais prudence IPI.
+
+### A. Yoast + réglages (fondation, zone-indépendant)
+- Installer Yoast. **NOINDEX** : archives auteur (fixe la fuite /author/mrafetingmail-com/), catégories, étiquettes ;
+  rediriger les pièces jointes. Retirer auteurs/tag du sitemap.
+- Yoast → Représentation du site : Organisation « MOSA Conciergerie », logo, tél +32491972718.
+
+### B. Yoast Titres + Métas (par page) — Liège/Huy/Namur
+- Accueil : « Conciergerie Airbnb à Liège, Huy & Namur | MOSA » + méta accueil voyageurs/ménage/optimisation.
+- Logements / Blog / Rendez-vous / Article : idem, adaptés (voir prompt).
+- Légales : noindex.
+
+### C. H1 & structure
+- **Bug `<br>` sans espace** sur les H1/H2 (« toutesérénité », « Tarificationdynamique », EN « totalserenity »…) → remettre l'espace.
+- `/logements/` : **ajouter un H1** « Nos logements en conciergerie à Liège, Huy & Namur ».
+- Surtitre hero « CONCIERGERIE AIRBNB EN WALLONIE » → « …À LIÈGE, HUY & NAMUR » (mot-clé + villes réelles).
+- Boutons « Réserver » de /logements/ (#contact mort) → /rendez-vous/.
+
+### D. Vocabulaire (prudence IPI + cohérence avec leurs mentions légales « n'exerce aucune activité d'agence immobilière »)
+- Article : « Mandat de gestion… » (méta/extrait) → reformuler ; « gestion des réservations » → « suivi des réservations » ;
+  « gérer les réservations » → « s'occuper des réservations » ; « mandat de gestion classique » → « mandat de conciergerie ».
+- EN Home : « property management » → « Airbnb concierge service » ; « Booking management » → « Booking coordination » ;
+  « switch property manager » → « switch concierge ».
+
+### E. Fautes / templates
+- « Combiné » → « Combinée » ; ALT « Boveri » → « Boverie » ; « Belgique Belgique » (doublon cookies) ;
+  footer libellé « Facebook-f » ; jargon « LCD » → « location courte durée (LCD) ».
+- Politique de cookies : texte générique e-commerce Complianz (« panier/paiement », section 6 vide) → régénérer via Complianz (config).
+
+### F. Images ALT
+- 8 pictos mosa-icone-1..8 (accueil FR+EN) → ALT descriptifs. Sur l'EN, traduire les ALT actuellement en FR (⚠️ dépend de l'EN de Maxime).
+
+### G. Liens
+- Tél : harmoniser l'affichage « +32 491 97 27 18 » partout (FR affiche « 0491… »).
+- Réseaux Insta/Facebook vides → laisser (comme les autres) ou brancher si Maxime donne les URL.
+- E-mail .com vs domaine .be → **à confirmer** (lequel est le bon ?).
+
+### H. Schema LocalBusiness (Elementor → Code perso, <head>)
+- name MOSA Conciergerie, tél +32491972718, adresse Rue Strivay 53, 4122 Plainevaux (Neupré), areaServed Liège/Huy/Namur, email.
+
+### I. Search Console + Site Kit (compte mrafetin@gmail.com)
+- Créer propriété + sitemap ; puis Site Kit.
+
+### ⏸️ NE PAS TOUCHER (chantier de Maxime)
+- Toute la partie **bilingue EN/Polylang** (EN partiel, /en/<slug-fr> sert du FR, cookies FR sur EN, switcher, x-default) → attendre qu'il finisse.
+- Mentions légales (brouillon, BCE manquant), header template brouillon, logements (photos stock/placeholders), témoignages placeholders.
+
+## 🙋 À demander à Maxime (via Camille)
+1. **Zone exacte** : vraiment Liège + Huy + Namur à parts égales, ou **Liège en priorité** + les 2 autres en secondaire ?
+2. Quand aura-t-il **fini de construire** (surtout l'EN + mentions légales + vraies photos de logements) ?
+3. **E-mail** : .com ou .be ? Et a-t-il de **vrais** comptes Facebook/Instagram à brancher ?
