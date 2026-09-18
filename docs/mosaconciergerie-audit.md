@@ -40,9 +40,21 @@ Rends-moi TOUT ça page par page (FR+EN). NE MODIFIE RIEN.
 ```
 
 ## Statut
-- [ ] Accès obtenus
-- [ ] Audit fait
+- [x] Accès obtenus
+- [x] Audit **PARTIEL** fait (~70% — connexion Chrome perdue en cours)
+- [ ] Audit à terminer (rouvrir l'onglet + « continue » à l'extension : vocabulaire, avis, fautes, ALT médiathèque, H2/H3 légales, communes Zone/FAQ)
 - [ ] Zone confirmée par Maxime
-- [ ] Maxime a fini d'éditer → feu vert corrections
+- [ ] Maxime a fini d'éditer (surtout la version EN/Polylang) → feu vert corrections
 - [ ] Corrections appliquées
 - [ ] Search Console + Site Kit (compte mrafetin@gmail.com)
+
+## Findings de l'audit partiel (2026-09-18)
+- **Aucun plugin SEO** (ni Yoast/RankMath/SEOPress) → 0 méta (sauf article auto 155c), titres défaut « Page – MOSA Conciergerie », pas d'OG, pas de mot-clé. → **SEO complet, Yoast à installer.**
+- **Indexation OK** (case « décourager » NON cochée). Sitemap natif `/wp-sitemap.xml` expose **/author/mrafetingmail-com/** (⚠️ fuite du login admin) + catégorie + tag.
+- **Search Console** : aucune (à créer).
+- **Pages** : 7 FR (6 publiées + **Mentions légales en brouillon → 404** alors que le footer FR+EN y pointe) ; **2 EN seulement** (Home, Book a call) via **Polylang gratuit, assistant NON terminé** ; 1 article FR (« Conciergerie Airbnb à Liège… ») ; 5 articles + 1 page en corbeille ; template Header Elementor en brouillon.
+- **H1** : `/logements/` **sans H1** ; page auteur H1 vide ; H1 accueil « Louer en toute sérénité » **coupé par un `<br>` sans espace** ; aucun mot-clé métier/géo dans H1-H2 de l'accueil.
+- **Bilingue (⚠️ en construction)** : hreflang Polylang sur les 2 paires traduites, **pas de x-default**. Switcher FR/EN = lien fixe `/` et `/en/` (pas le switcher Polylang). **Home EN pointe vers des pages FR** (/logements/, /blog/, /mentions-legales/), bandeau cookies Complianz **en FR sur l'EN**, `/en/logements/` etc. répondent **200 avec le contenu FR** (duplication/mélange). → NE PAS toucher tant que Maxime construit l'EN.
+- **Images/liens** : 8 pictos sans ALT (accueil FR+EN, mosa-icone-1…8) ; photos logements en **fond CSS** (pas d'`<img>` → pas d'ALT possible) ; Insta/Facebook = **liens vides** (instagram.com/, facebook.com/) ; LinkedIn = profil perso ; `tel:+32491972718` OK mais affiché « 0491… » en FR / « +32 491… » en EN ; **e-mail en .com** alors que le site est en .be ; menu = ancres de l'accueil ; politique de confidentialité orpheline.
+- **Zone citée** : Liège, **Huy, Namur** (slogan), Outremeuse, Sart-Tilman, Condroz, Le Perron/Cornillon (noms de logements), Liège seul dans l'article. ⚠️ Huy/Namur = à confirmer avec Maxime (3 villes distinctes, peut-être aspirationnel).
+- **Reste à auditer** (browser coupé) : vocabulaire gestion/management, témoignages, fautes/textes template, ALT médiathèque, H2/H3 légales/archives, communes « Zone d'activité » + FAQ.
