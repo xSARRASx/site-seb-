@@ -152,7 +152,8 @@ Comme le site bloque souvent la lecture externe (403), c'est **elle** qui fait l
 - Maxime Rafétin, conciergerie, **client BELGE** (pas Loi Hoguet mais prudence IPI). Tél +32 491 97 27 18 · maxime@mosaconciergerie.com · Google **mrafetin@gmail.com**. Siège Rue Strivay 53, 4122 Plainevaux (Neupré). Détail : `docs/mosaconciergerie-audit.md`.
 - **Zone** : Liège (principale), Huy, Namur. Site NEUF, **bilingue FR/EN (EN en construction par Maxime)** → SEO appliqué en évitant le chantier (Polylang/EN, mentions légales, photos NON touchés).
 - **Fait** : Yoast installé (auteurs/catégories/tags noindex — fuite /author/ neutralisée) ; 7 titres+métas (5 FR + 2 EN) ; bug `<br>` corrigé ; /logements/ a 1 H1 ; boutons Réserver→/rendez-vous/ ; vocabulaire (gestion→suivi, property management→concierge service) ; schema LocalBusiness ; **Search Console créée+validée + 7 URL indexées**.
-- **Reste (Maxime / plus tard)** : mentions légales à publier (BCE), EN/Polylang à finir, réseaux vides, photos stock, **Site Kit** (mrafetin@gmail.com).
+- **Site Kit** ✅ installé + connecté (martinmorebkk@gmail.com) : Search Console + PageSpeed. Analytics non connecté (pas demandé).
+- **Reste (Maxime / plus tard)** : mentions légales à publier (BCE), EN/Polylang à finir, réseaux vides, photos stock. Transfert propriété au client Maxime (mrafetin@gmail.com) = plus tard si besoin.
 
 ---
 
