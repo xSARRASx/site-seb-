@@ -114,3 +114,18 @@ Rends-moi TOUT ça page par page (FR+EN). NE MODIFIE RIEN.
 1. **Zone exacte** : vraiment Liège + Huy + Namur à parts égales, ou **Liège en priorité** + les 2 autres en secondaire ?
 2. Quand aura-t-il **fini de construire** (surtout l'EN + mentions légales + vraies photos de logements) ?
 3. **E-mail** : .com ou .be ? Et a-t-il de **vrais** comptes Facebook/Instagram à brancher ?
+
+---
+
+## ✅ CORRECTIONS APPLIQUÉES (18-19/09/2026) — SEO complet fait
+Malgré le site en construction, l'extension a tout appliqué en évitant le chantier de Maxime.
+- **A** Yoast installé ; auteurs/catégories/étiquettes en noindex + hors sitemap (fuite /author/mrafetingmail-com/ neutralisée) ; Org « MOSA Conciergerie » + logo.
+- **B** 7 titres+métas (5 FR + 2 EN) posés ; légales en noindex.
+- **C** bug `<br>` corrigé (FR+EN) ; surtitre « À LIÈGE, HUY & NAMUR » ; **/logements/ a 1 H1** (« Nos logements de conciergerie à Liège, Huy & Namur ») ; 7 boutons « Réserver » → /rendez-vous/.
+- **D** vocabulaire : article « suivi des réservations » / « mandat de conciergerie » ; EN « Airbnb concierge service » / « Booking coordination » / « switch concierge ». 0 « gestion/gérer/management ».
+- **E** « Combinée » ; « Belgique » doublon corrigé (Complianz) ; « LCD » explicité ; tél harmonisé « +32 491 97 27 18 ».
+- **F** 8 pictos ALT remplis (0 image sans ALT sur l'accueil).
+- **G** schema LocalBusiness en `<head>` tout le site (image corrigée → /uploads/2026/09/hero-accueil.jpg).
+- **H** Search Console créée+validée (martinmorebkk@gmail.com) + sitemap soumis + **7 URL indexées** (pas de quota dépassé).
+- **Décisions** : /logements/ H1 gardé tel quel ; tél Yoast = Premium (dans le schema) ; « Boveri » = troncature (déjà « Boverie »).
+- **Reste (Maxime / plus tard)** : mentions légales à publier (BCE à compléter) ; EN/Polylang à finir (bandeau cookies FR sur EN, ALT FR, x-default) ; réseaux sociaux vides ; photos de logements (stock) ; **Site Kit** (compte mrafetin@gmail.com) à faire après.

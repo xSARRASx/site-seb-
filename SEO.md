@@ -148,6 +148,14 @@ Comme le site bloque souvent la lecture externe (403), c'est **elle** qui fait l
 
 ---
 
+### ✅ MOSA Conciergerie — mosaconciergerie.be (Liège, Huy, Namur / Belgique) — SEO COMPLET fait
+- Maxime Rafétin, conciergerie, **client BELGE** (pas Loi Hoguet mais prudence IPI). Tél +32 491 97 27 18 · maxime@mosaconciergerie.com · Google **mrafetin@gmail.com**. Siège Rue Strivay 53, 4122 Plainevaux (Neupré). Détail : `docs/mosaconciergerie-audit.md`.
+- **Zone** : Liège (principale), Huy, Namur. Site NEUF, **bilingue FR/EN (EN en construction par Maxime)** → SEO appliqué en évitant le chantier (Polylang/EN, mentions légales, photos NON touchés).
+- **Fait** : Yoast installé (auteurs/catégories/tags noindex — fuite /author/ neutralisée) ; 7 titres+métas (5 FR + 2 EN) ; bug `<br>` corrigé ; /logements/ a 1 H1 ; boutons Réserver→/rendez-vous/ ; vocabulaire (gestion→suivi, property management→concierge service) ; schema LocalBusiness ; **Search Console créée+validée + 7 URL indexées**.
+- **Reste (Maxime / plus tard)** : mentions légales à publier (BCE), EN/Polylang à finir, réseaux vides, photos stock, **Site Kit** (mrafetin@gmail.com).
+
+---
+
 ### ✅ Les Clefs du Rivage 85 — lesclefsdurivage85.fr (Saint-Jean-de-Monts / Vendée) — SEO COMPLET fait
 - Isabelle Fonteneau, conciergerie, **sans Carte G**. ⚠️ **Dossier sensible** (prévenir Camille avant contact client). Tél +33 6 66 18 23 21 · contact@lesclefsdurivage85.fr · SIREN 106859010 · 186 Av. Valentin, 85160 Saint-Jean-de-Monts.
 - **Zone** (leur propre page « Notre zone ») : Saint-Jean-de-Monts, Notre-Dame-de-Monts, Saint-Hilaire-de-Riez, Saint-Gilles-Croix-de-Vie, Challans (Pays de Monts / littoral vendéen). Marque figée **« Les Clefs du Rivage 85 »**. Réseaux vides (laissés).
