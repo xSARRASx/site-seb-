@@ -43,3 +43,18 @@ Rends-moi TOUT ça page par page. NE MODIFIE RIEN.
 - [ ] Corrections appliquées (titres/H1 à 2 niveaux : moyenne durée Pays Basque / courte durée Landes)
 - [ ] Vraies URL Facebook/Instagram (Marie)
 - [ ] Search Console + Site Kit (Gmail à demander)
+
+---
+
+## ✅ CORRECTIONS APPLIQUÉES (19-20/09/2026) — SEO complet fait
+- **A** Yoast installé ; auteurs/catégories/tags noindex + hors sitemap ; Org « Ongi Etorri Conciergerie » ; fuseau Paris + format date FR + slogan ; **nom public Marie Lefèvre** + slug auteur `marie-lefevre` (e-mail perso retiré de l'URL) ; article réattribué à Marie ; catégorie → « Conseils propriétaires ».
+- **B** 6 titres+métas ; légales noindex.
+- **C** H1 ajoutés (Contact, Blog, Mentions, Article) ; « Location moyenne durée » H6→H2.
+- **D** Loi Hoguet 0/0 : « Gestion des litiges »→« Prise en charge » ; 10 remplacements dans l'article (exploiter/suivi/prise en charge) ; cookies→paramétrage. (Restent 2 chaînes Complianz « Gérez » = plugin, page noindex → laissées.)
+- **E** « Ongi EtorContactri » réparé ; « nous intervenons » + « Pays Basque » ; **zone recalée** (MD Pays Basque / CD Landes), Dax retiré, Hossegor retiré (à confirmer).
+- **F** 28 ALT remplis. Photos hors zone (San Sebastian, Gaztelugatxe, Zumaia = Pays basque espagnol) → à remplacer par vraies photos Hendaye/Landes (cliente).
+- **G** tel: corrigé (+33602204730) ; tél+email cliquables sur Contact ; réseaux « # » laissés.
+- **H** schema LocalBusiness (7 communes) en `<head>`.
+- **I** Search Console créée+validée + sitemap soumis (statut « impossible de récupérer » transitoire → revérifier 24-48h) + 6 URL indexées.
+- **Décisions** : Hossegor laissé retiré (confirmer Marie) ; tél Yoast = Premium (dans schema) ; cookies Complianz laissés (noindex).
+- **Reste (cliente / plus tard)** : vraies URL Facebook/Instagram ; **Site Kit** (Gmail à demander à Marie) ; photos hors zone à remplacer ; mentions légales (SIREN affiché comme SIRET + pas d'adresse) ; confirmer Hossegor.
