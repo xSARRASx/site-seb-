@@ -150,8 +150,8 @@ Comme le site bloque souvent la lecture externe (403), c'est **elle** qui fait l
 
 ### ✅ Ongi Etorri Conciergerie — ongietorriconciergerie.fr (Hendaye / Pays Basque + Landes) — SEO COMPLET fait
 - Marie Lefèvre, conciergerie **moyenne durée** (Pays Basque : Hendaye, Urrugne, Ciboure, Saint-Jean-de-Luz) **+ courte durée** (Landes : Capbreton, Ondres, Seignosse), **sans Carte G**. Tél 06 02 20 47 30 · services@ongietorriconciergerie.fr. Détail : `docs/ongietorri-correction-prompt.md` + `docs/ongietorri-audit.md`.
-- **Fait** : Yoast installé (auteurs/catégories/tags noindex, e-mail perso retiré de l'URL auteur) ; 6 titres+métas ; H1 ajoutés (Contact/Blog/Mentions/Article) ; **Loi Hoguet 0/0** (10 remplacements dans l'article + « Gestion des litiges »→« Prise en charge ») ; zone recalée 2 niveaux (Dax retiré) ; 28 ALT ; schema LocalBusiness ; **Search Console + 6 URL indexées**.
-- **Reste (cliente / plus tard)** : vraies URL Facebook/Instagram, **Site Kit** (Gmail à demander à Marie), photos hors zone (Pays basque espagnol) à remplacer, mentions légales (SIREN vs SIRET + adresse), confirmer Hossegor.
+- **Fait** : Yoast installé (auteurs/catégories/tags noindex, e-mail perso retiré de l'URL auteur) ; 6 titres+métas ; H1 ajoutés (Contact/Blog/Mentions/Article) ; **Loi Hoguet 0/0** (10 remplacements dans l'article + « Gestion des litiges »→« Prise en charge ») ; zone recalée 2 niveaux (Dax retiré) ; 28 ALT ; schema LocalBusiness ; **Search Console + 6 URL indexées** ; **Site Kit connecté** (martinmorebkk@gmail.com, Search Console + PageSpeed).
+- **Reste (cliente / plus tard)** : vraies URL Facebook/Instagram, photos hors zone (Pays basque espagnol) à remplacer, mentions légales (SIREN vs SIRET + adresse), confirmer Hossegor.
 
 ---
 
