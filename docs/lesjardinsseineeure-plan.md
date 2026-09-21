@@ -79,3 +79,15 @@
 (Voir le bloc « PROMPT DE CORRECTION » livré en chat. Résumé : retirer le 06 IAD de la méta Contact, renseigner les
 mots-clés Yoast, ajouter « conciergerie Airbnb » sur Accueil/Services, corriger les 4 « gérez/gestion », raccourcir
 métas/titres, mailler Eure/Normandie, FAQPage sur /faq/, logo Org Yoast, publier les 5 articles, Search Console + Site Kit.)
+
+---
+
+## ✅ APPLIQUÉ (21/09/2026) — SEO local fait
+- **06 10 69 66 62 SUPPRIMÉ** (méta Contact) → 0 partout. Tél = 07 78 51 33 40 uniquement.
+- Mots-clés Yoast renseignés sur les 20 pages + 5 articles ; « conciergerie Airbnb » ajouté (Accueil intro + Services intro/H2).
+- **Loi Hoguet 0/0** : Rouen/Les Andelys FAQ « Gérez-vous »→« Vous occupez-vous » (visible + JSON-LD) ; articles #62 « Exploitée seule », #98 « assurer » + « coordination du linge ».
+- Métas raccourcies (Tarifs/Louviers/Normandie/À propos/Zone/Blog) + titres Contact/À propos <60 ; « d'Évreux » corrigé.
+- Eure (#95) + Normandie (#94) **maillées** (page Zone + footer). **FAQPage ajouté sur /faq/** (10 Q/R). Yoast config initiale terminée.
+- **5 articles PUBLIÉS** (visibles /blog/ + sitemap).
+- **Search Console** créée+validée + sitemap ; indexation demandée (villes + Accueil/Services/Tarifs + articles #98/#62 ; #99/#100/#101 quota → demain). **Site Kit connecté** (martinmorebkk@gmail.com, Search Console + PageSpeed).
+- **Reste (cliente)** : fournir le **logo** (fichier) pour Yoast Organisation ; réindexer 3 articles demain. Statut maintenance : laissé tel quel (site en ligne, confirmé côté Martin).
