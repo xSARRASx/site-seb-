@@ -72,3 +72,10 @@
 5. Raccourcir 4 métas > 160c + 2 titres > 60c ; « de Évreux » → « d'Évreux ».
 6. Pages Eure/Normandie orphelines → mailler ou noindex (à décider) ; FAQPage sur /faq/ ; logo Organization Yoast.
 7. Publier les 5 articles (après fix). Search Console + Site Kit (compte cliente ou agence).
+
+---
+
+## ✅ DÉCISION : on fait le SEO (site en ligne confirmé côté Martin) — prompt de correction prêt
+(Voir le bloc « PROMPT DE CORRECTION » livré en chat. Résumé : retirer le 06 IAD de la méta Contact, renseigner les
+mots-clés Yoast, ajouter « conciergerie Airbnb » sur Accueil/Services, corriger les 4 « gérez/gestion », raccourcir
+métas/titres, mailler Eure/Normandie, FAQPage sur /faq/, logo Org Yoast, publier les 5 articles, Search Console + Site Kit.)
