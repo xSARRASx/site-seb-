@@ -46,3 +46,29 @@
 - [ ] SEO local appliqué (dès republication)
 - [ ] Search Console + Site Kit
 - [ ] Articles publiés
+
+---
+
+## 🚨 AUDIT (21/09/2026, lecture seule) — DÉCOUVERTE MAJEURE
+- **LE SITE EST EN LIGNE, PAS EN 503.** Requête anonyme = HTTP 200, `robots index,follow`, sitemap public (19 URL). Snippet maintenance (Code Snippets « MAINTENANCE ») INACTIF, mode maintenance Elementor OFF, aucun plugin maintenance. → **Contredit la consigne cliente (devait être hors ligne).** À signaler à Camille : réactiver la maintenance OU confirmer la mise en ligne. **Rien appliqué en attendant.**
+- **🚨 Numéro interdit PUBLIC** : le 06 10 69 66 62 (n° agent IAD) est dans la **méta Yoast de /contact/** → visible Google + og:description. À retirer en priorité.
+
+### État réel de la base (globalement TRÈS bien faite)
+- **21 pages** publiées. 6 pages villes (Louviers, Vernon, Évreux, Rouen, Val-de-Reuil, Les Andelys) + **2 pages en plus non citées** : Eure (#95) et Normandie (#94) → **orphelines** (hors menu, Eure sans lien entrant).
+- Pages villes : 1 H1 chacune (« Conciergerie Airbnb à [ville] »), structure H2/H3 propre, titres/métas Yoast remplis. JSON-LD **LocalBusiness + FAQPage + Service + BreadcrumbList** présents (tél +33778513340 ✔, zone 40 km, areaServed correct).
+- **Mot-clé Yoast VIDE sur les 20 pages + 5 articles** (score 0) → à renseigner (gain facile).
+- « conciergerie Airbnb » **absent** du H1/corps de l'Accueil et **totalement absent de Services** ; « tarif conciergerie Airbnb » jamais en exact dans le corps de Tarifs.
+- **Loi Hoguet** : 2 FAQ « Gérez-vous… » (Rouen #73, Les Andelys #75) + articles #62 (« Gérée seule »), #98 (« gérer une arrivée », « gestion du linge ») → à corriger. Reste 0 partout ailleurs.
+- **5 articles en brouillon** (bien rédigés) → publier à la mise en ligne (après fix vocabulaire #62/#98).
+- FAQPage manquant sur la page /faq/ (10 questions) ; Organization Yoast sans logo + « première config » non finie ; breadcrumb maison doublonne Yoast.
+- Métas > 160c : Normandie (164), Tarifs (161), Louviers (161), À propos (163) ; titres > 60 : Contact (64), À propos (62). Faute « de Évreux » → « d'Évreux ».
+- **Site Kit installé mais NON connecté** (compte conciergerie.seineeure27@gmail.com). 5 doublons d'images sans ALT (inutilisées). Page « Privacy Policy » brouillon EN.
+
+### Corrections SEO local prêtes (à appliquer APRÈS décision Camille sur le statut du site)
+1. Retirer le 06 10 69 66 62 de la méta /contact/ (URGENT).
+2. Renseigner le mot-clé Yoast sur chaque page (conciergerie [ville] ; conciergerie Airbnb ; tarif conciergerie Airbnb).
+3. Ajouter « conciergerie Airbnb » dans H1/intro Accueil + page Services.
+4. Loi Hoguet : « Gérez-vous… » → « Vous occupez-vous de… » (Rouen, Les Andelys) ; articles #62/#98 (gérer→exploiter/piloter, gestion du linge→coordination du linge).
+5. Raccourcir 4 métas > 160c + 2 titres > 60c ; « de Évreux » → « d'Évreux ».
+6. Pages Eure/Normandie orphelines → mailler ou noindex (à décider) ; FAQPage sur /faq/ ; logo Organization Yoast.
+7. Publier les 5 articles (après fix). Search Console + Site Kit (compte cliente ou agence).
