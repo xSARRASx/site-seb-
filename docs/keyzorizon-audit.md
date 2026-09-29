@@ -43,3 +43,27 @@ Rends-moi TOUT ça page par page. NE MODIFIE RIEN.
 - [ ] Corrections SEO local appliquées (mots-clés, H1 avec ville, vocabulaire, maillage)
 - [ ] Vérifier avec Camille : afficher le téléphone ? témoignage Thomas ? SIRET/adresse ?
 - [ ] Search Console + Site Kit (compte boutoubanadia@gmail.com ou agence)
+
+---
+
+## ✅ AUDIT FAIT (29/09/2026, lecture seule) — synthèse
+**Points sensibles OK** : téléphone 06 50 44 98 83 **introuvable** partout (HTML/tel:/JSON-LD, 11 URL) ✔ · **0 « gestion/gérer/gestionnaire »** sur tout le site ✔ · 1 H1/page, titres+métas partout, toutes images avec ALT, indexation ON, permaliens propres, sitemap+robots OK, clause Loi Hoguet dans les mentions légales ✔.
+
+**À corriger :**
+1. **Mot-clé Yoast VIDE** sur les 13 contenus (aucun score calculé).
+2. **Pas de JSON-LD LocalBusiness** (seulement le schéma Yoast de base). Yoast = « Organisation » mais **nom + logo vides**.
+3. **Faux témoignages** : « Thomas » = « Je suis pleinement satisfaite » (féminin), prénom seul, ni ville ni date ; « Elodie » dit « ils » (entreprise solo) ; le lien « fiche Google » = simple recherche Google. → risque DGCCRF.
+4. **Restes de template indexables** : article **« Hello world! »** publié (+ commentaire par défaut), catégorie **Uncategorized**, **archive auteur** exposant l'adresse Gmail (titre + H1 + URL).
+5. **Search Console** : pas de Site Kit, champ vérif Yoast vide, aucune balise.
+6. **Pas de pages par ville** (Rennes/Saint-Malo/Sarzeau seulement en H3 dans « Nos logements ») ; page « Conciergerie » n'emploie « Airbnb » qu'une fois.
+7. Divers : favicon absente, SIRET « en cours d'attribution » (client), photo « golfe du Morbihan » ≈ Chausey, salon en rendu 3D, je/nous mélangés, Calendly au nom perso, WordPress 7.1.2 en attente.
+
+## Corrections SEO local prêtes (⚠️ NE PAS afficher le téléphone ; NE PAS inventer d'avis)
+1. Renseigner le **mot-clé Yoast** par page (conciergerie Rennes / conciergerie Airbnb Rennes / conciergerie Saint-Malo…).
+2. Ajouter un **schema LocalBusiness SANS téléphone ni adresse** (manquants) : nom, email, zone (Rennes, Saint-Malo, Sarzeau, Ille-et-Vilaine). Remplir aussi Yoast → Représentation du site (nom « Keyzorizon Conciergerie » + logo si dispo).
+3. **Masquer la section témoignages** (Thomas/Elodie non crédibles) en attendant de vrais avis → signaler à Camille.
+4. Nettoyage template : **corbeille « Hello world! »** + son commentaire ; renommer **Uncategorized** ; **noindex archives auteur** + nom public ≠ e-mail.
+5. Renforcer « conciergerie Airbnb » / « conciergerie Rennes » sur Accueil + page Conciergerie ; harmoniser je/nous.
+6. **Search Console + Site Kit** (compte agence martinmorebkk@gmail.com, ou compte cliente boutoubanadia@gmail.com).
+7. **À décider** : créer des pages par ville (Rennes / Saint-Malo / Sarzeau) = gros levier local, mais création de pages.
+8. **À voir avec Camille** : afficher le tél sur la fiche Google ? SIRET + adresse (NAP) ? confirmer/retirer le témoignage Thomas ? photo hors zone (Chausey) à remplacer.
