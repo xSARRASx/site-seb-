@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rapport de prestations SEO — Maison du Web</title>
+<style>
+  :root{
+    --bg:#f6f4ef; --paper:#ffffff; --ink:#22271f; --muted:#6d7168;
+    --accent:#1f5c46; --accent-2:#c79a3a; --line:#e6e1d6;
+    --soft:#eef2ee; --shadow:0 12px 34px rgba(31,46,35,.10);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:"Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;
+    background:var(--bg); color:var(--ink); line-height:1.6;
+    padding:32px 16px 60px;
+  }
+  .wrap{max-width:900px;margin:0 auto}
+
+  /* Cover */
+  .cover{
+    background:linear-gradient(135deg,#1f5c46 0%,#123b2c 100%);
+    color:#fff; border-radius:20px; padding:42px 40px; box-shadow:var(--shadow);
+    position:relative; overflow:hidden;
+  }
+  .cover:after{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;
+    background:radial-gradient(circle,rgba(199,154,58,.35),transparent 70%);border-radius:50%}
+  .brandline{display:flex;align-items:center;gap:12px;margin-bottom:22px}
+  .logo{width:46px;height:46px;border-radius:12px;background:linear-gradient(135deg,var(--accent-2),#e0be6f);
+    display:grid;place-items:center;font-weight:800;color:#3a2c07;font-size:18px}
+  .brandline b{font-size:15px;letter-spacing:.5px}
+  .brandline span{display:block;font-size:12px;opacity:.8;font-weight:400}
+  .cover h1{font-size:30px;line-height:1.2;margin-bottom:10px}
+  .cover p{opacity:.9;max-width:560px;font-size:15px}
+  .cover .date{margin-top:20px;font-size:13px;opacity:.75}
+
+  /* Intro */
+  .intro{background:var(--paper);border:1px solid var(--line);border-radius:16px;
+    padding:26px 28px;margin-top:20px;box-shadow:var(--shadow)}
+  .intro h2{font-size:17px;color:var(--accent);margin-bottom:10px}
+  .intro p{color:var(--muted);font-size:15px}
+
+  /* Method strip */
+  .method{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:20px}
+  .m{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:16px 18px;display:flex;gap:12px;align-items:flex-start}
+  .m .ic{font-size:20px;flex:0 0 auto}
+  .m b{display:block;font-size:14.5px;margin-bottom:2px}
+  .m span{color:var(--muted);font-size:13px}
+
+  /* Section title */
+  .sec-title{margin:38px 4px 14px;font-size:14px;letter-spacing:1px;color:var(--muted);text-transform:uppercase;font-weight:700}
+
+  /* Site cards */
+  .site{background:var(--paper);border:1px solid var(--line);border-radius:18px;
+    padding:26px 28px;margin-bottom:18px;box-shadow:var(--shadow)}
+  .site .top{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:6px}
+  .site h3{font-size:20px;color:var(--ink)}
+  .place{color:var(--accent);font-weight:700;font-size:13.5px;background:var(--soft);
+    padding:5px 12px;border-radius:999px;white-space:nowrap}
+  .goal{color:var(--muted);font-size:14.5px;margin:8px 0 16px;font-style:italic}
+  .done{list-style:none;display:grid;gap:9px}
+  .done li{display:flex;gap:10px;align-items:flex-start;font-size:14.5px}
+  .done li:before{content:"✓";color:var(--accent);font-weight:800;flex:0 0 auto;margin-top:1px}
+  .result{margin-top:16px;background:var(--soft);border-left:3px solid var(--accent-2);
+    border-radius:8px;padding:12px 14px;font-size:14px;color:#40483d}
+  .result b{color:var(--accent)}
+
+  /* Footer */
+  .foot{text-align:center;margin-top:40px;color:var(--muted);font-size:13px;line-height:1.8}
+  .foot .sign{color:var(--accent);font-weight:700;font-size:15px}
+
+  @media (max-width:620px){
+    .cover{padding:32px 24px}.cover h1{font-size:24px}
+    .method{grid-template-columns:1fr}
+    .site{padding:22px 20px}
+  }
+  @media print{ body{background:#fff;padding:0} .cover,.intro,.site,.m{box-shadow:none} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- COUVERTURE -->
+  <header class="cover">
+    <div class="brandline">
+      <div class="logo">MW</div>
+      <div><b>MAISON DU WEB</b><span>Référencement & visibilité locale</span></div>
+    </div>
+    <h1>Rapport de prestations — Référencement (SEO)</h1>
+    <p>Un aperçu clair et concret du travail réalisé sur nos derniers sites de conciergerie,
+       pour améliorer leur visibilité sur Google dans leur secteur.</p>
+    <div class="date">Document préparé par Maison du Web · Septembre 2026</div>
+  </header>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <h2>En quelques mots</h2>
+    <p>Le référencement naturel (SEO), c'est l'ensemble des optimisations qui aident un site à
+       <b>apparaître plus haut sur Google</b> lorsque des clients recherchent une conciergerie près de chez eux.
+       Voici, en langage simple, ce que nous avons mis en place sur nos 4 derniers accompagnements.</p>
+  </section>
+
+  <!-- METHODE (bénéfices) -->
+  <div class="method">
+    <div class="m"><div class="ic">🎯</div><div><b>Mots-clés locaux</b><span>Cibler ce que vos clients tapent vraiment (ex. « conciergerie + votre ville »).</span></div></div>
+    <div class="m"><div class="ic">📝</div><div><b>Pages optimisées</b><span>Titres, descriptions et structure revus pour être bien compris par Google.</span></div></div>
+    <div class="m"><div class="ic">📍</div><div><b>Visibilité géographique</b><span>Fiche d'informations (adresse, zone, horaires) et présence par ville.</span></div></div>
+    <div class="m"><div class="ic">📈</div><div><b>Suivi Google</b><span>Connexion aux outils Google pour suivre les visites et l'indexation.</span></div></div>
+  </div>
+
+  <div class="sec-title">Les 4 sites accompagnés</div>
+
+  <!-- SITE 1 -->
+  <article class="site">
+    <div class="top"><h3>Les Clefs du Rivage</h3><span class="place">📍 Saint-Jean-de-Monts · Vendée</span></div>
+    <p class="goal">Objectif : être visible auprès des propriétaires du littoral vendéen.</p>
+    <ul class="done">
+      <li>Mise en place complète de l'outil de référencement du site.</li>
+      <li>Optimisation des titres et descriptions affichés dans Google, ville par ville (Saint-Jean-de-Monts, Notre-Dame-de-Monts, Saint-Hilaire-de-Riez, Saint-Gilles-Croix-de-Vie, Challans).</li>
+      <li>Structure des pages revue et textes harmonisés.</li>
+      <li>Images du site optimisées pour le référencement.</li>
+      <li>Fiche d'informations structurée pour Google (activité, zone, contact) et connexion à Google Search Console.</li>
+    </ul>
+    <div class="result"><b>Résultat :</b> un site prêt à ressortir sur « conciergerie » dans chacune des communes desservies.</div>
+  </article>
+
+  <!-- SITE 2 -->
+  <article class="site">
+    <div class="top"><h3>MOSA Conciergerie</h3><span class="place">📍 Liège · Belgique</span></div>
+    <p class="goal">Objectif : lancer la visibilité d'un site tout neuf, en français et en anglais.</p>
+    <ul class="done">
+      <li>Mise en place complète du référencement sur un site récent.</li>
+      <li>Optimisation des pages en français et en anglais.</li>
+      <li>Ciblage des zones : Liège, Huy et Namur.</li>
+      <li>Textes et structure des pages améliorés pour Google.</li>
+      <li>Fiche d'informations structurée + connexion à Google Search Console et aux outils de suivi de visites.</li>
+    </ul>
+    <div class="result"><b>Résultat :</b> un site correctement référencé dès son lancement et suivi dans les outils Google.</div>
+  </article>
+
+  <!-- SITE 3 -->
+  <article class="site">
+    <div class="top"><h3>Ongi Etorri Conciergerie</h3><span class="place">📍 Hendaye · Pays Basque</span></div>
+    <p class="goal">Objectif : valoriser deux offres — location moyenne durée et courte durée.</p>
+    <ul class="done">
+      <li>Mise en place complète du référencement du site.</li>
+      <li>Ciblage sur deux zones distinctes : le Pays Basque (Hendaye, Saint-Jean-de-Luz…) et les Landes (Capbreton, Seignosse…).</li>
+      <li>Titres, descriptions et structure des pages optimisés.</li>
+      <li>Ensemble des images du site optimisées pour le référencement.</li>
+      <li>Fiche d'informations structurée + connexion à Google Search Console et aux outils de suivi.</li>
+    </ul>
+    <div class="result"><b>Résultat :</b> une visibilité claire sur chacune des deux offres, dans chaque zone ciblée.</div>
+  </article>
+
+  <!-- SITE 4 -->
+  <article class="site">
+    <div class="top"><h3>Les Jardins Seine-Eure</h3><span class="place">📍 Louviers · Normandie</span></div>
+    <p class="goal">Objectif : renforcer la visibilité locale et enrichir le contenu.</p>
+    <ul class="done">
+      <li>Ciblage des mots-clés porteurs du secteur (dont Rouen, Vernon, Évreux, Louviers).</li>
+      <li>Pages par ville optimisées et reliées entre elles.</li>
+      <li>Publication de 5 articles de conseils pour attirer davantage de visiteurs.</li>
+      <li>Fiche d'informations structurée mise à jour.</li>
+      <li>Connexion à Google Search Console et aux outils de suivi de visites.</li>
+    </ul>
+    <div class="result"><b>Résultat :</b> un site plus complet, mieux ciblé localement et suivi dans les outils Google.</div>
+  </article>
+
+  <!-- FOOTER -->
+  <div class="foot">
+    <div class="sign">Maison du Web</div>
+    Référencement naturel & visibilité locale<br>
+    Merci de votre confiance.
+  </div>
+
+</div>
+</body>
+</html>
