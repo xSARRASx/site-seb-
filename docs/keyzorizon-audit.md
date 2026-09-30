@@ -67,3 +67,15 @@ Rends-moi TOUT ça page par page. NE MODIFIE RIEN.
 6. **Search Console + Site Kit** (compte agence martinmorebkk@gmail.com, ou compte cliente boutoubanadia@gmail.com).
 7. **À décider** : créer des pages par ville (Rennes / Saint-Malo / Sarzeau) = gros levier local, mais création de pages.
 8. **À voir avec Camille** : afficher le tél sur la fiche Google ? SIRET + adresse (NAP) ? confirmer/retirer le témoignage Thomas ? photo hors zone (Chausey) à remplacer.
+
+---
+
+## ✅ APPLIQUÉ (30/09/2026) — SEO local fait
+- **Mots-clés Yoast** renseignés sur les 9 pages (Accueil + À propos = « conciergerie Rennes »).
+- **Renforcement** : « conciergerie Airbnb à Rennes » (intro Accueil) ; « votre conciergerie Airbnb » + H2 « Conciergerie Airbnb : ce que nous prenons en charge » (page Conciergerie). **« Nous » partout SAUF À propos** (récit perso de Nadia, « je » conservé).
+- **Schema LocalBusiness** (Elementor → Code perso, `<head>`, tout le site) **SANS téléphone ni adresse**. Yoast Org = « Keyzorizon Conciergerie » (⚠️ **aucun logo dans la médiathèque** → à ajouter quand dispo).
+- **Témoignages masqués** (Accueil + page Témoignages), rien supprimé, aucun avis inventé. Bloc « Votre avis compte » conservé.
+- **Nettoyage** : « Hello world! » en corbeille ; catégorie → « Conseils » (slug conseils) ; auteur affiché « Nadia Boutouba » (Gmail plus visible) ; archives auteur noindex.
+- **Search Console** créée + validée (balise Yoast) + sitemap soumis ; indexation demandée (Accueil/Conciergerie/Nos logements/À propos ; Contact = quota → demain). **Site Kit connecté** (martinmorebkk@gmail.com, sans Analytics).
+- **Vérif** : téléphone introuvable (pages + schema) ✔ · 0 « gestion/gérer » ✔ · design intact ✔.
+- **Reste (Camille/cliente)** : logo (fichier) ; réindexer /contact/ demain ; décider pages par ville (Rennes/Saint-Malo/Sarzeau) ; SIRET+adresse (NAP) ; afficher tél sur fiche Google ? ; confirmer/retirer témoignage Thomas ; photo hors zone (Chausey) + salon 3D à remplacer.
