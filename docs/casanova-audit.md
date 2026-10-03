@@ -113,3 +113,16 @@ NE touche PAS au schema LocalBusiness (JSON-LD) ni à l'en-tête/pied de page po
 ```
 
 > **Après activation header/footer par Camille** : poser le JSON-LD LocalBusiness (NAP complet + zone 8 communes) via Elementor → Code personnalisé (`<head>`, tout le site), puis Search Console + Site Kit (martinmorebkk@gmail.com) + demander l'accès fiche Google Business à Imen.
+
+---
+
+## ✅ APPLIQUÉ (03/10/2026) — SEO complet (hors header/footer + schema)
+- **Yoast Représentation du site** : type **Organisation** + nom « CasaNova Conciergerie » (logo déjà en place). ⚠️ **Téléphone / adresse / SIRET = champs verrouillés « Premium »** dans Yoast gratuit → **impossible à remplir ici** → **reportés dans le schema LocalBusiness** (après activation header/footer).
+- **Accueil** : mot-clé « conciergerie Airbnb Houilles » ; titre « Conciergerie Airbnb à Houilles & Sartrouville | CasaNova » ; méta 144c. H1 réécrit (villes + bénéfices) ; 1er § enrichi (CasaNova + 3 villes). « Reportings » → « Comptes rendus » ; 3 textes factices des formules → « Devis gratuit et sans engagement ».
+- **Services** : mot-clé « conciergerie Airbnb » ; titre « Conciergerie Airbnb : nos services clés en main | CasaNova » ; méta 148c. H1 → « Conciergerie Airbnb : une offre complète pour louer l'esprit libre » ; 1er § avec 3 villes. « Reportings » corrigé + 3 textes factices remplacés.
+- **Contact** : mot-clé « conciergerie Sartrouville » ; titre + méta. **Nouveau H2** « Contactez votre conciergerie à Sartrouville » → hiérarchie H1→H2→H3 corrigée.
+- **À propos, Notre zone, Mentions légales** : mot-clé + titre (50-60c) + méta (120-155c) sur chacune. Plus aucun « Titre - CasaNova » ni mot-clé vide.
+- **Article** : « Hello world! » (seul article) → corbeille + commentaire par défaut supprimé (0 commentaire). Catégorie « Uncategorized » → « Conseils » (slug conseils). Privacy Policy brouillon non touchée.
+- **Archives auteur** : nom public → « CasaNova Conciergerie » ; slug auteur → « casanova » (URL sans e-mail) ; archives auteur + catégories + étiquettes en **noindex** (vérifié).
+- **Vérifs** : 0 « gestion » · 0 « gérer » · 0 « reporting » · 0 « This is text element » (6 pages publiées). Aucun avis inventé, aucun réseau social, header/footer + schema non touchés ✔.
+- **RESTE (après activation header/footer par Camille)** : schema LocalBusiness (NAP complet + zone 8 communes, car Yoast Premium bloqué) ; Search Console + Site Kit (martinmorebkk@gmail.com) ; accès fiche Google Business à demander à Imen.
