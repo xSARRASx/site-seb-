@@ -155,11 +155,15 @@ NE touche PAS aux 4 badges langues (FRANÇAIS/NEDERLANDS/ENGLISH/ESPAÑOL) de la
 - **Search Console + Site Kit** : connectés (martinmorebkk@gmail.com, sans Analytics) ; propriété https://neleconciergerie.com/ ; sitemap `sitemap_index.xml` = « Opération effectuée » (0 page découverte au contrôle = normal, site récent) ; indexation demandée Accueil/Services/Contact/À propos.
 - **Vérif** : 0 « gestion » / 0 « gérer » ✔ ; aucun avis/chiffre inventé (4,9/5, 20+, 5 ans conservés) ; aucun réseau ; Theme Builder + Polylang non touchés ✔.
 
-### ⚠️ À CORRIGER (schema invalide) — EN COURS
-- 1re passe : JSON-LD publié avec `"@context"` et `"url"` **VIDES** (effacés au copier-coller) → invalide.
-- 2e passe (fix) : les URL recollées se sont transformées en **liens Markdown `[https://…](https://…)`** → **JSON toujours cassé** (confirmé par l'extension).
-- **CAUSE** : le copier-coller des URL depuis le chat les convertit (soit vide, soit Markdown).
-- **SOLUTION envoyée (3e passe)** : faire éditer le code **à la main** par l'extension, **supprimer le champ `url`** (optionnel), ne garder que `"@context": "https://schema.org"` en **texte brut sans crochets**. Vérif obligatoire dans le code source public. **À confirmer « schema OK ».**
+### ✅ Schema RÉSOLU (3e passe)
+- 1re passe : `@context` + `url` **vides** (effacés au copier-coller) → invalide.
+- 2e passe : URL recollées → **liens Markdown `[…](…)`** → toujours cassé.
+- 3e passe (OK) : édition **à la main** + **champ `url` supprimé** (optionnel) → **`"@context": "https://schema.org"` en texte brut, JSON valide, 1 seul LocalBusiness** (vérifié sur le script HTML public ; view-source bloqué par l'outil mais contrôle fait directement). ✔
+- 💡 **Leçon pour les prochains sites** : les URL dans un JSON-LD se cassent au copier-coller (vide ou Markdown). → faire **éditer le code à la main** par l'extension, et garder `url` facultatif.
+
+## 🏁 NELE — SEO LOCAL FINI (04/10/2026)
+Tout fait : mots-clés Yoast 5/5, contenu renforcé, entité+logo, schema LocalBusiness valide, archive auteur corrigée, nettoyage template, Search Console + Site Kit, indexation demandée. 0 « gestion/gérer ». Theme Builder + langues non touchés.
+**Reste non-SEO (Camille/Nele)** : badges langues morts (À propos) ; « Cannes » vs « Le Cannet » (récit perso) ; boîte `.com` reçoit bien ? ; fiche Google Business (accès Nele). **Demain** : revérifier indexation Services/Contact/À propos.
 
 ### Reste (toi / Camille / Nele)
 - Confirmer le **fix schema** ci-dessus.
