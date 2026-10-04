@@ -45,8 +45,101 @@ Rends-moi TOUT ça page par page. NE MODIFIE RIEN.
 ```
 
 ## Statut
-- [ ] Audit fait (lecture seule)
-- [ ] Trancher l'e-mail (.com vs .fr) avec Camille/Nele
-- [ ] Corrections SEO local appliquées (mots-clés, H1 ville, vocabulaire, maillage, og:image)
-- [ ] Search Console + Site Kit (compte agence martinmorebkk@gmail.com, ou cliente à demander)
-- [ ] Fiche Google Business (après e-mail tranché)
+- [x] Audit fait (lecture seule)
+- [x] E-mail tranché : **site 100 % `.com`**, aucun `.fr` → on garde `contact@neleconciergerie.com` (vérifier juste que cette boîte reçoit bien)
+- [ ] Corrections SEO local appliquées (mots-clés, maillage, schema, nettoyage)
+- [ ] Search Console + Site Kit (compte agence martinmorebkk@gmail.com)
+- [ ] Fiche Google Business
+
+---
+
+## ✅ AUDIT FAIT (lecture seule) — synthèse
+**Points OK** : **0 « gestion/gérer/gestionnaire »** (clause Loi Hoguet nickel en ML : « aucun encaissement de loyers… ») ✔ · 1 H1/page ✔ · titres+métas remplis sur 4 pages ✔ · toutes images avec ALT ✔ · tél +33620403230 partout ✔ · zone Cannes/Le Cannet/Mougins cohérente ✔ · indexation ON, permaliens propres, sitemap/robots OK ✔ · og:image par défaut réglée ✔ · **e-mail 100 % `.com`** (pas de `.fr`) ✔.
+
+**À corriger :**
+1. **Mot-clé Yoast VIDE sur 5 pages** (0/5, « expression clé non définie »).
+2. **Pas de schema LocalBusiness** (seulement WebPage/Breadcrumb/WebSite). Yoast « Entité » coché mais **nom + logo vides**. → ni tél, ni adresse, ni zone dans le schéma.
+3. **Archive auteur expose le Gmail** : `/author/nelemuyllegmail-com/`, title+H1 = « nelemuylle@gmail.com », indexable + dans le sitemap (nom public WP = l'e-mail).
+4. **Restes de template indexables** : article **« Hello world! »** + commentaire par défaut, catégorie **Uncategorized** (install EN), brouillon **Privacy Policy** (titre EN), fil d'Ariane schéma « Home ».
+5. **Mentions légales** : titre SEO + méta vides.
+6. **Pas de pages par ville** ; « conciergerie » absent des 2 H1 (Accueil/Services, H1 émotionnels) ; « conciergerie Le Cannet » jamais en expression exacte.
+7. **Search Console / Site Kit absents** (champ vérif Yoast vide, pas de Site Kit).
+8. **À trancher** : Accueil dit « installée à Cannes / je vis à Cannes » vs À propos « installée au Cannet » (siège = Le Cannet). → cohérence lieu.
+9. **4 badges langues sans lien** (FRANÇAIS/NEDERLANDS/ENGLISH/ESPAÑOL) sur À propos = liens morts trompeurs (Polylang NL/EN non faits). → **voir Camille** (ne pas toucher aux langues sans elle).
+10. Mineurs : og:image Accueil = logo carré (pas idéal) ; fuseau WordPress UTC+0 (→ Paris) ; chiffres « 4,9/5 · 20+ biens · 5 ans » sans source (à faire valider par Nele, pas de faux avis) ; 10 MAJ plugins en attente.
+
+## Corrections SEO local prêtes
+1. **Mots-clés Yoast** par page + titre/méta sur Mentions légales.
+2. **Schema LocalBusiness** (Elementor → Code perso, `<head>`, tout le site) : NAP complet + zone 3 communes. Remplir aussi Yoast → Représentation du site (nom « Nele Conciergerie » + logo).
+3. **Archive auteur** : nom public → « Nele Conciergerie » (≠ e-mail), slug auteur hors e-mail, **noindex archives auteur + catégories/étiquettes**.
+4. **Nettoyage** : corbeille « Hello world! » + commentaire ; renommer « Uncategorized » → « Conseils » ; supprimer brouillon Privacy Policy ; fil d'Ariane « Home » → « Accueil ».
+5. **Renforcer** « conciergerie » + ville dans l'intro/H2 d'Accueil & Services (sans casser les H1 émotionnels), 0 « gestion/gérer ».
+6. **Search Console + Site Kit** (martinmorebkk@gmail.com).
+7. **Mineurs** : og:image Accueil → photo villa ; fuseau → Paris.
+8. **À voir avec Camille/Nele** : « Cannes » vs « Le Cannet » (lieu) ; 4 badges langues morts ; chiffres à sourcer ; boîte `.com` reçoit bien ?
+
+## Prompt de CORRECTION (à coller dans l'extension)
+```
+Tu agis dans mon navigateur sur neleconciergerie.com (WordPress + Elementor + Yoast + Polylang). Tu PEUX modifier et tu ENREGISTRES chaque changement (Mettre à jour).
+INTERDICTIONS ABSOLUES : ne touche PAS au Theme Builder (il plante — en-tête/pied de page sont intégrés dans chaque page) ; ne touche PAS aux langues/Polylang (NL/EN non faites) ; reste en FRANÇAIS.
+Loi Hoguet (sans Carte G) : INTERDIT « gestion / gestionnaire / gérer / gestion locative ». Utilise : conciergerie, location courte durée, location saisonnière, pilotage, coordination, prestataire, suivi, prise en charge, optimisation, accompagnement. Zone : Cannes, Le Cannet (siège), Mougins.
+
+Fais dans l'ordre, en enregistrant à chaque fois :
+
+1) YOAST — mot-clé principal + (si besoin) titre/méta, PAGE PAR PAGE (l'éditeur en masse ne marche pas ici) :
+   - Accueil : mot-clé « conciergerie Cannes ».
+   - Services : mot-clé « conciergerie Cannes ».
+   - À propos : mot-clé « conciergerie Côte d'Azur ».
+   - Contact : mot-clé « conciergerie Le Cannet ».
+   - Mentions légales : mot-clé « mentions légales conciergerie » + Titre SEO (ex. « Mentions légales | Nele Conciergerie ») + méta courte.
+   Ne laisse AUCUN mot-clé vide.
+
+2) YOAST — Représentation du site (Réglages) : type « Entité/Organisation », Nom = « Nele Conciergerie », Logo = le logo du site (médiathèque). Dans Réglages → Réseaux sociaux : laisse vide (aucune URL connue). Image de site (og) : mets la photo « villa-terrasse-cote-azur » comme image par défaut.
+
+3) SCHEMA LocalBusiness — Elementor → Code personnalisé (Custom Code), nom « Schema LocalBusiness », emplacement <head>, condition « Tout le site ». Colle EXACTEMENT :
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Nele Conciergerie",
+  "description": "Conciergerie et location courte durée à Cannes, Le Cannet et Mougins.",
+  "url": "https://neleconciergerie.com",
+  "email": "contact@neleconciergerie.com",
+  "telephone": "+33620403230",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "24 avenue Lacour",
+    "postalCode": "06110",
+    "addressLocality": "Le Cannet",
+    "addressCountry": "FR"
+  },
+  "areaServed": ["Cannes","Le Cannet","Mougins"]
+}
+</script>
+Vérifie qu'il n'y a pas déjà un LocalBusiness en double. (Si Custom Code indisponible, DIS-LE, ne touche pas au Theme Builder.)
+
+4) CONTENU (sans casser les H1 existants) :
+   - Accueil + Services : fais apparaître naturellement « conciergerie » + une ville (Cannes / Le Cannet) dans le 1er paragraphe et dans un H2. NE mets AUCUN « gestion/gérer ».
+   - N'invente AUCUN avis ni chiffre. Ne touche pas aux chiffres existants (4,9/5, 20+, 5 ans).
+
+5) ARCHIVE AUTEUR (expose le Gmail) :
+   - Profil utilisateur : « Nom à afficher publiquement » = « Nele Conciergerie » (PAS l'e-mail). Change aussi le pseudo/slug si l'URL auteur contient l'e-mail.
+   - Yoast → Réglages → Types de contenu / Archives : archives d'auteur en noindex ; catégories et étiquettes en noindex aussi.
+
+6) NETTOYAGE TEMPLATE :
+   - « Hello world! » → corbeille + supprime son commentaire par défaut.
+   - Catégorie « Uncategorized » → renomme « Conseils » (slug conseils).
+   - Brouillon « Privacy Policy » (titre anglais) → corbeille.
+   - Yoast → Fil d'Ariane : libellé de l'accueil « Home » → « Accueil ».
+
+7) MINEUR : Réglages → Général → Fuseau horaire = Paris.
+
+8) SEARCH CONSOLE + SITE KIT :
+   - Installe/active « Site Kit by Google », connecte-le au compte Google martinmorebkk@gmail.com, autorise Search Console, N'ACTIVE PAS Analytics.
+   - Propriété https://neleconciergerie.com/ créée + sitemap sitemap_index.xml soumis.
+   - Demande l'indexation de : Accueil, Services, Contact, À propos (dans la limite du quota du jour).
+
+9) VÉRIFS FINALES : Ctrl+F « gestion » PUIS « gérer » sur chaque page = 0 occurrence. Aucun avis inventé. Aucun lien réseau social ajouté. Theme Builder et langues NON touchés.
+
+NE touche PAS aux 4 badges langues (FRANÇAIS/NEDERLANDS/ENGLISH/ESPAÑOL) de la page À propos : on verra avec Camille. Dis-moi ce que tu as changé page par page.
+```
