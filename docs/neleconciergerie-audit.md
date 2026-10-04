@@ -143,3 +143,23 @@ Vérifie qu'il n'y a pas déjà un LocalBusiness en double. (Si Custom Code indi
 
 NE touche PAS aux 4 badges langues (FRANÇAIS/NEDERLANDS/ENGLISH/ESPAÑOL) de la page À propos : on verra avec Camille. Dis-moi ce que tu as changé page par page.
 ```
+
+---
+
+## ✅ APPLIQUÉ (04/10/2026) — SEO local fait
+- **Mots-clés Yoast** (5/5) : Accueil + Services = « conciergerie Cannes » ; À propos = « conciergerie Côte d'Azur » ; Contact = « conciergerie Le Cannet » ; Mentions légales = « mentions légales conciergerie » (+ titre + méta). Aucun vide.
+- **Contenu** : Accueil 1er § enrichi (conciergerie + Cannes/Le Cannet/Mougins) + H2 « Une conciergerie d'exception à Cannes » ; Services 1er § + H2 « Conciergerie & intendance à Cannes ». H1 conservés.
+- **Yoast Représentation** : Entité « Nele Conciergerie » + logo ; sociaux vides ; og par défaut = villa (déjà réglée).
+- **Archive auteur** : nom public + pseudo « Nele Conciergerie », URL → `/author/nele-conciergerie/` (extension Edit Author Slug installée) ; noindex archives auteur + catégories + étiquettes.
+- **Nettoyage** : « Hello world! » + commentaire + brouillon Privacy Policy → corbeille ; « Uncategorized » → « Conseils » (slug conseils) ; fil d'Ariane « Home » → « Accueil » ; fuseau → Paris.
+- **Search Console + Site Kit** : connectés (martinmorebkk@gmail.com, sans Analytics) ; propriété https://neleconciergerie.com/ ; sitemap `sitemap_index.xml` = « Opération effectuée » (0 page découverte au contrôle = normal, site récent) ; indexation demandée Accueil/Services/Contact/À propos.
+- **Vérif** : 0 « gestion » / 0 « gérer » ✔ ; aucun avis/chiffre inventé (4,9/5, 20+, 5 ans conservés) ; aucun réseau ; Theme Builder + Polylang non touchés ✔.
+
+### ⚠️ À CORRIGER (schema invalide)
+- Le JSON-LD a été publié avec **`"@context": ""` et `"url": ""` VIDES** (effacés au copier-coller) → **schema invalide, ignoré par Google**. → mini-prompt envoyé pour restaurer `"@context": "https://schema.org"` + `"url": "https://neleconciergerie.com"`. **À confirmer appliqué.**
+
+### Reste (toi / Camille / Nele)
+- Confirmer le **fix schema** ci-dessus.
+- **Demain** : revérifier indexation Services/Contact/À propos (quota).
+- **Camille/Nele** : 4 badges langues morts (À propos) ; « Cannes » vs « Le Cannet » (récit perso) ; boîte `.com` reçoit bien ?
+- **Fiche Google Business** (accès Nele).
