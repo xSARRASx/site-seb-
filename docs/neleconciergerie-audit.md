@@ -155,8 +155,11 @@ NE touche PAS aux 4 badges langues (FRANÇAIS/NEDERLANDS/ENGLISH/ESPAÑOL) de la
 - **Search Console + Site Kit** : connectés (martinmorebkk@gmail.com, sans Analytics) ; propriété https://neleconciergerie.com/ ; sitemap `sitemap_index.xml` = « Opération effectuée » (0 page découverte au contrôle = normal, site récent) ; indexation demandée Accueil/Services/Contact/À propos.
 - **Vérif** : 0 « gestion » / 0 « gérer » ✔ ; aucun avis/chiffre inventé (4,9/5, 20+, 5 ans conservés) ; aucun réseau ; Theme Builder + Polylang non touchés ✔.
 
-### ⚠️ À CORRIGER (schema invalide)
-- Le JSON-LD a été publié avec **`"@context": ""` et `"url": ""` VIDES** (effacés au copier-coller) → **schema invalide, ignoré par Google**. → mini-prompt envoyé pour restaurer `"@context": "https://schema.org"` + `"url": "https://neleconciergerie.com"`. **À confirmer appliqué.**
+### ⚠️ À CORRIGER (schema invalide) — EN COURS
+- 1re passe : JSON-LD publié avec `"@context"` et `"url"` **VIDES** (effacés au copier-coller) → invalide.
+- 2e passe (fix) : les URL recollées se sont transformées en **liens Markdown `[https://…](https://…)`** → **JSON toujours cassé** (confirmé par l'extension).
+- **CAUSE** : le copier-coller des URL depuis le chat les convertit (soit vide, soit Markdown).
+- **SOLUTION envoyée (3e passe)** : faire éditer le code **à la main** par l'extension, **supprimer le champ `url`** (optionnel), ne garder que `"@context": "https://schema.org"` en **texte brut sans crochets**. Vérif obligatoire dans le code source public. **À confirmer « schema OK ».**
 
 ### Reste (toi / Camille / Nele)
 - Confirmer le **fix schema** ci-dessus.
