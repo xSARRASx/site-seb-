@@ -141,3 +141,19 @@ Enregistre, puis vérifie sur le script HTML d'une page publique que "@context":
 ```
 
 > **Hors prompt (à voir avec Pascal/Camille)** : remplacer les photos probablement hors zone ; configurer FluentSMTP (formulaire) ; distinguer courte vs moyenne durée sur Services ; décider des pages par ville ; récupérer le lien de la fiche Google Business (cohérence NAP) ; vérifier la mention « mandataire immobilier ».
+
+---
+
+## ✅ APPLIQUÉ (04/10/2026) — SEO complet fait
+- **Yoast installé + activé** → sitemap généré. Représentation = Organisation « Golden Key PJ » + logo, sociaux vides.
+- **Mots-clés 6/6 + titres (57-59c) + métas (131-150c)** : Accueil « conciergerie Airbnb Palavas » ; À propos « conciergerie Palavas-les-Flots » ; Services « conciergerie Airbnb Montpellier » ; Contact « conciergerie littoral Montpellier » ; ML + Politique = titres/métas + **noindex,follow**.
+- **Contenu** : bandeau accueil **H6→H2** ; H1 À propos → « Golden Key PJ — votre conciergerie à Palavas-les-Flots » ; H1 Services → « …sur le littoral de Montpellier » ; « Conseils fiscaux et administratifs » → « Accompagnement administratif » ; « La Grande Motte » → « La Grande-Motte » partout.
+- **Schema LocalBusiness** (édition à la main ✔) : `@context https://schema.org`, 1 seul LocalBusiness/page, tél +33786293050, adresse 13 rue Taillebourg 34250 Palavas, 7 communes.
+- **Logo** : ALT « Golden Key PJ » + lien → accueil (plus le PNG).
+- **Archive auteur** : nom public + pseudo « Golden Key PJ », slug `golden-key-pj` (Edit Author Slug), Gmail plus exposé ; noindex auteur/catégories/étiquettes ; « Uncategorized » → « Conseils ».
+- **Search Console + Site Kit** : martinmorebkk@gmail.com, propriété https://goldenkeypj.com/ (préfixe URL), sans Analytics ; 4 pages demandées à l'indexation.
+- **Vérifs** : 1 H1/page, 0 « gestion »/« gérer » (hors avis clients), avis Pierre Moré/Yasmine intacts, tarifs intacts, 0 réseau ✔.
+- ⚠️ **Sitemap** : le test Google en ligne récupère bien sitemap_index.xml + page-sitemap.xml (4 pages), mais le rapport « Sitemaps » affiche encore « Impossible de récupérer » → **classique propriété neuve, revérifier sous 24-48 h** (rien à refaire).
+
+## 🏁 GOLDEN KEY PJ — SEO COMPLET FINI (04/10/2026)
+**Reste non-SEO (Pascal/Camille)** : photos probablement hors zone à remplacer ; **FluentSMTP non configuré** (formulaire ne délivre peut-être pas) ; distinguer courte/moyenne durée sur Services ; décider pages par ville ; lien fiche Google Business ; vérifier « mandataire immobilier ». **Demain** : revérifier sitemap GSC.
