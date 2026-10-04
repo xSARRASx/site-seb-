@@ -126,3 +126,10 @@ NE touche PAS au schema LocalBusiness (JSON-LD) ni à l'en-tête/pied de page po
 - **Archives auteur** : nom public → « CasaNova Conciergerie » ; slug auteur → « casanova » (URL sans e-mail) ; archives auteur + catégories + étiquettes en **noindex** (vérifié).
 - **Vérifs** : 0 « gestion » · 0 « gérer » · 0 « reporting » · 0 « This is text element » (6 pages publiées). Aucun avis inventé, aucun réseau social, header/footer + schema non touchés ✔.
 - **RESTE (après activation header/footer par Camille)** : schema LocalBusiness (NAP complet + zone 8 communes, car Yoast Premium bloqué) ; Search Console + Site Kit (martinmorebkk@gmail.com) ; accès fiche Google Business à demander à Imen.
+
+## ✅ APPLIQUÉ (04/10/2026) — Schema + Search Console + Site Kit
+- **Schema LocalBusiness** : code « Schema LocalBusiness » dans Elementor → Custom Code, `<head>`, « Entire site », publié. Vérifié en ligne : JSON-LD servi sur toutes les pages, valide (nom + tél +33648567355 + adresse 8 rue Gustave Flaubert 78500 Sartrouville + zone 8 communes), **1 seul LocalBusiness** (Yoast ne sort que Organization/WebSite → pas de doublon). → **C'est ici que vit le NAP** (Yoast gratuit bloqué).
+- **Site Kit** installé + activé ; connecté au compte **martinmorebkk@gmail.com** ; Search Console autorisée ; **Analytics non activé** ; objectif « Fournir des services ».
+- **Search Console** : propriété https://conciergeriecasanova.com/ créée + vérifiée (jeton Site Kit) ; sitemap `sitemap_index.xml` soumis (affiche « Impossible de récupérer » = normal sur propriété neuve, fichier répond 200 → passera en « Réussite » sous 24-48 h, **revérifier**).
+- **Indexation demandée** (4/~10-12 du jour) : Accueil (re-push métas), Services, Contact, Notre zone. **Demain** : À propos + Mentions légales.
+- **RESTE RÉEL** : (1) **en-tête + pied de page CasaNova** = Camille active les modèles Theme Builder ; (2) **fiche Google Business** = accès à demander à Imen ; (3) revérifier sitemap GSC + indexer À propos/Mentions légales demain.
