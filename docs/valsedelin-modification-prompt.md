@@ -184,3 +184,16 @@ Enregistre, puis vérifie sur le script HTML d'une page publique que "@context":
 VÉRIF FINALE : Ctrl+F « gestion » PUIS « gérer » sur chaque PAGE et ARTICLE = 0 occurrence dans NOS textes (sauf l'article Hoguet qui explique la loi). Chaque page/article a 1 seul H1. Dis-moi ce que tu as changé, article par article.
 ```
 > **Après** : ajouter Karine (guibertkarine618@gmail.com) en **Propriétaire** de la Search Console (transfert au client) + réparer la connexion Site Kit si besoin.
+
+## ✅ APPLIQUÉ (05/10/2026) — correction ciblée faite
+- **Article « 5 signes… »** : titre+H1 → « …confier votre location saisonnière à une conciergerie » ; corps/FAQ reformulés (prise en charge / Exploiter / traiter / vous exploitez) ; géo recentrée Brière ; **slug conservé** ; Yoast rempli (mot-clé « conciergerie location saisonnière Brière », titre, méta 132c). 0 « gestion »/« gérer » ✔
+- **Article Hoguet** : **H1 ajouté** ; Yoast rempli (titre 53c, méta 144c, mot-clé) ; corps inchangé (6× « gestion immobilière » = terme légal, OK).
+- **Article Brière** : titre SEO perso + mot-clé « location courte durée Brière » + méta 150c.
+- **Yoast Représentation** : Organisation « Valse de Lin » + **logo sélectionné** → logo désormais dans le schema Organization.
+- **Schema LocalBusiness** (édition à la main ✔) : `@context https://schema.org` texte brut, 1 seul LocalBusiness/page, tél + locality Sainte-Reine-de-Bretagne 44160 + 5 zones.
+- **Noindex** Catégories + Étiquettes (Uncategorized + tags retirés du sitemap). **Image vide FAQ supprimée.**
+- **Vérif finale** : 1 H1/page sur les 8 pages + 4 articles ; 0 « gestion/gérer » partout (sauf article Hoguet juridique) ✔
+
+## 🏁 VALSE DE LIN — SEO LOCAL FINI (05/10/2026)
+> Zone = **Brière** (Pontchâteau/La Roche-Bernard/Redon + Sainte-Reine-de-Bretagne). L'ancien prompt « guérandaise » était erroné → ignoré.
+**Reste (transfert / client)** : ajouter **Karine (guibertkarine618@gmail.com) en Propriétaire** de la Search Console ; réparer la connexion **Site Kit** (erreur `isUsingProxy` — non bloquant, Search Console OK).
