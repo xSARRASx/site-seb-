@@ -157,8 +157,19 @@ Rends-moi TOUT ça page par page, FR puis EN. NE MODIFIE RIEN.
 
 ### Statut re-audit
 - [x] Re-audit lecture seule fait (05/10/2026)
-- [ ] Corrections ciblées appliquées
+- [x] Corrections ciblées appliquées (05/10/2026)
 - [ ] Transfert Search Console à Maxime (mrafetin@gmail.com)
+
+### ✅ CORRECTIONS RE-AUDIT APPLIQUÉES (05/10/2026)
+- **Double méta** : source = **thème Hello Elementor** (injecte une meta description depuis l'extrait) → option « Désactiver la balise meta description » activée (Hello → Réglages avancés). Les 3 articles n'ont plus qu'1 méta (Yoast). Réglage global (nettoie aussi l'EN), aucun contenu touché.
+- **Catégorie FR** « Uncategorized » → « Actualités » (slug actualites). EN « Non classé » intacte.
+- **Article Rentabilité** : 4 tournures adoucies (exploitation ×2 / prise en charge au quotidien / s'occuper de rien). 0 ancienne formulation.
+- **Mot-clé Réglementation** : déjà corrigé (« réglementation location courte durée Wallonie ») par Maxime/nous ~5 min avant → rien réécrit.
+- **Archives auteur** : déjà désactivées dans Yoast ; c'était le cache → après purge LiteSpeed, `/author/mrafetingmail-com/` redirige vers l'accueil (vérifié anonyme). ✔
+- **Faute cookies** « grâce un code » : **laissée** — chaîne de la traduction officielle Complianz (`.mo`), non éditable sans plugin (Loco Translate) ; page noindex, cosmétique → pas rentable. 
+- Cache LiteSpeed purgé.
+
+> **Reste = chantier Maxime (→ Camille)** : mentions légales **404** (n° BCE) ; bandeau cookies + ALT + description LocalBusiness **FR sur /en/** ; switcher FR/EN non contextuel + x-default ; versions EN manquantes ; **ré-auth Site Kit** puis transfert Search Console à mrafetin@gmail.com.
 
 ### ✅ RE-AUDIT 05/10 — ce qu'il révèle
 **Les titres SEO des 11 contenus publiés sont CORRECTS** (FR sur pages FR, EN sur pages EN) → le « titres en anglais » de Camille = en fait les **archives de catégorie** (« Uncategorized » EN sur archive FR ; « Non classé » FR sur archive EN) + **bandeau cookies FR sur /en/**.
