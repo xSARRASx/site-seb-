@@ -116,3 +116,71 @@ Donne-moi le récap page par page de tout ce que tu as modifié.
 - **Faux avis** (Partie H) : défaut = masquer (risque légal). À confirmer avec le client.
 - **Pages locales par ville** (La Baule, Guérande…) = gros levier SEO local, mais c'est un **projet à part** (création de pages) → à proposer plus tard.
 - **Réglages globaux** (langue fr_FR, indexation, permaliens) : déjà OK d'après l'audit ✅.
+
+---
+
+## ⚠️ IMPORTANT — ZONE CORRIGÉE (audit 05/10/2026)
+Le prompt ci-dessus visait **La Baule/Guérande/Saint-Nazaire** = **MAUVAISE ZONE**. Le site (déjà traité par Camille) cible la **BRIÈRE** : **Pontchâteau, La Roche-Bernard, Redon** (+ Sainte-Reine-de-Bretagne, commune de la cliente, 44160). → **Le vieux prompt A/B/... ci-dessus est périmé, NE PAS l'utiliser.** On garde la Brière.
+
+## ✅ AUDIT 05/10/2026 — déjà fait à ~90% (par Camille)
+Déjà OK : Yoast rempli sur 6 pages + article « L'art de la conciergerie » · 1 H1/page (sauf article Hoguet = 0) · Mentions/Politique en **noindex** · réseaux FB/IG branchés · FAQ liée (non orpheline) · ALT ~100% · tél `tel:+33610905209` · auteur **« Karine Riou »** (Gmail masqué, ancienne URL auteur redirige vers accueil) · **Search Console vérifiée + sitemap Success (16 URL)** · fautes corrigées (c'était/English speaking/guillemet) · carte « Coordination du Linge » OK · Politique reformulée (prise en charge/suivi) · **0 faux avis** (section témoignages absente).
+
+### RESTE à corriger
+1. ⚠️ **Loi Hoguet — article « 5 signes… confier la gestion… »** : titre + H1 + corps avec « gestion »(2)/« gérer »(2) → reformuler (exploitation/pilotage/prise en charge). Se répercute sur cartes Accueil/Blog + archive Uncategorized.
+2. **Yoast incomplet** sur 3 articles (« 5 signes » vide ; « La Brière séduit » titre auto + mot-clé bourré ; « Hoguet/carte G » vide) + **article Hoguet sans H1**.
+3. **Pas de schema LocalBusiness** → ajouter (Elementor Custom Code, à la main) : nom, tél, areaServed Brière, locality Sainte-Reine-de-Bretagne 44160.
+4. **Logo Organization vide** dans le JSON-LD → définir le logo dans Yoast → Représentation du site.
+5. Mineurs : Uncategorized + étiquettes indexables → noindex ; « Sérénité » majuscule (tagline) ; `<img>` vide sur FAQ ; Site Kit pas opérationnel (erreur `isUsingProxy`) — Search Console OK donc non bloquant.
+> L'article **Hoguet/carte G** garde « gestion immobilière » (terme légal, il explique la loi) → on ajoute juste H1 + Yoast, on ne reformule pas son corps.
+
+## Prompt de CORRECTION CIBLÉ (05/10/2026) — à coller dans l'extension
+```
+Tu agis dans mon navigateur sur valsedelin.fr (WordPress + Elementor Pro + Yoast). Tu PEUX modifier et tu ENREGISTRES chaque changement.
+Zone RÉELLE : Brière — Pontchâteau, La Roche-Bernard, Redon (+ Sainte-Reine-de-Bretagne). NE PARLE PAS de La Baule/Guérande.
+Loi Hoguet (sans Carte G) : INTERDIT « gestion / gestionnaire / gérer / gestion locative » dans NOS textes. Remplace par : prise en charge, coordination, suivi, exploitation, pilotage, accompagnement, optimisation.
+Ne touche PAS aux avis (il n'y en a pas). N'invente rien.
+
+1) ARTICLE « 5 signes qu'il est temps de confier la gestion de votre location saisonnière » (NE change PAS le slug/URL) :
+   - Titre affiché + H1 → « 5 signes qu'il est temps de confier votre location saisonnière à une conciergerie ».
+   - Dans le corps : « la gestion du quotidien » → « la prise en charge du quotidien » ; « Gérer un bien sur plusieurs plateformes » → « Exploiter un bien sur plusieurs plateformes » ; « stressant à gérer dans l'urgence » → « stressant à traiter dans l'urgence » ; « vous gérez mal votre bien » → « vous exploitez mal votre bien ».
+   - FAQ de l'article : « Dès que la gestion du quotidien » → « Dès que la prise en charge du quotidien ».
+   - Yoast : mot-clé « conciergerie location saisonnière Brière » ; Titre SEO « 5 signes de confier votre location à une conciergerie | Valse de Lin » ; méta (120-155c).
+   - Vérifie ensuite Ctrl+F « gestion » ET « gérer » sur cet article = 0.
+
+2) ARTICLE « Conciergerie et loi Hoguet : faut-il une carte G ? » :
+   - AJOUTE un H1 : « Conciergerie et loi Hoguet : faut-il une carte G ? » (1 seul H1).
+   - Yoast : mot-clé « conciergerie loi Hoguet carte G » ; Titre SEO (50-60c) ; méta (120-155c).
+   - NE REFORMULE PAS le corps : « gestion immobilière » y est le terme légal (l'article explique la loi).
+
+3) ARTICLE « La Brière séduit… » :
+   - Yoast : Titre SEO personnalisé « Pourquoi la Brière séduit voyageurs & propriétaires | Valse de Lin » ; mot-clé « location courte durée Brière » (remplace le mot-clé actuel trop long) ; vérifie la méta.
+
+4) YOAST — Représentation du site : vérifie Organisation « Valse de Lin » + sélectionne le LOGO du site dans la médiathèque (actuellement le logo du schema est vide).
+
+5) SCHEMA LocalBusiness — Elementor → Code personnalisé (Custom Code), nom « Schema LocalBusiness », emplacement <head>, condition Tout le site. ÉDITE À LA MAIN (tape le texte, ne colle pas d'URL depuis l'extérieur). Code EXACT, « @context » en texte brut sans crochets :
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "LocalBusiness",
+"name": "Valse de Lin",
+"description": "Conciergerie et location courte durée en Brière : Pontchâteau, La Roche-Bernard, Redon.",
+"email": "accueil@valsedelin.fr",
+"telephone": "+33610905209",
+"address": {
+"@type": "PostalAddress",
+"addressLocality": "Sainte-Reine-de-Bretagne",
+"postalCode": "44160",
+"addressCountry": "FR"
+},
+"areaServed": ["Pontchâteau","La Roche-Bernard","Redon","Sainte-Reine-de-Bretagne","Brière"]
+}
+</script>
+Enregistre, puis vérifie sur le script HTML d'une page publique que "@context": "https://schema.org" est en texte simple (aucun crochet) et qu'il n'y a qu'UN seul LocalBusiness.
+
+6) NOINDEX hygiène (Yoast → Réglages → Taxonomies) : passe Catégories et Étiquettes en noindex (archives fines Uncategorized + tags). Ne touche pas aux pages.
+
+7) MINEURS : sur l'Accueil, la tagline « Authenticité • Sérénité • Passion » → « Authenticité • Sérénité • Passion » peut rester (style) ; corrige seulement si « Sérénité » casse l'harmonie du reste. Sur la FAQ, supprime la balise image vide (sans src) si tu la trouves dans Elementor.
+
+VÉRIF FINALE : Ctrl+F « gestion » PUIS « gérer » sur chaque PAGE et ARTICLE = 0 occurrence dans NOS textes (sauf l'article Hoguet qui explique la loi). Chaque page/article a 1 seul H1. Dis-moi ce que tu as changé, article par article.
+```
+> **Après** : ajouter Karine (guibertkarine618@gmail.com) en **Propriétaire** de la Search Console (transfert au client) + réparer la connexion Site Kit si besoin.
