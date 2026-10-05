@@ -129,3 +129,33 @@ Malgré le site en construction, l'extension a tout appliqué en évitant le cha
 - **H** Search Console créée+validée (martinmorebkk@gmail.com) + sitemap soumis + **7 URL indexées** (pas de quota dépassé).
 - **Décisions** : /logements/ H1 gardé tel quel ; tél Yoast = Premium (dans le schema) ; « Boveri » = troncature (déjà « Boverie »).
 - **Reste (Maxime / plus tard)** : mentions légales à publier (BCE à compléter) ; EN/Polylang à finir (bandeau cookies FR sur EN, ALT FR, x-default) ; réseaux sociaux vides ; photos de logements (stock) ; **Site Kit** (compte mrafetin@gmail.com) à faire après.
+
+---
+
+## 🔄 RE-AUDIT demandé (05/10/2026) — Camille signale des pb SEO
+> Camille : « il y a des trucs qui vont pas dans le SEO, des **titres SEO en anglais** etc. » → Maxime a continué à construire (EN/Polylang + blog Gutenberg) depuis le 18/09 → probable écrasement/mélange FR↔EN des titres Yoast + nouveaux articles sans Yoast. On **re-audite en lecture seule** avant de corriger.
+
+### Prompt de RE-AUDIT (lecture seule) — à coller dans l'extension
+```
+Tu agis dans mon navigateur sur mosaconciergerie.be (WordPress + Elementor Pro + Yoast, site BILINGUE FR/EN via Polylang).
+MODE LECTURE SEULE : tu n'enregistres, ne modifies, ne publies, ne supprimes RIEN. Tu OBSERVES et tu fais un rapport.
+PROBLÈME SIGNALÉ : des titres SEO seraient en anglais (mélange FR/EN). Je veux un état précis langue par langue.
+
+Donne-moi, structuré :
+1) TOUTES les pages ET articles, FR et EN (/en/) : titre, URL/slug, statut, et LANGUE Polylang assignée (FR ou EN).
+2) Pour CHAQUE contenu : le TITRE SEO Yoast réel + sa langue (FR ou EN) → signale CHAQUE page FR qui a un titre/méta EN, et chaque page EN qui a un titre/méta FR. Idem mot-clé Yoast (rempli/vide + langue).
+3) Le <title> réellement servi dans le code source de chaque page FR vs EN : cohérent avec la langue de la page ?
+4) H1 de chaque page/article : langue cohérente ? (FR sur page FR, EN sur page EN) + 1 seul H1 ?
+5) NOUVEAUX ARTICLES de blog (Gutenberg) ajoutés récemment : ont-ils Titre SEO + méta + mot-clé Yoast ? Langue ? Sont-ils en FR ou EN ?
+6) BILINGUE : hreflang FR↔EN présent ? x-default ? /en/ sert-il encore du contenu FR (duplication) ? switcher correct ?
+7) VOCABULAIRE : « gestion / gestionnaire / gérer / gestion locative » (FR) + « property management » (EN) — page + phrase exacte (prudence IPI Belgique).
+8) SCHEMA : le JSON-LD LocalBusiness « MOSA Conciergerie » est-il toujours présent (1 seul par page) ? tél +32491972718 ?
+9) RÉGLAGES : indexation ON ? sitemap ? archives auteur/catégories/étiquettes toujours en noindex (fuite /author/mrafetingmail-com/) ? Search Console toujours là ?
+10) FAUTES / textes template EN oubliés sur pages FR (et inversement).
+Rends-moi TOUT ça page par page, FR puis EN. NE MODIFIE RIEN.
+```
+
+### Statut re-audit
+- [ ] Re-audit lecture seule fait
+- [ ] Corrections ciblées (titres FR↔EN, nouveaux articles Yoast, hreflang)
+- [ ] Transfert Search Console à Maxime (mrafetin@gmail.com)
