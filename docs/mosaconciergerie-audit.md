@@ -156,6 +156,51 @@ Rends-moi TOUT ça page par page, FR puis EN. NE MODIFIE RIEN.
 ```
 
 ### Statut re-audit
-- [ ] Re-audit lecture seule fait
-- [ ] Corrections ciblées (titres FR↔EN, nouveaux articles Yoast, hreflang)
+- [x] Re-audit lecture seule fait (05/10/2026)
+- [ ] Corrections ciblées appliquées
 - [ ] Transfert Search Console à Maxime (mrafetin@gmail.com)
+
+### ✅ RE-AUDIT 05/10 — ce qu'il révèle
+**Les titres SEO des 11 contenus publiés sont CORRECTS** (FR sur pages FR, EN sur pages EN) → le « titres en anglais » de Camille = en fait les **archives de catégorie** (« Uncategorized » EN sur archive FR ; « Non classé » FR sur archive EN) + **bandeau cookies FR sur /en/**.
+
+**À CORRIGER MAINTENANT (indépendant du chantier EN) :**
+1. **Double méta-description** dans le `<head>` des **3 articles** (2 balises meta description) → trouver la source (2e balise ≠ Yoast : Elementor Custom Code / réglages article / snippet) et supprimer le doublon.
+2. **Article « Réglementation… »** : mot-clé Yoast = « rentabilité Airbnb à Liège » (copié de l'autre article) → remettre « réglementation location courte durée Wallonie ».
+3. **Fuite auteur** : `/author/mrafetingmail-com/` répond 200 avec l'e-mail dans le `<title>` (noindex OK mais accessible) → **désactiver les archives d'auteur** (Yoast → redirige vers l'accueil ; site mono-auteur).
+4. **Catégorie « Uncategorized »** (FR, vide) → renommer « Actualités » (slug actualites). EN « Non classé » : laisser si risqué (noindex + vide).
+5. **Prudence IPI (Belgique, moins strict)** : article Rentabilité, adoucir « la qualité de sa gestion » (×2) → « …de son exploitation » ; « réactivité de la gestion au quotidien » → « réactivité de la prise en charge au quotidien » ; « sans que le propriétaire ne gère rien » → « sans que le propriétaire ait à s'occuper de rien ».
+6. **Faute** (Politique de cookies FR) : « grâce un code » → « grâce à un code ».
+
+**À NE PAS toucher = chantier bilingue de Maxime (→ signaler à Camille) :**
+- Bandeau cookies **FR sur /en/** (config Complianz EN) ; **ALT d'images en FR sur /en/** + **description LocalBusiness en FR sur /en/** (dépend de l'EN final).
+- **Mentions légales en brouillon → /mentions-legales/ = 404** (liens footer FR+EN cassés) : **attend le n° BCE** → Maxime publie.
+- **x-default absent** + **switcher FR/EN non contextuel** (renvoie à /, /en/) → Polylang/menu de Maxime.
+- Versions EN manquantes (blog, logements, articles, légales) ; « Témoignage à venir » / « Testimonial coming soon » (placeholders).
+- **Site Kit** demande une **ré-authentification** Google + transfert Search Console à **mrafetin@gmail.com** (après).
+
+### Prompt de CORRECTION CIBLÉE (05/10) — à coller dans l'extension
+```
+Tu agis dans mon navigateur sur mosaconciergerie.be (WordPress + Elementor Pro + Yoast + Polylang, bilingue FR/EN). Tu PEUX modifier et tu ENREGISTRES chaque changement.
+⚠️ Le propriétaire édite parfois le site en direct : si tu vois un éditeur déjà ouvert sur un contenu, NE l'écrase pas, signale-le.
+Belgique (pas de Loi Hoguet, mais prudence IPI) : évite « gestion locative / gestionnaire / property management ».
+NE TOUCHE PAS à la version EN (/en/), ni aux ALT/bandeau cookies/description EN, ni aux mentions légales (brouillon) : c'est le chantier en cours du propriétaire.
+
+Fais UNIQUEMENT ceci, en enregistrant à chaque fois :
+
+1) DOUBLE MÉTA-DESCRIPTION — sur les 3 articles FR (/conciergerie-airbnb-liege-comment-ca-marche/, /rentabilite-airbnb-liege/, /reglementation-location-courte-duree-wallonie/), le code source contient 2 balises <meta name="description">. Trouve d'où vient la 2e (hors Yoast) : regarde Elementor → Code personnalisé (snippets qui injectent une description), les réglages de la page/article, un éventuel champ description Elementor. Supprime la source du DOUBLON pour qu'il ne reste QUE la méta Yoast. Si tu ne trouves pas la source avec certitude, NE supprime rien et DIS-LE-MOI.
+
+2) MOT-CLÉ Yoast — article « Réglementation location courte durée en Wallonie » : remplace le mot-clé actuel (« rentabilité Airbnb à Liège ») par « réglementation location courte durée Wallonie ». Vérifie que le titre/méta restent cohérents.
+
+3) ARCHIVES AUTEUR — Yoast → Réglages → Types de contenu (ou Avancé/Archives) : DÉSACTIVE les archives d'auteur (option qui redirige /author/... vers l'accueil). But : que /author/mrafetingmail-com/ ne soit plus accessible (il expose l'e-mail). Site mono-auteur, aucun impact.
+
+4) CATÉGORIE — renomme la catégorie FR « Uncategorized » en « Actualités » (slug : actualites). NE touche PAS à la catégorie EN « Non classé ».
+
+5) PRUDENCE VOCABULAIRE — article « Rentabilité Airbnb à Liège », remplace :
+   - « la qualité de sa gestion » → « la qualité de son exploitation » (2 occurrences)
+   - « la réactivité de la gestion au quotidien » → « la réactivité de la prise en charge au quotidien »
+   - « sans que le propriétaire ne gère rien » → « sans que le propriétaire ait à s'occuper de rien »
+
+6) FAUTE — Politique de cookies (FR) : « intégré grâce un code » → « intégré grâce à un code ».
+
+VÉRIF : les 3 articles n'ont plus qu'1 seule méta-description ; mot-clé Réglementation corrigé ; /author/mrafetingmail-com/ ne s'affiche plus (redirige) ; catégorie FR = Actualités. NE touche à RIEN d'autre (EN, mentions légales, cookies EN). Dis-moi ce que tu as changé.
+```
