@@ -8,6 +8,15 @@
 
 ---
 
+## ✅ RÈGLE PAR DÉFAUT (décidée par Martin, 28/10/2026) — NE PLUS REDEMANDER
+> **Pour TOUS les sites, systématiquement, sans reposer la question :**
+> - **On installe/connecte Site Kit + Search Console sous le COMPTE AGENCE `martinmorebkk@gmail.com`** (Option B), pour livrer immédiatement.
+> - **Analytics : jamais activé** (sauf demande explicite).
+> - **Transfert au client = À LA FIN** : on ajoute l'e-mail Google du client en « Propriétaire » (Search Console) + « Propriétaire » (fiche Google Business), en passe groupée.
+> - Exception unique : si le compte Google du client est **déjà connecté dans le Chrome** au moment où on branche Site Kit, autant le faire directement à son nom (Option A) — mais **on ne bloque jamais** pour ça.
+
+---
+
 ## ⚠️ Le point qui coince (à comprendre avant)
 
 Pour connecter Site Kit / ajouter un propriétaire **avec l'adresse Gmail du client**, il faut être
