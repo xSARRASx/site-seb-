@@ -178,7 +178,21 @@ FEU VERT reçu : on met le site en indexation. Fais, en enregistrant à chaque f
 Dis-moi ce qui est fait et ce qui reste en quota pour demain. NE touche pas au contenu Elementor.
 ```
 
-### Statut final (hors feu vert)
+### Statut final
 - ✅ Prompts A + B appliqués (fondation + 28 pages Yoast + schema + hygiène).
-- ⏳ Connexion Site Kit (client), feu vert noindex (Camille) → Prompt C, fiche Google Business, mémo contenu (Camille).
+- ✅ **Prompt C partiel (28/10)** : **noindex LEVÉ** (Réglages → Lecture décoché) ; sitemap `/sitemap_index.xml` = 200 (24 URL, 6 pages×4 langues, légales exclues) ; `index,follow` vérifié ; robots.txt réécrit par Yoast. ⚠️ **Vérifier que Sandra a bien validé la mise en ligne** (sinon réversible : recocher).
+- ⏳ **Sitemap NON soumis + indexation NON demandée** : Site Kit pas connecté à contactostaycare@gmail.com (comptes dispo dans ce Chrome = martinmorebkk/mmaallooppii/juliettechrp). → connecter le bon compte PUIS soumettre + indexer.
+- ⏳ Fiche Google Business ; mémo contenu Camille (Airbnb ES + ALT).
+
+### Prompt C-bis — une fois Site Kit connecté (soumission sitemap + indexation)
+```
+Tu agis dans mon navigateur sur staycare.com.co (WordPress + Yoast + Site Kit connecté). Le noindex est déjà levé et le sitemap fonctionne.
+1) Search Console (via Site Kit ou search.google.com) → Sitemaps : ajoute et soumets « sitemap_index.xml ». Confirme le statut.
+2) Inspection de l'URL → demande l'indexation, dans la limite du quota (~10-12/jour) :
+   - Accueils : / , /fr/ , /en/ , /pt/
+   - Services : /servicios/ , /fr/services/ , /en/our-services/ , /pt/servicos/
+   - Zone : /nuestra-zona/ , /fr/notre-zone/ , /en/our-area/ , /pt/nossa-regiao/
+   (si quota atteint, garder Zone pour demain ; Nosotros/Contact/FAQ des 4 langues ensuite)
+Dis-moi ce qui est soumis et ce qui reste en quota.
+```
 
