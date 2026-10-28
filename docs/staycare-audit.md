@@ -42,9 +42,115 @@ Rends-moi TOUT ça, langue par langue. NE MODIFIE RIEN (surtout PAS le noindex n
 ```
 
 ## Statut
-- [ ] Audit lecture seule fait
-- [ ] Yoast installé + titres/métas/mots-clés par page (28 pages, 4 langues) — SANS toucher au contenu Elementor
-- [ ] Schema LocalBusiness (emplacement non régénéré → à valider)
-- [ ] Search Console + Site Kit (compte contactostaycare@gmail.com ou agence) — sitemap soumis, indexation SEULEMENT après levée du noindex (feu vert Camille)
+- [x] Audit lecture seule fait (28/10/2026)
+- [ ] Prompt A : fondation (Yoast + WPCode schema + Représentation + hygiène + Site Kit) — SANS lever le noindex
+- [ ] Prompt B : Yoast titres/métas/mots-clés des 28 pages (4 langues)
+- [ ] Prompt C (APRÈS feu vert Camille = levée noindex) : sitemap + indexation
 - [ ] Fiche Google Business (vérifier l'e-mail avec Camille)
-- [ ] Besoins côté contenu (H1/ALT) → liste pour Camille (régénération script)
+- [ ] Liste « contenu » pour Camille (H1/ALT via script)
+
+---
+
+## ✅ AUDIT FAIT (28/10/2026) — synthèse
+**OK** : 28 pages (7×4), hreflang ES/FR/EN/PT réciproques ✔, 1 H1/page ✔, 0 image sans ALT ✔, switcher langue correct ✔, réseaux branchés (IG/FB/LinkedIn) ✔, **noindex confirmé coché** ✔.
+
+**NOTRE PÉRIMÈTRE (safe) — à corriger :**
+1. **Aucun plugin SEO** → installer **Yoast**. 0 méta sur 28 pages ; `<title>` hors accueil = « Nom – StayCare » (sans mot-clé/ville).
+2. **Aucun schema / JSON-LD / OG**. Pas d'Elementor Pro → schema via **plugin snippet (WPCode Lite)** (l'Elementor est régénéré, donc PAS dedans).
+3. **Fuite e-mail** (3 endroits) : archive auteur `/author/contactostaycaregmail-com/`, API `/wp-json/wp/v2/users`, **nom d'affichage = l'e-mail** → corriger via **nom public « StayCare » + slug + désactiver archives auteur** (règle les 3).
+4. **« Hello world! »** publié (/fr/hello-world/) + catégories « Non classé »/« Uncategorized » indexables → corbeille + noindex catégories.
+5. **Fuseau = Europe/Paris** → **America/Bogota**.
+6. **Pages légales** (aviso-legal / mentions / legal-notice / informacoes-legais) → **noindex** dans Yoast (pour rester hors index quand le noindex global sera levé).
+7. **Représentation Yoast** : Org « StayCare » + logo + réseaux (IG/FB/LinkedIn, on a les URL).
+8. **Search Console / Site Kit absents** → connecter (⚠️ sitemap en 404 = normal tant que noindex ; **indexation = Prompt C après levée**).
+
+**CHANTIER CAMILLE / SCRIPT (contenu Elementor régénéré — NE PAS toucher) :**
+- « Airbnb » quasi absent du contenu ES (H1/corps) → on le met dans les **titres Yoast**, mais pour H1/corps c'est la source/script.
+- **ALT non traduits** (FR/EN/PT gardent l'ALT espagnol ; photos équipe en FR ; logo ALT en EN) → source.
+- x-default absent (Polylang gratuit) ; menus WP FR inutilisés (cosmétique).
+
+## Prompt A — FONDATION (à coller dans l'extension) — ne lève PAS le noindex
+```
+Tu agis dans mon navigateur sur staycare.com.co (WordPress + Hello Elementor + Elementor gratuit + Polylang, multilingue ES/FR/EN/PT). Tu PEUX modifier et tu ENREGISTRES chaque changement.
+RÈGLES ABSOLUES : NE lève PAS le noindex (Réglages → Lecture reste coché). NE touche PAS au contenu Elementor (textes, H1, images, ALT, menus, footer) : il est régénéré par script et serait écrasé. Colombie = pas de Loi Hoguet, vocabulaire « administración/gestión/conserjería » autorisé.
+
+Fais, en enregistrant à chaque fois :
+1) Installe et active « Yoast SEO » (Extensions → Ajouter).
+2) Installe et active « WPCode Lite » (ou « Insert Headers and Footers ») — on y mettra le schema (pas d'Elementor Pro).
+3) YOAST → Représentation du site : Organisation « StayCare », logo du site (médiathèque). Réseaux sociaux : Instagram https://www.instagram.com/staycare.medellin/ , Facebook https://www.facebook.com/profile.php?id=61590669764266 , LinkedIn https://www.linkedin.com/company/staycaremedellin .
+4) FUITE E-MAIL : Utilisateurs → profil de l'auteur : « Nom à afficher publiquement » = « StayCare » (PAS l'e-mail). Change aussi le pseudo/slug pour qu'il ne contienne plus l'e-mail (installe « Edit Author Slug » si besoin → slug « staycare »). Puis Yoast → Réglages → désactive les ARCHIVES D'AUTEUR (redirection vers l'accueil). But : /author/... ne doit plus exposer l'e-mail.
+5) Yoast → Réglages → Catégories et Étiquettes en NOINDEX.
+6) « Hello world! » (/fr/hello-world/) → corbeille + supprime le commentaire par défaut.
+7) Réglages → Général → Fuseau horaire = America/Bogota.
+8) PAGES LÉGALES (aviso-legal ES, mentions-legales FR, legal-notice EN, informacoes-legais PT) : dans Yoast (onglet Avancé de chaque page) → « Autoriser les moteurs à afficher cette page ? » = NON (noindex).
+9) SCHEMA LocalBusiness — dans WPCode : nouveau snippet, type HTML/JS, emplacement « site-wide header » (<head>). ÉDITE À LA MAIN (tape le texte, ne colle pas d'URL depuis l'extérieur). Contenu EXACT, « @context » en texte brut sans crochets :
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "LocalBusiness",
+"name": "StayCare",
+"description": "Conserjería y administración de alquileres turísticos (Airbnb) en Medellín.",
+"url": "https://staycare.com.co",
+"email": "contactostaycare@gmail.com",
+"telephone": "+573123703693",
+"address": {
+"@type": "PostalAddress",
+"streetAddress": "Carrera 65 # 48C-65",
+"addressLocality": "Medellín",
+"addressRegion": "Antioquia",
+"addressCountry": "CO"
+},
+"areaServed": ["Medellín","Laureles","Estadio","Los Conquistadores","El Poblado","Antioquia"],
+"sameAs": ["https://www.instagram.com/staycare.medellin/","https://www.facebook.com/profile.php?id=61590669764266","https://www.linkedin.com/company/staycaremedellin"]
+}
+</script>
+Active le snippet. Vérifie dans le code source d'une page que "@context": "https://schema.org" est en texte simple (aucun crochet) et qu'il n'y a qu'UN LocalBusiness.
+10) SITE KIT : installe/active « Site Kit by Google », connecte-le au compte Google contactostaycare@gmail.com (le client reste propriétaire), autorise Search Console, N'ACTIVE PAS Analytics. ⚠️ NE SOUMETS PAS le sitemap et NE demande AUCUNE indexation (le site est en noindex volontaire) — on le fera plus tard.
+
+Dis-moi ce que tu as changé. NE lève PAS le noindex, NE touche PAS au contenu Elementor.
+```
+
+## Prompt B — YOAST TITRES/MÉTAS/MOTS-CLÉS (28 pages) — à coller APRÈS le A
+```
+Tu agis dans mon navigateur sur staycare.com.co (WordPress + Yoast + Polylang ES/FR/EN/PT). Tu PEUX modifier et tu ENREGISTRES chaque page.
+NE touche PAS au contenu Elementor (H1/textes/ALT). Travaille UNIQUEMENT dans l'encart Yoast de chaque page (Titre SEO + Méta + Mot-clé principal). Titre 50-60c, Méta 120-155c, DANS LA LANGUE DE LA PAGE, orientée propriétaires, incluant « Medellín ». NE lève pas le noindex.
+
+== ESPAGNOL (racine /) ==
+- / : mot-clé « conserjería Airbnb Medellín » ; Titre « Conserjería y administración de Airbnb en Medellín | StayCare ».
+- /servicios/ : mot-clé « servicios de conserjería Airbnb Medellín » ; Titre « Servicios de conserjería para Airbnb en Medellín | StayCare ».
+- /nuestra-zona/ : mot-clé « conserjería Airbnb Laureles El Poblado » ; Titre « Conserjería Airbnb en Laureles y El Poblado | StayCare ».
+- /nosotros/ : mot-clé « conserjería Airbnb Medellín StayCare » ; Titre « Nosotros – Conserjería Airbnb en Medellín | StayCare ».
+- /contacto/ : mot-clé « contacto conserjería Medellín » ; Titre « Contacto – Conserjería Airbnb en Medellín | StayCare ».
+- /preguntas-frecuentes/ : mot-clé « preguntas conserjería Airbnb Medellín » ; Titre « Preguntas frecuentes – Conserjería Airbnb Medellín | StayCare ».
+- /aviso-legal/ : Titre « Aviso legal y privacidad | StayCare » (déjà noindex, pas de mot-clé requis).
+
+== FRANÇAIS (/fr/) ==
+- /fr/ : mot-clé « conciergerie Airbnb Medellín » ; Titre « Conciergerie Airbnb à Medellín pour propriétaires | StayCare ».
+- /fr/services/ : mot-clé « services conciergerie Airbnb Medellín » ; Titre « Services de conciergerie Airbnb à Medellín | StayCare ».
+- /fr/notre-zone/ : mot-clé « conciergerie Laureles El Poblado Medellín » ; Titre « Conciergerie à Laureles et El Poblado, Medellín | StayCare ».
+- /fr/a-propos/ : mot-clé « conciergerie Airbnb Medellín » ; Titre « À propos – Conciergerie Airbnb à Medellín | StayCare ».
+- /fr/contact/ : Titre « Contact – Conciergerie Airbnb à Medellín | StayCare ».
+- /fr/faq/ : Titre « FAQ – Conciergerie Airbnb à Medellín | StayCare ».
+- /fr/mentions-legales/ : Titre « Mentions légales et confidentialité | StayCare » (noindex).
+
+== ANGLAIS (/en/) ==
+- /en/ : mot-clé « Airbnb management Medellín » ; Titre « Airbnb Management & Concierge in Medellín | StayCare ».
+- /en/our-services/ : mot-clé « Airbnb concierge services Medellín » ; Titre « Airbnb Concierge Services in Medellín | StayCare ».
+- /en/our-area/ : mot-clé « Airbnb concierge Laureles El Poblado » ; Titre « Airbnb Concierge in Laureles & El Poblado | StayCare ».
+- /en/about-us/ : mot-clé « Airbnb concierge Medellín » ; Titre « About – Airbnb Concierge in Medellín | StayCare ».
+- /en/contact-us/ : Titre « Contact – Airbnb Concierge in Medellín | StayCare ».
+- /en/faqs/ : Titre « FAQ – Airbnb Concierge in Medellín | StayCare ».
+- /en/legal-notice/ : Titre « Legal notice and privacy | StayCare » (noindex).
+
+== PORTUGAIS (/pt/) ==
+- /pt/ : mot-clé « administração de Airbnb Medellín » ; Titre « Administração de Airbnb e Concierge em Medellín | StayCare ».
+- /pt/servicos/ : mot-clé « serviços de concierge Airbnb Medellín » ; Titre « Serviços de concierge para Airbnb em Medellín | StayCare ».
+- /pt/nossa-regiao/ : mot-clé « concierge Airbnb Laureles El Poblado » ; Titre « Concierge Airbnb em Laureles e El Poblado | StayCare ».
+- /pt/sobre-nos/ : mot-clé « concierge Airbnb Medellín » ; Titre « Sobre – Concierge Airbnb em Medellín | StayCare ».
+- /pt/contato/ : Titre « Contato – Concierge Airbnb em Medellín | StayCare ».
+- /pt/perguntas-frequentes/ : Titre « FAQ – Concierge Airbnb em Medellín | StayCare ».
+- /pt/informacoes-legais/ : Titre « Aviso legal e privacidade | StayCare » (noindex).
+
+Rédige chaque méta (120-155c) dans la langue de la page. Ne laisse aucun mot-clé vide (sauf pages légales). Dis-moi un récap par langue.
+```
+
