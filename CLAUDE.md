@@ -69,6 +69,11 @@
 - `docs/HANDOFF-COMPLET.md` = ancien dossier technique général (utile pour les modèles de prompts et le schema). `docs/sitekit-et-transfert-propriete-client.md` = procédure de transfert de propriété aux clients.
 - `index.html` à la racine = tableau de suivi de Camille (localStorage).
 
+## 7 bis. Autres livrables et projets
+- `rapports-clients/` : rapports SEO individuels par client (HTML, non techniques, aucun client ne voit un autre client).
+- `HANDOFF-AUTOMATISATION-SEO.md` : doc technique du « Suivi SEO » (index.html statique + localStorage, pas de backend ; pistes : Google Sheet / Supabase-Firebase / repo GitHub).
+- **Robot SEO** = autre repo **`xSARRASx/BUG-GL`**, branche **`claude/amazing-euler-U7YqQ`**. Demande de Martin : remplacer le stub `robot/lib/analyse.js` par une vraie analyse SEO publique en lecture seule. Contraintes : `dryRun: true`, `autoTermine: false`, `allowScheduledActive: false`, cron 15 min, aucune écriture sur WordPress, aucun OpenAI/OpenSEO payant, aucun statut « terminé » automatique, tests hors ligne, logs sans secrets (noms de variables d'environnement seulement). Lancer aucun workflow. **État : fichiers confirmés présents, rien modifié — Martin n'a jamais donné le « go ».** Ne pas commencer sans son feu vert.
+
 ## 8. SITE EN COURS : StayCare (Medellín, Colombie) — détails dans `docs/staycare-audit.md`
 - Sandra Belhouari · staycare.com.co · multilingue Polylang : **ES à la racine**, `/fr/`, `/en/`, `/pt/` (7 pages par langue).
 - ⚠️ **Contenu Elementor régénéré par script** (par Camille) : NE PAS toucher aux textes, H1, images, ALT, menus. Sûr : Yoast, réglages WP, WPCode, Search Console, Site Kit.
