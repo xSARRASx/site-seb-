@@ -44,11 +44,11 @@ Rends-moi TOUT ça, langue par langue. NE MODIFIE RIEN (surtout PAS le noindex n
 ## Statut
 - [x] Audit lecture seule fait (28/10/2026)
 - [x] **Prompt A fait (28/10)** : Yoast + WPCode schema + Représentation + réseaux + fuite e-mail corrigée (/author/staycare/ redirige, API users = « StayCare ») + Hello world corbeille + fuseau Bogota + catégories/étiquettes + 4 légales noindex + schema LocalBusiness valide. ⚠️ **Site Kit installé mais connexion Google NON faite** (le compte contactostaycare@gmail.com n'est pas connecté dans Chrome → **à faire par Camille/client** : « Se connecter avec Google », Analytics décoché, PAS de sitemap/indexation).
-- [ ] Prompt B : Yoast titres/métas/mots-clés des 28 pages (4 langues)
+- [x] **Prompt B fait (28/10)** : les 28 pages ont Titre SEO + Méta (120-155c, dans la langue, avec « Medellín ») + mot-clé. Mots-clés Contact/FAQ (FR/EN/PT) choisis par l'extension (non fournis). Titres ES accueil + Preguntas = 61c (négligeable), plusieurs titres FR/EN/PT courts (45-49c = OK) → **laissés tels quels**. 1 H1/page, noindex préservé, contenu Elementor non touché.
 - [ ] Connexion Site Kit (contactostaycare@gmail.com) — Camille/client
 - [ ] Prompt C (APRÈS feu vert Camille = levée noindex) : sitemap + indexation
 - [ ] Fiche Google Business (vérifier l'e-mail avec Camille)
-- [ ] Liste « contenu » pour Camille (H1/ALT via script)
+- [ ] Mémo « contenu » pour Camille (Airbnb dans H1/textes ES + traduire les ALT FR/EN/PT via script)
 > Notes A : login WP reste l'e-mail (non modifiable, mais plus exposé publiquement). Yoast ajoute aussi Organization+WebSite (2 blocs JSON-LD/page, mais 1 seul LocalBusiness). Yoast change le séparateur du `<title>` (« – » → « - »).
 
 ---
