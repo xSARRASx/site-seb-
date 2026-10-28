@@ -181,8 +181,10 @@ Dis-moi ce qui est fait et ce qui reste en quota pour demain. NE touche pas au c
 ### Statut final
 - ✅ Prompts A + B appliqués (fondation + 28 pages Yoast + schema + hygiène).
 - ✅ **Prompt C partiel (28/10)** : **noindex LEVÉ** (Réglages → Lecture décoché) ; sitemap `/sitemap_index.xml` = 200 (24 URL, 6 pages×4 langues, légales exclues) ; `index,follow` vérifié ; robots.txt réécrit par Yoast. ⚠️ **Vérifier que Sandra a bien validé la mise en ligne** (sinon réversible : recocher).
-- ⏳ **Sitemap NON soumis + indexation NON demandée** : Site Kit pas connecté à contactostaycare@gmail.com (comptes dispo dans ce Chrome = martinmorebkk/mmaallooppii/juliettechrp). → connecter le bon compte PUIS soumettre + indexer.
-- ⏳ Fiche Google Business ; mémo contenu Camille (Airbnb ES + ALT).
+- ✅ **Prompt C fini (28/10)** : **Site Kit connecté** (martinmorebkk@gmail.com, sans Analytics, objectif « Fournir des services ») ; **sitemap soumis** → « Opération effectuée » (index de sitemaps, lu 28/10) ; **10 pages en file d'indexation** (accueils ES/FR/EN/PT + Services ×4 + Zone ES/FR ; quota épuisé à la 11e car / envoyé 2× par erreur). Pages affichent encore « Exclue par noindex » = ancienne exploration 2-5/10, se corrigera au prochain crawl.
+- ⏳ **Demain (quota ~10-12)** : /en/our-area/ + /pt/nossa-regiao/, puis Nosotros/Contact/FAQ des 4 langues (12 URL, sur 1-2 jours ; le sitemap les découvre de toute façon).
+- ⏳ **Transfert propriété** : Search Console + Site Kit = martinmorebkk → ajouter contactostaycare@gmail.com en Propriétaire (passe groupée de fin).
+- ⏳ Fiche Google Business ; mémo contenu Camille (Airbnb ES + ALT) — déjà envoyé à Camille.
 
 ### Prompt C-bis — une fois Site Kit connecté (soumission sitemap + indexation)
 ```
