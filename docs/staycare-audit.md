@@ -156,3 +156,29 @@ NE touche PAS au contenu Elementor (H1/textes/ALT). Travaille UNIQUEMENT dans l'
 Rédige chaque méta (120-155c) dans la langue de la page. Ne laisse aucun mot-clé vide (sauf pages légales). Dis-moi un récap par langue.
 ```
 
+---
+
+## 📩 MÉMO POUR CAMILLE (contenu régénéré par script — pas de notre ressort)
+> StayCare : le SEO « technique » est fait (Yoast 28 pages, schema, réglages). Ces 2 points touchent au **contenu Elementor régénéré par script** → à intégrer **côté sources** pour ne pas être écrasés :
+1. **Mot-clé « Airbnb » quasi absent du contenu ESPAGNOL** (marché principal). Il n'apparaît qu'une fois sur l'accueil ES. → dans les sources ES, faire apparaître « Airbnb » dans le H1 et le 1er paragraphe de l'Accueil et de Servicios (ex. « conserjería **Airbnb** en Medellín »). Les titres SEO, eux, le portent déjà.
+2. **ALT des images non traduits** : FR/EN/PT gardent les ALT en espagnol ; les photos d'équipe (Sandra, Michael) ont un ALT **français** dans les 4 langues ; le logo a un ALT **anglais** (« StayCare Property Management ») partout. → traduire les ALT par langue dans les sources.
+3. (Vérif) **E-mail fiche Google** : `contact@staycare.com.co` est-il créé ? Sinon on reste sur `contactostaycare@gmail.com`.
+4. **Site Kit** : connexion Google à faire (1 clic « Se connecter avec Google » avec contactostaycare@gmail.com).
+
+## Prompt C — LEVÉE NOINDEX + SITEMAP + INDEXATION (⚠️ SEULEMENT après feu vert Camille)
+> NE lancer QUE lorsque Camille/Sandra ont validé la mise en ligne. Avant ça, le site doit rester en noindex.
+```
+Tu agis dans mon navigateur sur staycare.com.co (WordPress + Yoast + Site Kit, multilingue ES/FR/EN/PT).
+FEU VERT reçu : on met le site en indexation. Fais, en enregistrant à chaque fois :
+1) Réglages → Lecture : DÉCOCHE « Demander aux moteurs de recherche de ne pas indexer ce site ». Enregistre.
+2) Vérifie que le sitemap Yoast est maintenant généré : ouvre /sitemap_index.xml (ne doit plus être en 404) et confirme qu'il liste les pages des 4 langues. Les pages légales doivent en être absentes (elles sont en noindex).
+3) Vérifie sur quelques pages (1 par langue) que le code source affiche « index, follow » (plus « noindex »).
+4) Site Kit / Search Console (compte contactostaycare@gmail.com) : soumets le sitemap sitemap_index.xml.
+5) Demande l'indexation des pages principales, dans la limite du quota du jour : l'accueil des 4 langues (/, /fr/, /en/, /pt/) puis Services et Zone de chaque langue si le quota le permet.
+Dis-moi ce qui est fait et ce qui reste en quota pour demain. NE touche pas au contenu Elementor.
+```
+
+### Statut final (hors feu vert)
+- ✅ Prompts A + B appliqués (fondation + 28 pages Yoast + schema + hygiène).
+- ⏳ Connexion Site Kit (client), feu vert noindex (Camille) → Prompt C, fiche Google Business, mémo contenu (Camille).
+
